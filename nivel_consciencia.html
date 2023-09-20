@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nivel_consciencia.css">
+</head>
+
+<body>
+
+    <div class="meio">
+        <div class="titulo">
+            NÍVEL DE CONSCIÊNCIA<br>
+            <span id="idade_info"></span>
+        </div>
+
+        <div class="titulo2">
+            Abertura Ocular
+            <select name="format2" id="format2">
+                <option selected disabled>Abertura Ocular</option>
+                <option>Espontânea</option>
+                <option>Comando Verbal</option>
+                <option>Estímulo Doloroso</option>
+                <option>Nenhuma</option>
+            </select>
+        </div>
+
+        <div class="titulo3">
+            Resposta Verbal
+            <select name="format3" id="format3">
+                <option selected disabled>Resposta Verbal</option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option value="nenhuma">Nenhuma Resposta</option>
+            </select>
+        </div>
+
+        <div class="titulo4">
+            Resposta Motora
+            <select name="format4" id="format4">
+                <option selected disabled>Resposta Motora</option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option value="nenhuma">Nenhuma</option>
+            </select>
+        </div>
+    </div>
+
+</body>
+<script>
+    function Mudar_Idade() {
+        var idade = parseInt(document.getElementById("idade").value);
+
+        if (idade > 5) {
+            document.getElementById("idade_info").innerHTML = "Maior que 5 anos";
+            document.getElementsByName('format3')[0].options[0].innerHTML = "Orientado";
+            document.getElementsByName('format3')[0].options[1].innerHTML = "Confuso";
+            document.getElementsByName('format3')[0].options[2].innerHTML = "Palavras Confusas";
+            document.getElementsByName('format3')[0].options[3].innerHTML = "Palavras Incompreensíveis";
+
+            document.getElementsByName('format4')[0].options[1].innerHTML = "Obedece Comandos";
+            document.getElementsByName('format4')[0].options[2].innerHTML = "Localiza Dor";
+            document.getElementsByName('format4')[0].options[3].innerHTML = "Movimento de Retirada";
+            document.getElementsByName('format4')[0].options[4].innerHTML = "Flexão Anormal";
+            document.getElementsByName('format4')[0].options[5].innerHTML = "Extensão Anormal";
+        }
+        else {
+            document.getElementById("idade_info").innerHTML = "Menor que 5 anos";
+            document.getElementsByName('format3')[0].options[0].innerHTML = "Palavras e Frases Apropriadas";
+            document.getElementsByName('format3')[0].options[1].innerHTML = "Palavras Inapropriadas";
+            document.getElementsByName('format3')[0].options[2].innerHTML = "Choro Persistente ou Gritos";
+            document.getElementsByName('format3')[0].options[3].innerHTML = "Sons Incompreensíveis";
+
+            document.getElementsByName('format4')[0].options[1].innerHTML = "Obedece Prontamente";
+            document.getElementsByName('format4')[0].options[2].innerHTML = "Localiza Dor ou Estímulo Tátil";
+            document.getElementsByName('format4')[0].options[3].innerHTML = "Retirada do Segmento Estimulado";
+            document.getElementsByName('format4')[0].options[4].innerHTML = "Flexão Anormal (Decortificação)";
+            document.getElementsByName('format4')[0].options[5].innerHTML = "Extensão Anormal (Decerebração)";
+        }
+    }
+</script>
+
+</html>

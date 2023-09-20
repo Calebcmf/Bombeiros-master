@@ -1,0 +1,287 @@
+.body,html {
+   
+    padding: 0;
+    margin: 0;
+}
+
+img{
+   display: flex;
+  
+}
+
+.mapa{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 0;
+
+}
+
+.cabecalho{
+    background-color: #1E232C;
+    color: white;
+  
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo,.subtitulo{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.subtitulo{
+    height: 25%;
+    font-size: 12.5px;
+    font-weight: normal;
+    align-items: baseline;
+}
+
+
+.container{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cabeca{
+    width: 10%;
+    height: 9%;
+    top: 1.5%;
+    left: 46%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.pescoco{
+    width: 10%;
+    height: 3%;
+    top: 12.5%;
+    left: 46%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.ombroD{
+    width: 7%;
+    height: 6%;
+    top: 15.5%;
+    left: 36%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.ombroE{
+    width: 7%;
+    height: 6%;
+    top: 15.5%;
+    left: 60%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.bracoD{
+    width: 7%;
+    height: 6%;
+    top: 25.5%;
+    left: 27%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.bracoE{
+    width: 7%;
+    height: 6%;
+    top: 25.5%;
+    left: 68%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.peito{
+    width: 12%;
+    height: 10%;
+    top: 17.5%;
+    left: 45.5%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.barriga{
+    width: 12%;
+    height: 10%;
+    top: 32.5%;
+    left: 45.5%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.bingulin{
+    width: 4%;
+    height: 3%;
+    top: 45.5%;
+    left: 49.5%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.pernaD{
+    width: 10%;
+    height: 13%;
+    top: 55.5%;
+    left: 39.5%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.pernaE{
+    width: 10%;
+    height: 13%;
+    top: 55.5%;
+    left: 53.5%;
+    border: 2px solid seagreen;
+    position: absolute;
+}
+
+.popUP{
+    display: none;
+    width: 80%;
+    height: 50%;
+    z-index: 3;
+    background-color: #D9D9D9;  
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+   
+    flex-direction: column;
+
+}
+
+.m{
+    width: 100%;
+    height: 35%;
+   
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #D9D9D9;
+    flex-direction: column;
+    color: #1E232C;
+    padding-top: 5%;
+
+}
+
+.m1{
+    height: 45%;
+}
+
+.p{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+
+    border: 2px solid #1E232C;
+}
+
+.tri{
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+    margin-bottom: 2.5%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 5px;
+    
+}   
+
+
+
+.fechar{
+    position: absolute;
+    border: 1px solid red;
+    color: red;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    top: 5%;
+    border-radius: 50%;
+    left: 85%;
+    
+}
+
+p{
+    margin: 0;
+    padding-top: 3%;
+    background-color: #1E232C;
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D9D9D9;
+}
+
+input[type="checkbox"]:not(:checked), 
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999%;
+
+}
+
+input[type="checkbox"] + label {
+  
+
+  cursor: pointer;
+  height: 80%;
+  width: 80%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #1E232C;
+  color: #1E232C;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+
+.btnF{
+    width: 80%;
+    height: 5%;
+    background-color: #AF1521;
+}
+
+input[type="checkbox"]:checked + label {
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: #1E232C;
+  transition: 1s;
+}
+
+.escolha{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
