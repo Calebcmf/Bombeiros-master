@@ -22,21 +22,25 @@
                 include("dados_paciente.html");
             ?>
         </div>
+        <br><br>
         <div class="pagina" id="tipo_ocorrencia">
             <?php 
                 include("tipo_ocorrencia.html");
             ?>
         </div>
+        <br><br>
         <div class="pagina" id="localizacao_traumas">
             <?php 
                 include("localizacao_traumas.php");
             ?>
         </div>
+        <br><br>
         <div class="pagina" id="observacoes">
             <?php 
                 include("observacoes.html");
             ?>
         </div>
+        <br><br>
         <div class="pagina" id="nivel_consciencia">
             <?php 
                 include("nivel_consciencia.html");
