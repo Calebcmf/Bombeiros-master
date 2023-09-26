@@ -24,7 +24,13 @@ body {
     width: 80%;
     height: auto;
 }
-
+.rodape{
+    width:80%;
+    height:20%;
+    text-indent: 10px;
+    color: white;
+    background-color: rgb(15, 80, 153);
+}
 .menu {
     width: 20%;
     height: 100%;
@@ -92,5 +98,14 @@ a:hover {
     border-radius: 10px;
     color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     padding: 20px;
+}
+.form_faleconosco{
+    width: 90%;
+    height: 90%;
 }
