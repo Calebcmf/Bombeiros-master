@@ -35,6 +35,23 @@
             <div class="pernaE"   id="11" onclick="criar(1,'Perna Esquerda')"></div>
         </div>
     </div>
+
+    <div class="mapa tras">
+    <div class="container">
+            <img src="img/bodyTras.png" alt="" width= 100%>
+            <div class="cabeca"   id="01" onclick="criar(1,'Cabeça')"></div>
+            <div class="pescoco"  id="02" onclick="criar(1,'Pescoço')"></div>
+            <div class="ombroD"   id="03" onclick="criar(1,'Ombro Direito')"></div>
+            <div class="ombroE"   id="04" onclick="criar(1,'Ombro Esquerdo')"></div>
+            <div class="bracoE"   id="05" onclick="criar(1,'Braço Esquerdo')"></div>
+            <div class="bracoD"   id="06" onclick="criar(1,'Braço Direito')"></div>
+            <div class="peito"    id="07" onclick="criar(1,'Peito')"></div>
+            <div class="barriga"  id="08" onclick="criar(1,'Barriga')"></div>
+            <div class="bingulin" id="09" onclick="criar(1,'Pélvis')"></div>
+            <div class="pernaD"   id="10" onclick="criar(1,'Perna Direita')"></div>
+            <div class="pernaE"   id="11" onclick="criar(1,'Perna Esquerda')"></div>
+        </div>
+    </div>
     
 
     
@@ -102,7 +119,11 @@
 
         
     </form> 
- 
+    
+    <div class="mudarC">
+        <div class="opcC">FRENTE</div>
+        <div class="opcC t">ATRÁS</div>
+    </div>
 
         
    

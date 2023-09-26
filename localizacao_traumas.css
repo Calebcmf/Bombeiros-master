@@ -11,7 +11,7 @@ img{
 }
 
 .mapa{
-   display: flex;
+   display: none;
    justify-content: center;
    align-items: center;
    z-index: 0;
@@ -300,10 +300,37 @@ p{
     justify-content: center;
 }
 
+.tras{
+    display: flex;
+}
 .pagina{
     height: 500px;
     min-height: 500px;
 }
+
+.mudarC{
+    width: 40%;
+    height: 8%;
+    display: flex;
+    background-color: #C0C0C0;
+    border-bottom: 7PX solid #c0c0c0;
+    justify-content: space-between;
+}
+.opcC{
+    width: 40%;
+    height: 100%;
+    border-bottom: 7PX solid #AF1521;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #90131D;
+}
+
+.t{
+    background-color: #5B5B5B;
+        border-bottom: 7PX solid #75777D;
+}
+
 
 @media only screen and (min-width: 600px) {
     .fechar{
