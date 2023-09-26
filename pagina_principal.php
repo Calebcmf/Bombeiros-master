@@ -11,20 +11,23 @@
 <body>
     <div class="menu">
         <div class="pop-up_faleconosco" id="container_faleconosco">
-            <h2>Fale Conosco</h2>
+            <h1>Fale Conosco</h1>
             <form class="form_faleconosco" action="duvidas.php" method="post">
-                <label for="nome" >Nome</label>
+                Nome
                 <input type="text" class="caixa_texto" id="nome" name="nome" placeholder="Seu nome" required><br>
-                <br><br>
-                <label for="email" >Email</label>
+                
+                Email
                 <input type="email" class="caixa_texto" id="email" name="email" placeholder="Seu email" required><br>
-                <br><br>
-                <label for="mensagem">Mensagem</label><br>
+
+                Mensagem
                 <textarea id="mensagem" class="msg" name="mensagem" onkeypress="return searchKeyPress(event)" placeholder="Digite sua mensagem" required></textarea>
                 
-                <input type="submit" value="Enviar" name="enviar" class="">
+                <div class="botoes">
+                    <button onclick="Esconder();" class="fechar">Fechar</button>
+                    <input type="submit" value="Enviar" name="enviar" class="enviar">   
+                </div>
             </form>
-            <button onclick="Esconder();">Fechar</button>
+           
         </div>
         <div class="logos">
             <img src="img/logo_medicina.png" width="40%">

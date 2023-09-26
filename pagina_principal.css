@@ -110,24 +110,24 @@ a.opition:hover {
     position: fixed;
     left: 35%;
     top: 15%;
-    width: 30%;
-    height: 60%;
+    width: 25%;
+    height: 50%;
     z-index: 100;
     background-color: rgb(13, 70, 134);
     border-radius: 10px;
     color: white;
     display: none;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
-    padding: 20px;
+    padding: 40px;
 }
 
 .caixa_texto {
     background-color: white;
-    width: 80%;
+    width: 95%;
     height: 45px;
     font-size: 80%;
     border-radius: 30px;
@@ -135,6 +135,27 @@ a.opition:hover {
 }
 
 .form_faleconosco {
-    width: 90%;
+    width: 100%;
     height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+input.enviar{
+    width: 40%;
+    height: 90%;
+}
+button.fechar{
+    width: 40%;
+    height: 90%;
+}
+.botoes{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
 }
