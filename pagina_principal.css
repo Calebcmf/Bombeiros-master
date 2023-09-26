@@ -24,26 +24,31 @@ body {
     width: 80%;
     height: auto;
 }
-.rodape_menu{
-    width:80%;
-    height:20%;
+
+.rodape_menu {
+    width: 80%;
+    height: 20%;
     margin-left: 10px;
     color: white;
     background-color: rgb(15, 80, 153);
 }
-a.suporte{
+
+a.suporte {
     cursor: pointer;
     text-decoration: none;
     color: rgb(69, 145, 231);
 }
-.fale_conosco{
+
+.fale_conosco {
     cursor: pointer;
-    color:rgb(69, 145, 231);
+    color: rgb(69, 145, 231);
 }
-.ajuda{
+
+.ajuda {
     cursor: pointer;
-    color:rgb(69, 145, 231);
+    color: rgb(69, 145, 231);
 }
+
 .menu {
     width: 20%;
     height: 100%;
@@ -100,7 +105,8 @@ a.opition:hover {
     background-color: rgb(175, 50, 50);
 
 }
-.pop-up_faleconosco{
+
+.pop-up_faleconosco {
     position: fixed;
     left: 35%;
     top: 15%;
@@ -118,7 +124,8 @@ a.opition:hover {
     align-content: center;
     padding: 20px;
 }
-.caixa_texto{
+
+.caixa_texto {
     background-color: white;
     width: 80%;
     height: 45px;
@@ -126,7 +133,8 @@ a.opition:hover {
     border-radius: 30px;
     padding-left: 10px;
 }
-.form_faleconosco{
+
+.form_faleconosco {
     width: 90%;
     height: 90%;
 }
