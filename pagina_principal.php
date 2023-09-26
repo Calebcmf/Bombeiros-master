@@ -14,12 +14,12 @@
             <h2>Fale Conosco</h2>
             <form class="form_faleconosco" action="duvidas.php" method="post">
                 <label for="nome" >Nome</label>
-                <input type="text" class="nome" id="nome" name="nome" placeholder="Seu nome" required><br>
-    
+                <input type="text" class="caixa_texto" id="nome" name="nome" placeholder="Seu nome" required><br>
+                <br><br>
                 <label for="email" >Email</label>
-                <input type="email" class="email" id="email" name="email" placeholder="Seu email" required><br>
-    
-                <label for="mensagem">Mensagem</label>
+                <input type="email" class="caixa_texto" id="email" name="email" placeholder="Seu email" required><br>
+                <br><br>
+                <label for="mensagem">Mensagem</label><br>
                 <textarea id="mensagem" class="msg" name="mensagem" onkeypress="return searchKeyPress(event)" placeholder="Digite sua mensagem" required></textarea>
                 
                 <input type="submit" value="Enviar" name="enviar" class="">
@@ -37,10 +37,10 @@
             <a class="opition" href="#observacoes">Observações Importantes</a>
             <a class="opition" href="#nivel_consciencia">Nível de Consciencia</a>
         </div>
-        <div class="rodape">
+        <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
             <div class="ajuda">Ajuda</div>
-            <a href="">Suporte</a>
+            <a class="suporte" href="">Suporte</a>
         </div>
     </div>
 
