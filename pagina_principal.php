@@ -23,11 +23,12 @@
                 <textarea id="mensagem" class="msg" name="mensagem" onkeypress="return searchKeyPress(event)" placeholder="Digite sua mensagem" required></textarea>
                 
                 <div class="botoes">
-                    <button onclick="Esconder();" class="fechar">Fechar</button>
+                    <button onclick="Esconder();" class="fechar_popup">Fechar</button>
                     <input type="submit" value="Enviar" name="enviar" class="enviar">   
                 </div>
             </form>
-           
+        </div>
+        <div class="fundo_popup-escuro" id="fundo_popup-escuro">
         </div>
         <div class="logos">
             <img src="img/logo_medicina.png" width="40%">

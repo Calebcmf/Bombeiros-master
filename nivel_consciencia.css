@@ -12,7 +12,7 @@ h1{
 }
 
 .meio {
-  max-width: 50%;
+  width: 50%;
   min-height: 30%;
   padding: 20px;
   background-color: #1e232c;
@@ -36,4 +36,14 @@ select {
   height: 30px;
   border-radius: 15px;
   padding-left: 10px;
+}
+@media(max-width:1200px){
+  .meio{
+    width: 60%;
+  }
+}
+@media(max-width:900px){
+  .meio{
+    width: 65%;
+  }
 }
