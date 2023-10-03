@@ -30,6 +30,8 @@ body {
     height: 20%;
     margin-left: 10px;
     color: white;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(15, 80, 153);
 }
 
@@ -63,6 +65,7 @@ a.suporte {
     left: 0px;
     top: 0px;
     z-index: 50;
+    transition: 0.5s;
 }
 
 .logos {
@@ -141,15 +144,25 @@ a.opition:hover {
     flex-direction: column;
     justify-content: space-evenly;
 }
-input.enviar{
+
+input.enviar {
     width: 40%;
     height: 90%;
 }
-button.fechar{
-    width: 40%;
-    height: 90%;
+
+button.fechar_popup {
+    width: 45%;
+    height: 80%;
 }
-.botoes{
+.fundo_popup-escuro{
+    width: 200vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    position: fixed;
+    display: none;
+}
+
+.botoes {
     width: 90%;
     height: 20%;
     display: flex;
@@ -158,4 +171,41 @@ button.fechar{
     justify-content: center;
     justify-items: center;
     align-content: center;
+}
+
+@media(max-width: 1100px) {
+    .principal{
+        width: 90%;
+    }
+    .menu {
+        width: 5%;
+    }
+
+    .menu:hover {
+        width: 25%;
+    }
+
+    .opcoes {
+        display: none;
+    }
+
+    .rodape_menu {
+        display: none;
+    }
+
+    .menu:hover .opcoes {
+        display: flex;
+    }
+
+    .menu:hover .rodape_menu {
+        display: flex;
+    }
+
+    .menu:hover .logos {
+        flex-direction: row;
+    }
+
+    .logos {
+        flex-direction: column;
+    }
 }
