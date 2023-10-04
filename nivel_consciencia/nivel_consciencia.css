@@ -13,7 +13,7 @@ h1{
 
 .meio {
   width: 50%;
-  min-height: 30%;
+  height: 30%;
   padding: 20px;
   background-color: #1e232c;
   display: flex;
@@ -32,7 +32,7 @@ h1{
 }
 
 select {
-  width: 300px;
+  width: 400px;
   height: 30px;
   border-radius: 15px;
   padding-left: 10px;
@@ -45,5 +45,29 @@ select {
 @media(max-width:900px){
   .meio{
     width: 65%;
+  }
+}
+@media(max-width:700px){
+  .meio{
+    width: 70%;
+  }
+  select {
+    width: 340px;
+  }
+}
+@media(max-width:500px){
+  .meio{
+    width: 80%;
+  }
+  select {
+    width: 250px;
+  }
+}
+@media(max-width:300px){
+  .meio{
+    width: 90%;
+  }
+  select {
+    width: 200px;
   }
 }

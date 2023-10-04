@@ -31,8 +31,8 @@
         <div class="fundo_popup-escuro" id="fundo_popup-escuro">
         </div>
         <div class="logos">
-            <img src="img/logo_medicina.png" width="40%">
-            <img src="img/logo_pequena.png" width="40%">
+            <img src="../img/logo_medicina.png" width="40%">
+            <img src="../img/logo_pequena.png" width="40%">
         </div>
         <div class="opcoes">
             <a class="opition" href="#dados_paciente">Dados do Paciente</a>
@@ -51,31 +51,31 @@
     <div class="principal">
         <div class="pagina" id="dados_paciente">
             <?php 
-                include("dados_paciente.html");
+                include("../dados_paciente/dados_paciente.html");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="tipo_ocorrencia">
             <?php 
-                include("tipo_ocorrencia.html");
+                include("../tipo_ocorrencia/tipo_ocorrencia.html");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="localizacao_traumas">
             <?php 
-                include("localizacao_traumas.php");
+                include("../localizacao_traumas/localizacao_traumas.php");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="observacoes">
             <?php 
-                include("observacoes.html");
+                include("../observacoes/observacoes.html");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="nivel_consciencia">
             <?php 
-                include("nivel_consciencia.html");
+                include("../nivel_consciencia/nivel_consciencia.html");
             ?>
         </div>
         <div class="pagina"></div>
