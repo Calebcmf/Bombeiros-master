@@ -15,8 +15,7 @@ body {
     display: flex;
     align-items: center;
     align-content: center;
-    justify-content: center;
-    justify-items: center;
+   
 }
 
 .principal {
@@ -240,7 +239,7 @@ button.fechar_popup {
         width: 50%;
     }
     .menu:hover {
-        width: 40%;
+        width: 43%;
     }
 
 }
@@ -249,7 +248,16 @@ button.fechar_popup {
         width: 60%;
     }
     .menu:hover {
-        width: 40%;
+        width: 60%;
+    }
+
+}
+@media(max-width: 300px){
+    .pop-up_faleconosco{
+        width: 60%;
+    }
+    .menu:hover {
+        width: 70%;
     }
 
 }

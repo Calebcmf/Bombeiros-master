@@ -31,8 +31,8 @@
         <div class="fundo_popup-escuro" id="fundo_popup-escuro">
         </div>
         <div class="logos">
-            <img src="img/logo_medicina.png" width="40%">
-            <img src="img/logo_pequena.png" width="40%">
+            <img src="../img/logo_medicina.png" width="40%">
+            <img src="../img/logo_pequena.png" width="40%">
         </div>
         <div class="opcoes">
             <a class="opition" href="#dados_paciente">Dados do Paciente</a>
