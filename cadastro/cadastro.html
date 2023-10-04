@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro de Bombeiros</title>
+</head>
+<script type="text/javascript" src="../Scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="cadastro.js"></script>
+<body>
+    <div class="fundo">
+        <div class="barra">
+            <img src="../imagens/noar.png" height="70%">
+        </div>
+        <div class="meio">
+            <form class="formulario" id="form1" action="" method="post">
+                <fieldset>
+                    <legend>CADASTRO</legend>
+                    <div class="texto"> E-mail:</div>
+                    <input type="text" class="caixa_larga" id="email" name="email">
+                    <br>
+                    <div class="texto">Nome:</div>
+                    <input type="text" class="caixa_larga" id="nome" name="nome">
+                    <br>
+                    <div class="texto">Telefone:</div>
+                    <input type="text" class="caixa_larga" id="telefone" name="telefone">
+                    <br>
+                    <div class="texto">Senha:</div>
+                    <input type="password" class="caixa_larga" id="senha" name="senha">
+                </fieldset>
+                <div class="botoes">
+                    <a href="adm_principal" target="_self" class="voltar">Voltar</a>
+                    <input type="button" name="enviar" class="continuar" value="Enviar" onclick="Listar();" />
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Mensagem de cadastro concluído -->
+            <div id="mensagem" style="display: none; color: green;">Cadastro concluído!</div>
+        </div>
+    </div>
+</body>
+
+</html>
