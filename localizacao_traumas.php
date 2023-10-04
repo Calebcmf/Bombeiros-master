@@ -21,21 +21,100 @@
     
     <div class="mapa">
     <div class="container">
-            <img src="img/cabeca.png"        class="cabeca">    </img>
-            <img src="img/pescoco.png"       class="pescoco">   </img>
-            <img src="img/tricepsdir.png"    class="tricepsD">  </img>
-            <img src="img/tricepsesq.png"    class="tricepsE">  </img> 
-            <img src="img/bicepsdir.png"     class="bicepsD">   </img>
-            <img src="img/bicepsesq.png"     class="bicepsE">   </img> 
-            <img src="img/peitodir.png"      class="peitoD" >    </img>
-            <img src="img/peitoesq.png"      class="peitoE" >    </img> 
-            <img src="img/barrigadir.png"    class="barrigaD">  </img>
-            <img src="img/barrigaesq.png"    class="barrigaE">  </img>
-            <img src="img/pelvis.png"        class="pelvis" >    </img>
-            <img src="img/coxaesq.png"       class="coxaE"  >     </img>
-            <img src="img/coxadir.png"       class="coxaD"  >     </img>
-            <img src="img/pedir.png"         class="peD"    >       </img>
-            <img src="img/peesq.png"         class="peE"    >       </img>      
+            <div class="d1">
+                <div class="d2">
+                    <img src="img/cabeca.png" class="cabeca h">
+                </div>
+                <div class="d2 c">
+                <img src="img/pescoco.png"       class="pescoco h ">   </img>
+                </div>
+            </div>
+            <div class="d1 r">
+                <div class="d3 b">
+                <img src="img/bicepsdir.png"     class="bicepsD h ">   </img>   
+                </div>
+                <div class="d3">
+                <img src="img/tricepsdir.png"    class="tricepsD h">  </img>
+                </div>
+                <div class="d3">
+                <img src="img/peitodir.png"      class="peitoD h " >    </img>
+                </div>
+                <div class="d3">
+                <img src="img/peitoesq.png"      class="peitoE h " >    </img>
+                </div>
+                <div class="d3">
+                <img src="img/tricepsesq.png"    class="tricepsE h">  </img> 
+                </div>
+                <div class="d3 b">
+                <img src="img/bicepsesq.png"     class="bicepsE h">   </img> 
+                </div>
+            </div>
+            <div class="d1 r r2">
+            <div class="d3 q">
+                <img src="img/MaoDir.png"    class="maoD h ">  </img>
+            </div>
+                <div class="d3"></div>
+                <div class="d3">
+                    <img src="img/barrigadir.png"    class="barrigaD h ">  </img>
+                </div>
+                <div class="d3">
+                <img src="img/barrigaesq.png"    class="barrigaE h ">  </img>
+                </div>
+                <div class="d3"></div>
+            <div class="d3 q ">
+                <img src="img/MaoEsq.png"    class="maoE h ">  </img>
+            </div>
+            </div>
+            <div class="d1 cx">
+                <div class="d2 c">
+                <img src="img/pelvis.png"        class="pelvis h " >    </img>
+                </div>
+                <div class="d2 s">
+                <div class="d3 v ">
+                <img src="img/coxaesq.png"       class="coxaE h "  >     </img>
+                </div>
+                <div class="d3 v ">
+                <img src="img/coxadir.png"       class="coxaD h "  >     </img>
+                </div>
+                </div>
+            </div>
+            <div class="d1 r">
+                <div class="d4">
+                <img src="img/pernaesq.png" class="pernaE h "  > </img>
+                </div>
+                <div class="d4">
+                <img src="img/pernadir.png"class="pernaD h "  >     </img>
+                </div>
+            </div>
+
+            <div class="d1">
+                <div class="d2 f">
+                   
+                </div>
+                <div class="d2">
+                <div class="d4 s">
+                    <img src="img/pedir.png"         class="peD h "    >       </img>
+                    </div>
+                    <div class="d4 s ">
+                    <img src="img/peesq.png"         class="peE h"    >       </img> 
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="img/cabeca.png"        class="cabeca h">    </img>
+            <img src="img/pescoco.png"       class="pescoco h ">   </img>
+            <img src="img/tricepsdir.png"    class="tricepsD h">  </img>
+            <img src="img/tricepsesq.png"    class="tricepsE h">  </img> 
+            <img src="img/bicepsdir.png"     class="bicepsD h ">   </img>
+            <img src="img/bicepsesq.png"     class="bicepsE h">   </img> 
+            <img src="img/peitodir.png"      class="peitoD h " >    </img>
+            <img src="img/peitoesq.png"      class="peitoE h " >    </img> 
+            <img src="img/barrigadir.png"    class="barrigaD h ">  </img>
+            <img src="img/barrigaesq.png"    class="barrigaE h ">  </img>
+            <img src="img/pelvis.png"        class="pelvis h " >    </img>
+            <img src="img/coxaesq.png"       class="coxaE h "  >     </img>
+            <img src="img/coxadir.png"       class="coxaD h "  >     </img>
+            <img src="img/pedir.png"         class="peD h "    >       </img>
+            <img src="img/peesq.png"         class="peE h"    >       </img>       -->
         </div>  
     </div>
 
