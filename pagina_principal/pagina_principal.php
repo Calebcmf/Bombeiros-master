@@ -51,31 +51,31 @@
     <div class="principal">
         <div class="pagina" id="dados_paciente">
             <?php 
-                include("");
+                include("../dados_paciente/dados_paciente.html");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="tipo_ocorrencia">
             <?php 
-                include("tipo_ocorrencia.html");
+                include("../tipo_ocorrencia/tipo_ocorrencia.html");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="localizacao_traumas">
             <?php 
-                include("localizacao_traumas.php");
+                include("../localizacao_traumas/localizacao_traumas.php");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="observacoes">
             <?php 
-                include("observacoes.html");
+                include("../observacoes/observacoes.html");
             ?>
         </div>
         <br><br>
         <div class="pagina" id="nivel_consciencia">
             <?php 
-                include("nivel_consciencia.html");
+                include("../nivel_consciencia/nivel_consciencia.html");
             ?>
         </div>
         <div class="pagina"></div>
