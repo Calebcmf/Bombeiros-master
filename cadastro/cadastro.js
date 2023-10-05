@@ -13,6 +13,7 @@ function Listar() {
             $('#mensagem').show();
 
             // Limpar o formulário após o sucesso
+            $('#form1')[0].reset();
         },
         error: function (xhr, status, error) {
             console.error('Ocorreu um erro ao enviar os dados: ' + error);

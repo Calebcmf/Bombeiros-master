@@ -40,6 +40,7 @@
             <a class="opition" href="#localizacao_traumas">Localização Traumas</a>
             <a class="opition" href="#observacoes">Observações Importantes</a>
             <a class="opition" href="#nivel_consciencia">Nível de Consciencia</a>
+            <a class="opition" href="#salvar_imagem">Imagem da Ocorrência</a>
         </div>
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
@@ -78,7 +79,11 @@
                 include("../nivel_consciencia/nivel_consciencia.html");
             ?>
         </div>
-        <div class="pagina"></div>
+        <div class="pagina" id="salvar_imagem">
+            <?php 
+                include("../salvar_imagem/salvar_imagem.html")
+            ?>
+        </div>
     </div>
     
  

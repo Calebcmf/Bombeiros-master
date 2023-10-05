@@ -1,10 +1,5 @@
 <?php
-include("conecta.php");
-
-$id = $_GET["id"];
-$nome = $_GET["nome"];
-$email = $_GET["email"];
-$telefone = $_GET["telefone"];
+include("../conecta.php");
 
 $comando = $pdo->prepare("SELECT `id_bombeiros`, `nome`, `email`, `telefone` FROM `bombeiros` WHERE 1;");
 $resultado = $comando->execute();

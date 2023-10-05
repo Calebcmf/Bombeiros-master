@@ -1,7 +1,7 @@
 body,
 html {
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,6 @@ html {
     align-content: center;
     justify-items: center;
     justify-content: center;
-    overflow-x: hidden;
     background-color: #eeeeee;
 }
 
@@ -24,7 +23,7 @@ html {
     justify-content: space-around;
 }
 
-.meio {
+.container_salvar-imagem {
     width: 60%;
     min-height: 40%;
     background-color: #1e232c;
@@ -40,8 +39,9 @@ html {
 h1{
     font-size: 30px;
 }
-.adicionar{
+button.adicionar_salvar-imagem{
     font-size: 15px;
+    color: black;
 }
 form{
     width: 100%;
