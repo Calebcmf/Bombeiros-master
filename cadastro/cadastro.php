@@ -1,5 +1,5 @@
 <?php
-include("conecta.php");
+include("../conecta.php");
 
 $nome  = $_POST["nome"];    
 $email = $_POST["email"];
@@ -9,7 +9,7 @@ $password = md5($senha);
 $empregados = [];  
 
 
-$comando = $pdo->prepare("INSERT INTO cadastro_bombeiro(nome, email, senha, telefone) VALUES('$nome','$email', \"$password\",'$telefone' )");
+$comando = $pdo->prepare("INSERT INTO bombeiros(nome, email, senha, telefone) VALUES('$nome','$email', \"$password\",'$telefone' )");
 	$resultado = $comando->execute();
 
 

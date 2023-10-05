@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../salvar_imagem/salvar_imagem.css">
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="meio">
+            <h1>Selecione as Imagens do Acidente</h1> <br>
+            <form action="" id="formulario">
+                <input type="file" id="imagem" onchange="Adicionar();"><br>
+                
+            </form>
+            <button onclick="adicionarCampo();" class="adicionar"><b>+</b></button>
+        </div>
+    </div>
+
+</body>
+<script>
+    var controleCampo = 1;
+    function adicionarCampo() {
+        controleCampo++;
+        document.getElementById('formulario').insertAdjacentHTML('beforeend', '<input type="file" name="imagem' + controleCampo + '" id="imagem' + controleCampo + '"/><br>');
+    }
+
+</script>
+
+</html>

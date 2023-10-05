@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="listar_bombeiro.css">
+    <title>Listar Bombeiro</title>
+</head>
+
+<body>
+
+    <h1>Listagem de Bombeiros</h1>
+
+    <table id="tabela1">
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>E-mail</td>
+            <td>Telefone</td>
+        </tr>
+    </table>
+
+</body>
+<script src="../jquery-1.8.2.min.js"></script>
+<script>
+    function Listar() {
+        // A variável "dados" conterá todos os campos do <form id="form1">
+        var dados = $('#form1').serialize(); // TODOS OS CAMPOS DO <form> DEVEM TER 'name='
+
+        $.ajax({
+            type: "GET",
+            url: "arquivo.php",
+            data: dados,
+            dataType: 'json',
+
+            success: function (meu_json) {
+
+                var valores = meu_json;          // Vem do arquivo.php
+                var lista = valores.empregados;  // Pega os dados dos "empregados"
+
+                var tabela = document.getElementById("tabela1");
+                for (x = 0; x < lista.length; x++) {
+                    var numeroLinhas = tabela.rows.length
+                    var linha = tabela.insertRow(numeroLinhas);
+                    var coluna1 = linha.insertCell(0);
+                    var coluna2 = linha.insertCell(1);
+                    var coluna3 = linha.insertCell(2);
+                    var coluna4 = linha.insertCell(3);
+                    coluna1.innerHTML = lista[x].id;
+                    coluna2.innerHTML = lista[x].nome;
+                    coluna3.innerHTML = lista[x].email;
+                    coluna4.innerHTML = lista[x].telefone;
+                }
+
+            },
+            error: function (xhr, status, error) {
+                // Aqui poderíamos preencher uma <div> com o innerHTML por exemplo
+                console.error('Ocorreu um erro ao enviar os dados: ' + error);
+            },
+            beforeSend: function (xhr) {
+                // Faz algo antes do envio, como exibir uma animação por exemplo.
+            },
+            complete: function (xhr, status) {
+                // Faz algo após a conclusão, como ocultar uma animação por exemplo. 
+                // Vai ser executado mesmo se ocorrer um erro.
+            },
+            timeout: 5000    // Define um tempo limite de 5 segundos (5000 milissegundos)
+        });
+    }
+</script>
+
+</html>

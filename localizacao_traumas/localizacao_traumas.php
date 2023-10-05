@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../localizacao_traumas/localizacao_traumas.css">
+    <link rel="stylesheet" href="localizacao_traumas.css">
    
 </head>
 <body>
@@ -21,37 +21,104 @@
     
     <div class="mapa">
     <div class="container">
-            <img src="img/body.png" alt="" width= 100%>
-            <div class="cabeca"   id="01" onclick="criar(1,'Cabeça')"></div>
-            <div class="pescoco"  id="02" onclick="criar(1,'Pescoço')"></div>
-            <div class="ombroD"   id="03" onclick="criar(1,'Ombro Direito')"></div>
-            <div class="ombroE"   id="04" onclick="criar(1,'Ombro Esquerdo')"></div>
-            <div class="bracoE"   id="05" onclick="criar(1,'Braço Esquerdo')"></div>
-            <div class="bracoD"   id="06" onclick="criar(1,'Braço Direito')"></div>
-            <div class="peito"    id="07" onclick="criar(1,'Peito')"></div>
-            <div class="barriga"  id="08" onclick="criar(1,'Barriga')"></div>
-            <div class="bingulin" id="09" onclick="criar(1,'Pélvis')"></div>
-            <div class="pernaD"   id="10" onclick="criar(1,'Perna Direita')"></div>
-            <div class="pernaE"   id="11" onclick="criar(1,'Perna Esquerda')"></div>
-        </div>
+            <div class="d1">
+                <div class="d2">
+                    <img src="img/cabeca.png" class="cabeca h">
+                </div>
+                <div class="d2 c">
+                <img src="img/pescoco.png"       class="pescoco h ">   </img>
+                </div>
+            </div>
+            <div class="d1 r">
+                <div class="d3 b">
+                <img src="img/bicepsdir.png"     class="bicepsD h ">   </img>   
+                </div>
+                <div class="d3">
+                <img src="img/tricepsdir.png"    class="tricepsD h">  </img>
+                </div>
+                <div class="d3">
+                <img src="img/peitodir.png"      class="peitoD h " >    </img>
+                </div>
+                <div class="d3">
+                <img src="img/peitoesq.png"      class="peitoE h " >    </img>
+                </div>
+                <div class="d3">
+                <img src="img/tricepsesq.png"    class="tricepsE h">  </img> 
+                </div>
+                <div class="d3 b">
+                <img src="img/bicepsesq.png"     class="bicepsE h">   </img> 
+                </div>
+            </div>
+            <div class="d1 r r2">
+            <div class="d3 q">
+                <img src="img/MaoDir.png"    class="maoD h ">  </img>
+            </div>
+                <div class="d3"></div>
+                <div class="d3">
+                    <img src="img/barrigadir.png"    class="barrigaD h ">  </img>
+                </div>
+                <div class="d3">
+                <img src="img/barrigaesq.png"    class="barrigaE h ">  </img>
+                </div>
+                <div class="d3"></div>
+            <div class="d3 q ">
+                <img src="img/MaoEsq.png"    class="maoE h ">  </img>
+            </div>
+            </div>
+            <div class="d1 cx">
+                <div class="d2 c">
+                <img src="img/pelvis.png"        class="pelvis h " >    </img>
+                </div>
+                <div class="d2 s">
+                <div class="d3 v ">
+                <img src="img/coxaesq.png"       class="coxaE h "  >     </img>
+                </div>
+                <div class="d3 v ">
+                <img src="img/coxadir.png"       class="coxaD h "  >     </img>
+                </div>
+                </div>
+            </div>
+            <div class="d1 r">
+                <div class="d4">
+                <img src="img/pernaesq.png" class="pernaE h "  > </img>
+                </div>
+                <div class="d4">
+                <img src="img/pernadir.png"class="pernaD h "  >     </img>
+                </div>
+            </div>
+
+            <div class="d1">
+                <div class="d2 f">
+                   
+                </div>
+                <div class="d2">
+                <div class="d4 s">
+                    <img src="img/pedir.png"         class="peD h "    >       </img>
+                    </div>
+                    <div class="d4 s ">
+                    <img src="img/peesq.png"         class="peE h"    >       </img> 
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="img/cabeca.png"        class="cabeca h">    </img>
+            <img src="img/pescoco.png"       class="pescoco h ">   </img>
+            <img src="img/tricepsdir.png"    class="tricepsD h">  </img>
+            <img src="img/tricepsesq.png"    class="tricepsE h">  </img> 
+            <img src="img/bicepsdir.png"     class="bicepsD h ">   </img>
+            <img src="img/bicepsesq.png"     class="bicepsE h">   </img> 
+            <img src="img/peitodir.png"      class="peitoD h " >    </img>
+            <img src="img/peitoesq.png"      class="peitoE h " >    </img> 
+            <img src="img/barrigadir.png"    class="barrigaD h ">  </img>
+            <img src="img/barrigaesq.png"    class="barrigaE h ">  </img>
+            <img src="img/pelvis.png"        class="pelvis h " >    </img>
+            <img src="img/coxaesq.png"       class="coxaE h "  >     </img>
+            <img src="img/coxadir.png"       class="coxaD h "  >     </img>
+            <img src="img/pedir.png"         class="peD h "    >       </img>
+            <img src="img/peesq.png"         class="peE h"    >       </img>       -->
+        </div>  
     </div>
 
-    <div class="mapa tras">
-    <div class="container">
-            <img src="img/bodyTras.png" alt="" width= 100%>
-            <div class="cabeca"   id="01" onclick="criar(1,'Cabeça')"></div>
-            <div class="pescoco"  id="02" onclick="criar(1,'Pescoço')"></div>
-            <div class="ombroD"   id="03" onclick="criar(1,'Ombro Direito')"></div>
-            <div class="ombroE"   id="04" onclick="criar(1,'Ombro Esquerdo')"></div>
-            <div class="bracoE"   id="05" onclick="criar(1,'Braço Esquerdo')"></div>
-            <div class="bracoD"   id="06" onclick="criar(1,'Braço Direito')"></div>
-            <div class="peito"    id="07" onclick="criar(1,'Peito')"></div>
-            <div class="barriga"  id="08" onclick="criar(1,'Barriga')"></div>
-            <div class="bingulin" id="09" onclick="criar(1,'Pélvis')"></div>
-            <div class="pernaD"   id="10" onclick="criar(1,'Perna Direita')"></div>
-            <div class="pernaE"   id="11" onclick="criar(1,'Perna Esquerda')"></div>
-        </div>
-    </div>
+    
     
 
     
