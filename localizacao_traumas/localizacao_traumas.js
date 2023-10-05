@@ -3,7 +3,7 @@ function criar(i, url) {
     var imagem =  document.getElementById('im');
     var metade = document.getElementById('mtd');
     a.style.display = 'flex'; 
-    imagem.src=`img/${url}.png`;
+    imagem.src=`../img/${url}.png`;
     metade.innerHTML = "";
     metade.innerHTML = url;
 
