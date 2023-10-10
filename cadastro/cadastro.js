@@ -1,3 +1,4 @@
+
 function Listar() {
     var dados = $('#form1').serialize();
 
@@ -7,13 +8,30 @@ function Listar() {
         data: dados,
         dataType: 'json',
         success: function (meu_json) {
+            if (meu_json.error) {
+                // Exibir a mensagem de erro
+                $('#mensagem').text(meu_json.error);
+                $('#mensagem').css('color', 'red');
+                $('#mensagem').show();
+            } else {
+                var valores = meu_json;
+                var lista = valores.empregados;
 
-            // Exibir a mensagem de cadastro concluído
-            $('#mensagem').text('Cadastro concluído!');
-            $('#mensagem').show();
+                for (x = 0; x < lista.length; x++) {
+                    console.log(lista[x].nome);
+                    console.log(lista[x].email);
+                    console.log(lista[x].senha);
+                    console.log(lista[x].telefone);
+                }
 
-            // Limpar o formulário após o sucesso
-            $('#form1')[0].reset();
+                // Exibir a mensagem de cadastro concluído
+                $('#mensagem').text('Cadastro concluído!');
+                $('#mensagem').css('color', 'green');
+                $('#mensagem').show();
+
+                // Limpar o formulário após o sucesso
+                $('#form1')[0].reset();
+            }
         },
         error: function (xhr, status, error) {
             console.error('Ocorreu um erro ao enviar os dados: ' + error);
