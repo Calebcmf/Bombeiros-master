@@ -50,43 +50,42 @@
     </div>
 
     <div class="principal">
-        <div class="pagina" id="dados_paciente">
+        <div class="pagina1" id="dados_paciente">
             <?php 
                 include("../dados_paciente/dados_paciente.html");
             ?>
         </div>
         <br><br>
-        <div class="pagina" id="tipo_ocorrencia">
+        <div class="pagina2" id="tipo_ocorrencia">
             <?php 
                 include("../tipo_ocorrencia/tipo_ocorrencia.html");
             ?>
         </div>
         <br><br>
-        <div class="pagina" id="localizacao_traumas">
+        <div class="pagina3" id="localizacao_traumas">
             <?php 
                 include("../localizacao_traumas/localizacao_traumas.php");
             ?>
         </div>
         <br><br>
-        <div class="pagina" id="observacoes">
+        <div class="pagina4" id="observacoes">
             <?php 
                 include("../observacoes/observacoes.html");
             ?>
         </div>
         <br><br>
-        <div class="pagina" id="nivel_consciencia">
+        <div class="pagina5" id="nivel_consciencia">
             <?php 
                 include("../nivel_consciencia/nivel_consciencia.html");
             ?>
         </div>
-        <div class="pagina" id="salvar_imagem">
+        <div class="pagina6" id="salvar_imagem">
             <?php 
                 include("../salvar_imagem/salvar_imagem.html")
             ?>
         </div>
     </div>
     
- 
 </body>
 
 </html>

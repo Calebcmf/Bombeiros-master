@@ -10,12 +10,14 @@ body {
     overflow-x: hidden;
 }
 
-.pagina {
+.pagina1,.pagina2,.pagina3,.pagina4,.pagina5,.pagina6,.pagina7,.pagina8 {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     align-content: center;
+    margin-bottom: 20px;
    
 }
 

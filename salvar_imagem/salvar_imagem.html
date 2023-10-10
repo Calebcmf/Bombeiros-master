@@ -10,12 +10,12 @@
 <body>
 
     <div class="container_salvar-imagem">
-        <h1>Selecione as Imagens do Acidente</h1><button onclick="adicionarCampo();" class="adicionar_salvar-imagem"><b>+</b></button>
+        <h1>Selecione as Imagens do Acidente</h1><button onclick="adicionarCampo();"
+            class="adicionar_salvar-imagem"><b>+</b></button>
         <form action="" id="formulario">
             <input type="file" id="imagem" onchange="Adicionar();"><br>
-
         </form>
-        
+        <spam id="mensagem_imagem" style="display: none; color: white;">Máximo 5 imagens!</spam>
     </div>
 
 </body>
@@ -23,7 +23,16 @@
     var controleCampo = 1;
     function adicionarCampo() {
         controleCampo++;
-        document.getElementById('formulario').insertAdjacentHTML('beforeend', '<input type="file" name="imagem' + controleCampo + '" id="imagem' + controleCampo + '"/><br>');
+        if (controleCampo <= 5) {
+            document.getElementById('formulario').insertAdjacentHTML('beforeend', '<input type="file" name="imagem' + controleCampo + '" id="imagem' + controleCampo + '"/><br>');
+        }
+        else {
+            var mensagem = document.getElementById('mensagem_imagem');
+            mensagem.style.display = "flex";
+            setTimeout(2000);
+            setTimeout(() => {mensagem.style.display = "none";}, 3000);
+        }
+
     }
 
 </script>
