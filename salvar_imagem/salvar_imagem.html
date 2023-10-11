@@ -8,9 +8,15 @@
 </head>
 
 <body>
-
+    <div class="cabecalho">
+        <div class="titulo">
+            Selecione Imagens do Acidente
+        </div>
+        <div class="subtitulo"></div>
+    </div>
+    <br> <br>
     <div class="container_salvar-imagem">
-        <h1>Selecione as Imagens do Acidente</h1><button onclick="adicionarCampo();"
+        <h2>Selecione as Imagens</h2><button onclick="adicionarCampo();"
             class="adicionar_salvar-imagem"><b>+</b></button>
         <form action="" id="formulario">
             <input type="file" id="imagem" onchange="Adicionar();"><br>
@@ -30,7 +36,7 @@
             var mensagem = document.getElementById('mensagem_imagem');
             mensagem.style.display = "flex";
             setTimeout(2000);
-            setTimeout(() => {mensagem.style.display = "none";}, 3000);
+            setTimeout(() => { mensagem.style.display = "none"; }, 3000);
         }
 
     }

@@ -84,6 +84,11 @@
                 include("../salvar_imagem/salvar_imagem.html")
             ?>
         </div>
+        <div class="pagina7" id="objetos_recolhidos">
+            <?php
+                include("../objetos_recolhidos/objetos_recolhidos.html")
+            ?>
+        </div>
     </div>
     
 </body>

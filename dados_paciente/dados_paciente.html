@@ -5,25 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dados_paciente/dados_paciente.css">
+  <script src="../nivel_consciencia/nivel_consciencia.js"></script>
   <title>Dados do Paciente</title>
 </head>
 
 <body>
   <div class="cabecalho">
-    
-        <div class="titulo">
-            Dados
-        </div>
-        <div class="subtitulo">
-            Paciente
-        </div>
-    
+
+    <div class="titulo">
+      Dados
+    </div>
+    <div class="subtitulo">
+      Paciente
+    </div>
+
   </div>
   <br><br>
   <form class="formulario" method="post" action="paciente.php">
     <table class="tabela">
       <TR BGCOLOR=#1E232C>
-        
+
       </TR>
       <tr>
         <td>Nome:</td>
@@ -49,7 +50,7 @@
           Idade:
         </td>
         <td>
-          <input type="number" name="idade" id="idade" class="caixa1">
+          <input type="number" name="idade" id="idade" class="caixa1" onchange="Mudar_Idade();">
         </td>
       </tr>
       <tr>
@@ -69,15 +70,8 @@
         </td>
       </tr>
       <TR BGCOLOR=#1E232C>
-        <td ALIGN="center" VALIGN="center" HEIGHT="40" COLSPAN="2" class="t"   >
-          
-    
-                
-                    Dados  
-            
-             
-                
-    
+        <td ALIGN="center" VALIGN="center" HEIGHT="40" COLSPAN="2" class="t">
+          Dados
         </td>
       </TR>
       <tr>
@@ -97,7 +91,8 @@
         </td>
       </tr>
     </table>
-   
+
   </form>
 </body>
+
 </html>
