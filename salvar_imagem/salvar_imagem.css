@@ -42,12 +42,13 @@ html {
     justify-items: center;
     justify-content: space-around;
 }
-h1{
-    font-size: 30px;
-}
+
 button.adicionar_salvar-imagem{
     font-size: 15px;
-    color: black;
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    left: 20px;
 }
 form{
     width: 100%;
