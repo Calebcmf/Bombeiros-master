@@ -24,7 +24,7 @@ html {
 }
 
 .container_salvar-imagem {
-    width: 60%;
+    width: 50%;
     min-height: 40%;
     background-color: #1e232c;
     border-radius: 10px;
@@ -63,7 +63,7 @@ form{
 }
 
 @media(max-width: 1300px){
-    .meio{
+    .container_salvar-imagem{
         width: 70%;
     }
 }
@@ -72,8 +72,8 @@ form{
     h1{
         font-size: 28px;
     }
-    .meio{
-        width: 80%;
+    .container_salvar-imagem{
+        width: 85%;
     }
 }
 
@@ -81,8 +81,8 @@ form{
     h1{
         font-size: 25px;
     }
-    .meio{
-        width: 85%;
+    .container_salvar-imagem{
+        width: 90%;
     }
 }
 
@@ -90,8 +90,8 @@ form{
     h1{
         font-size: 23px;
     }
-    .meio{
-        width: 90%;
+    .container_salvar-imagem{
+        width: 95%;
     }
 }
 
@@ -99,7 +99,7 @@ form{
     h1{
         font-size: 23px;
     }
-    .meio{
-        width: 95%;
+    .container_salvar-imagem{
+        width: 98%;
     }
 }
