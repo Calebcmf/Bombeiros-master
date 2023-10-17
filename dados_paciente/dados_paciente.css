@@ -110,7 +110,24 @@ B {
   font-weight: normal;
 
 }
+.sexo_check{
+  background-color: #20242c;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  border-radius: 5px;
+}
 
+.radio_sexo{
+  display: none;
+}
+.radio_sexo:checked + .sexo_check{
+  background-color: #AF1521;
+}
 
 @media (max-width: 600px) {
   B {
