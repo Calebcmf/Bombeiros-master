@@ -90,6 +90,11 @@
                 include("../objetos_recolhidos/objetos_recolhidos.html")
             ?>
         </div>
+        <div class="pagina8" id="avaliacao_cinematica">
+            <?php
+                include("../avaliacao_cinematica/avaliacao_cinematica.html")
+            ?>
+        </div>
     </div>
     
 </body>
