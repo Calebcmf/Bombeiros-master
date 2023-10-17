@@ -156,8 +156,9 @@ input.oco{
   cursor: pointer;
   height: 35px;
   width: 80%;
-  font-size: 10px;
+  font-size: 15px;
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #1E232C;

@@ -46,7 +46,6 @@
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
             <div class="ajuda">Ajuda</div>
-            <a class="suporte" href="">Suporte</a>
         </div>
     </div>
 
