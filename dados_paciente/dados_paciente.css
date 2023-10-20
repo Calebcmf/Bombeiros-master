@@ -1,12 +1,12 @@
 html,
 body {
-  width: 100%;  
+  width: 100%;
   display: flex;
   flex-direction: column;
-  
+
 }
 
-td{
+td {
   color: black;
 }
 
@@ -19,13 +19,15 @@ td{
   align-content: center;
   justify-content: space-around;
 }
-.caixa_sexo{
+
+.caixa_sexo {
   width: 50px;
   height: 50px;
   padding: 5px;
   background-color: rgb(54, 54, 54);
 }
-.caixa_sexo :focus{
+
+.caixa_sexo :focus {
   background-color: rgb(8, 53, 80);
 }
 
@@ -42,10 +44,12 @@ td{
   border-radius: 20px;
   border: #1E232C 2px solid;
 }
-.botao_proximo:hover{
+
+.botao_proximo:hover {
   background-color: rgb(5, 91, 148);
   color: aliceblue;
 }
+
 .tabela {
   border: #1E232C 2px solid;
   width: 80%;
@@ -76,41 +80,39 @@ B {
   font-size: 23px;
 }
 
-.cabecalho{
+.cabecalho {
   background-color: #1E232C;
   color: white;
   z-index: 2;
   width: 100%;
   height: 10%;
-  font-size: 20px;  
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.t{
+.t {
   width: 100%;
   color: white;
 }
-.titulo,.subtitulo{
+
+.titulo,
+.subtitulo {
   height: 5px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
   font-size: 20px;
 }
 
-.subtitulo{
-  
-
-
+.subtitulo {
   font-weight: normal;
-
 }
-.sexo_check{
+
+.sexo_check {
   background-color: #20242c;
   width: 70px;
   height: 70px;
@@ -120,12 +122,15 @@ B {
   align-items: center;
   justify-items: center;
   border-radius: 5px;
+  margin-right: 20px;
+
 }
 
-.radio_sexo{
+.radio_sexo {
   display: none;
 }
-.radio_sexo:checked + .sexo_check{
+
+.radio_sexo:checked+.sexo_check {
   background-color: #AF1521;
 }
 
@@ -134,14 +139,15 @@ B {
     font-size: 20px;
   }
 }
+
 @media (max-width: 320px) {
   B {
     font-size: 17px;
   }
 }
+
 @media (max-width: 1000px) {
   .tabela {
     width: 95%;
   }
 }
-

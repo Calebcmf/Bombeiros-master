@@ -94,6 +94,11 @@
                 include("../avaliacao_cinematica/avaliacao_cinematica.html")
             ?>
         </div>
+        <div class="pagina9" id="sinais_sintomas">
+            <?php
+                include("../sinais_sintomas/sinais_sintomas.html")
+            ?>
+        </div>
     </div>
     
 </body>
