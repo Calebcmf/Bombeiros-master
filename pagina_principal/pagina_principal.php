@@ -31,8 +31,8 @@
         <div class="fundo_popup-escuro" id="fundo_popup-escuro">
         </div>
         <div class="logos">
-            <img src="../img/logo_medicina.png" width="40%">
-            <img src="../img/logo_pequena.png" width="40%">
+            <img src="../img/logo_medicina.png" class="imagem_logo">
+            <img src="../img/logo_pequena.png" class="imagem_logo">
         </div>
         <div class="opcoes">
             <a class="opition" href="#dados_paciente">Dados do Paciente</a>
@@ -42,6 +42,8 @@
             <a class="opition" href="#nivel_consciencia">Nível de Consciencia</a>
             <a class="opition" href="#salvar_imagem">Imagem da Ocorrência</a>
             <a class="opition" href="#objetos_recolhidos">Objetos Recolhidos</a>
+            <a class="opition" href="#avaliacao_cinematica">Avaliação da Cinemática</a>
+            <a class="opition" href="#sinais_sintomas">Sinais e Sintomas</a>
         </div>
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>

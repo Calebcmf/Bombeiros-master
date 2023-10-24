@@ -22,46 +22,13 @@ img{
 
 }
 
-
-.cabecalho{
-    background-color: #1E232C;
-    color: white;
-    padding: 3%;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.titulo,.subtitulo{
-    height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 30px;
-}
-.subtitulo{
-    height: 25%;
-    font-size: 12.5px;
-    font-weight: normal;
-    align-items: baseline;
-}
-
-
 .container{
     height: 500px;
     width: 500px;
     position: relative;
     display: flex;
     flex-direction: column;
- 
-    
 }
-
 
 .d1{
     width: 500px;
