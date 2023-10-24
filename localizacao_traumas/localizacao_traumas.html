@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../localizacao_traumas/localizacao_traumas.css">
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+
+        <script src="../localizacao_traumas/localizacao_traumas.js"> </script>
+  
+</head>
+<body>
+    
+    <div class="cabecalho">
+        <div class="titulo">
+            Localizacao 
+        </div>
+        <div class="subtitulo">
+            dos Traumas
+        </div>
+    </div>
+    
+    <div class="mapa">
+    <div class="container">
+            <div class="d1">
+                <div class="d2">
+                    <img src="../img/Cabeça.png" class="cabeca h" onclick="criar(1,'Cabeca')">
+                </div>
+                <div class="d2 c">
+                <img src="../img/Pescoço.png"       class="pescoco h " onclick="criar(1,'Pescoço')">   </img>
+                </div>
+            </div>
+            <div class="d1 r">
+                <div class="d3 b">
+                <img src="../img/Bíceps Direito.png"     class="bicepsD h " onclick="criar(1,'Biceps Direito')">   </img>   
+                </div>
+                <div class="d3">
+                <img src="../img/Tríceps Direito.png"    class="tricepsD h" onclick="criar(1,'Tríceps Direito')">  </img>
+                </div>
+                <div class="d3">
+                <img src="../img/Peito Direito.png"      class="peitoD h " onclick="criar(1,'Peito Direito')">    </img>
+                </div>
+                <div class="d3">
+                <img src="../img/Peito Esquerdo.png"      class="peitoE h " onclick="criar(1,'Peito Esquerdo')">    </img>
+                </div>
+                <div class="d3">
+                <img src="../img/Tríceps Esquerdo.png"    class="tricepsE h"onclick="criar(1,'Tríceps Esquerdo')">  </img> 
+                </div>
+                <div class="d3 b">
+                <img src="../img/Bíceps Esquerdo.png"     class="bicepsE h"onclick="criar(1,'Bíceps Esquerdo')">   </img> 
+                </div>
+            </div>
+            <div class="d1 r r2">
+            <div class="d3 q">
+                <img src="../img/Mão Direita.png"    class="maoD h " onclick="criar(1,'Mão Direita')">  </img>
+            </div>
+                <div class="d3"></div>
+                <div class="d3">
+                    <img src="../img/Barriga Direita.png"    class="barrigaD h " onclick="criar(1,'Barriga Direita')">  </img>
+                </div>
+                <div class="d3">
+                <img src="../img/Barriga Esquerda.png "    class="barrigaE h " onclick="criar(1,'Barriga Esquerda')">  </img>
+                </div>
+                <div class="d3"></div>
+            <div class="d3 q ">
+                <img src="../img/Mão Esquerda.png"    class="maoE h " onclick="criar(1,'Mão Esquerda')">  </img>
+            </div>
+            </div>
+            <div class="d1 cx">
+                <div class="d2 c">
+                <img src="../img/Pélvis.png"        class="pelvis h " onclick="criar(1,'Pélvis')" >    </img>
+                </div>
+                <div class="d2 s">
+                <div class="d3 v ">
+                <img src="../img/Coxa Esquerda.png"       class="coxaE h " onclick="criar(1,'Coxa Esquerda')" >     </img>
+                </div>
+                <div class="d3 v ">
+                <img src="../img/Coxa Direita.png"       class="coxaD h "  onclick="criar(1,'Coxa Direita')">     </img>
+                </div>
+                </div>
+            </div>
+            <div class="d1 r">
+                <div class="d4">
+                <img src="../img/Perna Esquerda.png" class="pernaE h "   onclick="criar(1,'Perna Esquerda')"> </img>
+                </div>
+                <div class="d4">
+                <img src="../img/Perna Direita.png"class="pernaD h "  onclick="criar(1,'Pernsa Direita')" >     </img>
+                </div>
+            </div>
+
+            <div class="d1">
+                <div class="d2 f">
+                   
+                </div>
+                <div class="d2">
+                <div class="d4 s">
+                    <img src="../img/Pé Direito.png"         class="peD h "     onclick="criar(1,'Pé Direito')">       </img>
+                    </div>
+                    <div class="d4 s ">
+                    <img src="../img/Pé Esquerdo.png"         class="peE h"     onclick="criar(1,'Pé Esquerdo')">       </img> 
+                    </div>
+                </div>
+            </div>
+            
+        </div>  
+    </div>
+
+    
+    <div class="ContainerFerimentos">
+            <div class="FerFra"></div>
+                      <div class="FerFra"></div>
+    </div>
+
+    
+    <form class="popUP" id="form1"  method="post" >
+    
+            <div class="m">
+                <div class="fechar" onclick="fechar(1)">X</div>
+                <div class="quadI">
+                    <img src="../img/Cabeca.png" width  ="50%" height="auto" id="im" alt=""></img>
+                </div>
+                
+                <p id="mtd" >Cabeça<p>
+            </div>
+        <div class="m m1">
+            <div class="tri">
+                <div class="escolha">
+                    <input type="checkbox" id="check_1" name="check_1" class = "tra">
+                    <label for="check_1">FRA/LUX/ENT</label>    
+                </div>
+                
+                <div class="escolha">
+                    <input type="checkbox" id="check_2" name="check_2" class = "tra">
+                    <label for="check_2">ESVICERAÇÃO</label>  
+                </div>
+                
+                <div class="escolha">
+                    <input type="checkbox" id="check_3" name="check_3" class = "tra">
+                    <label for="check_3">QUEIMADURA</label>  
+                </div>
+            </div>
+
+            <div class="tri">
+                <div class="escolha">
+                    <input type="checkbox" id="check_4" name="check_4" class = "tra">
+                    <label for="check_4">FERIMENTOS</label>  
+                </div>
+
+                <div class="escolha">
+                    <input type="checkbox" id="check_5" name="check_5"class = "tra">
+                    <label for="check_5">F.A.B/F.A.F</label> 
+                </div>
+
+                <div class="escolha">
+                    <input type="checkbox" id="check_6" name="check_6" class = "tra">
+                    <label for="check_6">QUEIMADURA</label>
+                </div>
+            </div>
+
+            <div class="tri">
+                <div class="escolha">
+                    <input type="checkbox" id="check_7" name="check_7"class = "tra">
+                    <label for="check_7">HEMARROGIA</label>
+                </div>
+                
+                <div class="escolha">
+                    <input type="checkbox" id="check_8" name="check_8"class = "tra">
+                    <label for="check_8">AMPUTAÇÃO</label>
+                </div>
+                
+                <div class="escolha">
+                    <input type="checkbox" id="check_9" name="check_9"class = "tra">
+                    <label for="check_9">QUEIMADURA</label>
+                </div>
+            </div>
+        </div> 
+        
+        <input type="submit" value="Enviar" name="Enviar" id="Enviar"  class="btnF">
+
+        
+    </form> 
+    
+    <div class="mudarC">
+        <div class="opcC">FRENTE</div>
+        <div class="opcC t">ATRÁS</div>
+    </div>
+
+        
+   
+</body>
+   
+    
+</html>

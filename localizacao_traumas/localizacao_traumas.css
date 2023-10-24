@@ -22,19 +22,52 @@ img{
 
 }
 
+
+.cabecalho{
+    background-color: #1E232C;
+    color: white;
+    padding: 3%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo,.subtitulo{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.subtitulo{
+    height: 25%;
+    font-size: 12.5px;
+    font-weight: normal;
+    align-items: baseline; 
+}
+
+
 .container{
     height: 500px;
     width: 500px;
     position: relative;
     display: flex;
     flex-direction: column;
+ 
+    
 }
+
 
 .d1{
     width: 500px;
     height: 100px;
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     flex-direction: column;
 }
 
@@ -43,14 +76,14 @@ img{
     justify-content: center;
     height: 75px;
   
-    border: 2px solid red;
+   /* border: 2px solid red; */
 }
 
 .d3{
     height: 75px;
     width: 50px;
     display: flex;
-    border: 2px solid red;
+   /* border: 2px solid red; */
 
 }
 
@@ -64,7 +97,7 @@ img{
 .d4{
     width: 40px;
     height: 120px;
-    border: 2px solid red;
+   /* border: 2px solid red; */
 }
 
 
@@ -324,8 +357,9 @@ p{
     display: flex;
 }
 .pagina{
-    height: 500px;
-    min-height: 500px;
+    height: 1200px;
+    min-height: 1200px;
+    
 }
 
 .mudarC{
@@ -355,11 +389,23 @@ p{
     margin-bottom: 10%;
 }
 
-.pagina{
-    height: 700px   ;
 
+.ContainerFerimentos{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 700px;
+    width: 60%;
+    margin-bottom: 5%;
+    border: 2px solid #AF1521;
 }
 
+.FerFra{
+    display: flex;
+    height: 200px;
+    width: 300px;
+    border: 2px solid #AF1521;
+}
 
 @media only screen and (max-width: 600px) {
     .fechar{
@@ -367,7 +413,7 @@ p{
     }
 
     .pagina{
-        height: 700px;
+        height: 1000px;
     }
     .popUP{
         width: 80%;
