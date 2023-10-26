@@ -1,13 +1,10 @@
 <?php
   
   include("../conecta.php");
+           
+              $parte = $_POST['parteCorpo'];
         
-
-        
-         
-            $parte = $_POST['parteCorpo'];
-
-
+            $parte = "indefinido";
             $fraluxent =    isset($_POST['check_1']) ? 1 : 0;
             $esviceracao =  isset($_POST['check_2']) ? 1 : 0;
             $queimadura =   isset($_POST['check_3']) ? 1 : 0;

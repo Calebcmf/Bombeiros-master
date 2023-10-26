@@ -66,7 +66,7 @@
         <br><br>
         <div class="pagina3" id="localizacao_traumas">
             <?php 
-                include("../localizacao_traumas/localizacao_traumas.php");
+                include("../localizacao_traumas/localizacao_traumas.html");
             ?>
         </div>
         <br><br>
