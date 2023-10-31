@@ -42,7 +42,7 @@
         </td>
         <td style="display: flex; flex-direction: row;">
           <input type="radio" name="sexo" id="masculino" class="radio_sexo">
-          <label for="masculino" class="sexo_check"><img src="../img/masc.png"></label> 
+          <label for="masculino" class="sexo_check"><img src="../img/masc.png"></label>
 
           <input type="radio" name="sexo" id="feminino" class="radio_sexo">
           <label for="feminino" class="sexo_check"><img src="../img/fem.png"></label>
@@ -64,17 +64,9 @@
           <input type="text" name="telefone" class="caixa">
         </td>
       </tr>
-      <tr>
-        <td>
-          Local da Ocorrência:
-        </td>
-        <td>
-          <input type="text" name="local" class="caixa">
-        </td>
-      </tr>
       <TR BGCOLOR=#1E232C>
         <td ALIGN="center" VALIGN="center" HEIGHT="40" COLSPAN="2" class="t">
-          Dados
+          Dados do Acompanhante
         </td>
       </TR>
       <tr>
@@ -93,9 +85,46 @@
           <input type="number" name="idadeAcompanhante" class="caixa1">
         </td>
       </tr>
+      <TR BGCOLOR=#1E232C>
+        <td ALIGN="center" VALIGN="center" HEIGHT="40" COLSPAN="2" class="t">
+          Local da Ocorrência
+        </td>
+      </TR>
+      <tr>
+        <td>
+          Local da Ocorrência:
+        </td>
+        <td>
+          <input type="text" id="location" class="caixa">
+        </td>
+      </tr>
     </table>
 
   </form>
 </body>
+<script>
+  // Função que pega a localização do dispositivo
+  function getDeviceLocation() {
+    // Verifica se o navegador tem suporte para geolocalização
+    if (navigator.geolocation) {
+      // Solicita a localização do dispositivo
+      navigator.geolocation.getCurrentPosition((position) => {
+        // Coloca a localização no input
+        const input = document.querySelector("#location");
+        input.value = `${position.latitude}, ${position.longitude}`;
+      }, (error) => {
+        // Erro ao obter a localização
+        console.log(error);
+      });
+    } else {
+      // Navegador sem suporte para geolocalização
+      console.log("O navegador não tem suporte para geolocalização.");
+    }
+  }
+
+  // Chama a função ao carregar a página
+  document.addEventListener("DOMContentLoaded", getDeviceLocation);
+
+</script>
 
 </html>
