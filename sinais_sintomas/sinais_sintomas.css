@@ -119,7 +119,6 @@ input.escolha_ss{
 .escolha_ss[type="checkbox"]:checked {
   position: absolute;
   left: -9999%;
-
 }
 
 .escolha_ss[type="checkbox"] + label {
@@ -144,6 +143,7 @@ input.escolha_ss{
   height: 40px;
   transition: 1s;
 }
+
 
 @media only screen and (min-width: 600px) {
     

@@ -232,7 +232,7 @@ button.fechar_popup {
     height: 40px;
     background-color: #1e232c;
     color: white;
-    font-size: 30px;
+    font-size: 32px;
     display: flex;
     align-content: center;
     align-items: center;
@@ -287,7 +287,7 @@ button.fechar_popup {
     }
 
     .titulo {
-        font-size: 28px;
+        font-size: 30px;
     }
 }
 
@@ -299,7 +299,7 @@ button.fechar_popup {
     }
 
     .titulo {
-        font-size: 25px;
+        font-size: 28px;
     }
 
 }
@@ -316,7 +316,7 @@ button.fechar_popup {
     }
 
     .titulo {
-        font-size: 23px;
+        font-size: 25px;
     }
 
 }
@@ -331,7 +331,7 @@ button.fechar_popup {
     }
 
     .titulo {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 
@@ -345,7 +345,7 @@ button.fechar_popup {
     }
 
     .titulo {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -359,6 +359,6 @@ button.fechar_popup {
     }
 
     .titulo {
-        font-size: 15px;
+        font-size: 18px;
     }
 }

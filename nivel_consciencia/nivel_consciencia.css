@@ -31,7 +31,7 @@ h1{
   font-size: 20px;
 }
 
-select {
+select.select_nc {
   width: 400px;
   height: 30px;
   border-radius: 15px;
