@@ -101,6 +101,22 @@
                 include("../sinais_sintomas/sinais_sintomas.html")
             ?>
         </div>
+        <div class="pagina10" id="anamnese_emergencia">
+            <?php
+                include("../anamnese_emergencia/anamnese_emergencia.html")
+            ?>
+        </div>
+        <div class="pagina11" id="anamnese_gestacional">
+            <?php
+                include("../anamnese_gestacional/anamnese_gestacional.html")
+            ?>
+        </div>
+        <div class="pagina12" id="anamnese_gestacional">
+            <?php
+                include("../materiais_utilizados/materiais_utilizados.html")
+            ?>
+        </div>
+       
     </div>
     
 </body>

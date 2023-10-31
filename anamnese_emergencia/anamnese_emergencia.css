@@ -1,0 +1,94 @@
+.texto{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+
+}
+
+.sinais{
+    display: flex;
+    background-color: #D9D9D9;
+    border: none;
+    transition: 2s;
+    margin-bottom: 2%;
+}
+
+.tc{
+    
+
+    color: #1E232C;
+    padding: 1%;
+
+    margin: 1%;
+    font-size: 16px;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.sinais:focus{
+    border: none;
+    outline: none;
+    border-radius: 0%;
+    transition: 2s; 
+}
+.opcoesE{
+    width: 50%;
+    height: 100%;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opc[type="radio"]{
+    height: 30px;
+    width: 30px;   
+    display: flex;
+    box-sizing: border-box;
+    outline: #1E232C;
+    margin:1%;
+    transition: .5s;
+}
+
+
+.opc[type="radio"]:checked{
+    box-sizing: border-box;
+    appearance: none;
+    background: #1E232C;
+    border: none;
+    outline: 10px solid #D9D9D9; 
+    width: 30px;  
+    height: 30px;  
+    transition: .5s;
+}
+
+.opc label{
+    display: inline-block;
+}
+
+.a{
+    width: 100%;
+    height: 50%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.p{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
