@@ -92,10 +92,18 @@
       </TR>
       <tr>
         <td>
-          Local da Ocorrência:
+          CEP:
         </td>
         <td>
-          <input type="text" id="location" class="caixa">
+          <input type="text" id="cep_local" class="caixa">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Local:
+        </td>
+        <td>
+          <input type="text" id="local" class="caixa">
         </td>
       </tr>
     </table>
@@ -103,28 +111,23 @@
   </form>
 </body>
 <script>
-  // Função que pega a localização do dispositivo
-  function getDeviceLocation() {
-    // Verifica se o navegador tem suporte para geolocalização
-    if (navigator.geolocation) {
-      // Solicita a localização do dispositivo
-      navigator.geolocation.getCurrentPosition((position) => {
-        // Coloca a localização no input
-        const input = document.querySelector("#location");
-        input.value = `${position.latitude}, ${position.longitude}`;
-      }, (error) => {
-        // Erro ao obter a localização
-        console.log(error);
-      });
-    } else {
-      // Navegador sem suporte para geolocalização
-      console.log("O navegador não tem suporte para geolocalização.");
-    }
+  navigator.geolocation.getCurrentPosition(function (posicao) {
+    var url = "http://nominatim.openstreetmap.org/reverse?lat=" + posicao.coords.latitude + "&lon=" + posicao.coords.longitude + "&format=json&json_callback=preencherDados";
+    var script = document.createElement('script');
+    script.src = url;
+    document.body.appendChild(script);
+  });
+
+
+
+  function preencherDados(dados) {
+    console.log(dados.address.postcode);
+    console.log(dados.address.city);
+    console.log(" ")
+
+    document.getElementById("cep_local").value = dados.address.postcode;
+    document.getElementById("local").value = dados.address.city;
   }
-
-  // Chama a função ao carregar a página
-  document.addEventListener("DOMContentLoaded", getDeviceLocation);
-
 </script>
 
 </html>
