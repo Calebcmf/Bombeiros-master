@@ -19,37 +19,41 @@
     <div class="container_nivel-consciencia">
         <div class="titulo2">
             Abertura Ocular <br>
-            <select name="format2" id="format2" class="select_nc">
-                <option selected disabled>Abertura Ocular</option>
-                <option>Espontânea</option>
-                <option>Comando Verbal</option>
-                <option>Estímulo Doloroso</option>
-                <option>Nenhuma</option>
+            <select name="format2" id="format2" class="select_nc" onclick="somarGCS();">
+                <option selected disabled value="0">Abertura Ocular</option>
+                <option value="4">Espontânea</option>
+                <option value="3">Comando Verbal</option>
+                <option value="2">Estímulo Doloroso</option>
+                <option value="1">Nenhuma</option>
             </select>
         </div>
 
         <div class="titulo3">
             Resposta Verbal <br>
-            <select name="format3" id="format3" class="select_nc">
-                <option selected disabled>Resposta Verbal</option>
-                <option></option>
-                <option></option>
-                <option></option>
-                <option value="nenhuma">Nenhuma Resposta</option>
+            <select name="format3" id="format3" class="select_nc" onclick="somarGCS();">
+                <option selected disabled value="0">Resposta Verbal</option>
+                <option value="4"></option>
+                <option value="3"></option>
+                <option value="2"></option>
+                <option value="1">Nenhuma Resposta</option>
             </select>
         </div>
 
         <div class="titulo4">
             Resposta Motora <br>
-            <select name="format4" id="format4" class="select_nc">
-                <option selected disabled>Resposta Motora</option>
-                <option></option>
-                <option></option>
-                <option></option>
-                <option></option>
-                <option></option>
-                <option value="nenhuma">Nenhuma</option>
+            <select name="format4" id="format4" class="select_nc" onclick="somarGCS();">
+                <option selected disabled value="0">Resposta Motora</option>
+                <option value="6"></option>
+                <option value="5"></option>
+                <option value="4"></option>
+                <option value="3"></option>
+                <option value="2"></option>
+                <option value="1">Nenhuma</option>
             </select>
+        </div>
+        <br>
+        <div class="gcs" style="display: flex; width: 50%; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+            Total(GCS): <input type="number" name="totalgcs" id="totalgcs" style="width: 30px; height: 20px;">
         </div>
     </div>
 </body>
