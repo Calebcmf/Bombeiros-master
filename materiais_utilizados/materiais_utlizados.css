@@ -8,7 +8,7 @@
 }
 
 .coluna,.coluna2{
-    width: 12.5%;
+    width: 25%;
     height: 75%;
     display: flex;
     flex-direction: column;
@@ -16,14 +16,14 @@
 }
 
 .coluna2{
-    width: 10%;
+    width: 15%;
 }
 
 .tituloCont{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 2px solid #75777D;
+
     width: 100%;
     height: 20%;
     color: white;
@@ -43,7 +43,7 @@ h1{
     height: 13%;
     display: flex;
     align-items: center;
-    padding-left: 5%;
+
     box-shadow: 0px 1px 1px 0px #363C48;
 }
 
@@ -74,7 +74,7 @@ h1{
 
 .bc label{
     display: inline-block;
-    
+   
 }
 
 
