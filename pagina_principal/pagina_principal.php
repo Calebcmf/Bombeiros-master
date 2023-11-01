@@ -44,6 +44,8 @@
             <a class="opition" href="#objetos_recolhidos">Objetos Recolhidos</a>
             <a class="opition" href="#avaliacao_cinematica">Avaliação da Cinemática</a>
             <a class="opition" href="#sinais_sintomas">Sinais e Sintomas</a>
+            <a class="opition" href="#anamnese_gestacional">Anamnese Gestacional</a>
+            <a class="opition" href="#materiais_utilizados">Materiais Utilizados</a>
         </div>
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
@@ -111,9 +113,9 @@
                 include("../anamnese_gestacional/anamnese_gestacional.html")
             ?>
         </div>
-        <div class="pagina12" id="anamnese_gestacional">
+        <div class="pagina12" id="materiais_utilizados">
             <?php
-                include("../materiais_utilizados/materiais_utilizados.html")
+                include("../materiais_utilizados/materiais_utlizados.html")
             ?>
         </div>
        

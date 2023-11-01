@@ -118,11 +118,11 @@ a.suporte {
 
 a.opition {
     text-decoration: none;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 a.opition:hover {
-    background-color: rgb(175, 50, 50);
+    background-color: rgb(47, 150, 219);
 
 }
 

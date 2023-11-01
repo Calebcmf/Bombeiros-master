@@ -28,3 +28,13 @@ function Mudar_Idade() {
         document.getElementsByName('format4')[0].options[5].innerHTML = "Extensão Anormal (Decerebração)";
     }
 }
+function somarGCS(){
+    var soma;
+    totalgcs = document.getElementById("totalgcs");
+    select1 = parseInt(document.getElementById("format2").value);
+    select2 = parseInt(document.getElementById("format3").value);
+    select3 = parseInt(document.getElementById("format4").value);
+
+    soma = (select1+select2+select3);
+    totalgcs.value = soma;
+}
