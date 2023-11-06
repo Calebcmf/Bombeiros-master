@@ -15,7 +15,24 @@
     background-color: #D9D9D9;
     border: none;
     transition: 2s;
+    width: 50%;
     margin-bottom: 2%;
+}
+
+.tempo{
+    width: 30%;
+    padding: 1%;
+    background-color: #D9D9D9;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tempo[type="time"]:checked{
+    border-bottom: 2px solid #1E232C;
 }
 
 .tc{
