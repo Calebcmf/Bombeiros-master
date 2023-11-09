@@ -4,7 +4,7 @@ html {
     height: 100vh;
     margin: 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     align-content: center;
     justify-items: center;
@@ -17,25 +17,21 @@ html {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     align-content: center;
     justify-items: center;
     justify-content: space-around;
 }
-
-.quadra{
-    background-color: #d52121;
-    height: 30px;
-    width: 30px;
+.erro{
+    color: red;
+    font-weight: bold;
 }
-
 .meio {
     width: 30%;
     height: 45%;
-    background-color: #272424;
+    background-color: #1e232c;
     display: flex;
-    position: relative;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -47,13 +43,11 @@ html {
     box-shadow: 1px 1px 1px 1px 10px rgba(0, 0, 0, 0.274);
     transition: 0.5s;
     text-indent: 20px;
-    letter-spacing:  0.1em;
-    overflow: hidden;
 }
 
 .botoes {
-    width: 85%;
-    height: 80px;
+    width: 90%;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,13 +55,14 @@ html {
     justify-items: center;
     justify-content: center;
     justify-content: space-around;
+    border-radius: 30%;
 }
 
 fieldset {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     width: 80%;
-    height: 85%;
+    height: 70%;
     font-size: 25px;
     border: none;
     text-indent: 10px;
@@ -75,7 +70,7 @@ fieldset {
 
 .caixa_larga {
     width: 95%;
-    height: 40px;
+    height: 45px;
     font-size: 80%;
     border: 2px black solid;
     border-radius: 30px;
@@ -89,13 +84,24 @@ fieldset {
     width: 87%;
 }
 
-.meio legend{
-    color: #efe9e9;
+a.voltar {
+    text-decoration: none;
+    cursor: pointer;
+    width: 45%;
+    height: 90%;
+    border-radius: 100px;
     font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: #cfcfcf;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     align-content: center;
-    overflow: hidden;
-
+    justify-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    text-indent: -1px;
 }
 
 .barra {
@@ -112,9 +118,8 @@ fieldset {
     top: 10px;
 }
 
-a.voltar:hover {
+a.voltar {
     background-color: white;
-    border: 2px rgb(51, 51, 51) solid;
 }
 
 a {
@@ -123,9 +128,8 @@ a {
 
 .formulario {
     height: 90%;
-    width: 90%;
+    width: 100%;
     display: flex;
-    position: absolute;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -133,15 +137,6 @@ a {
     justify-content: center;
     justify-content: space-around;
     -webkit-user-select: none;
-    background-color: #3a3737;
-    inset: 4px;
-    padding: 12px 20px;
-    overflow: hidden;
-    border-radius: 10px;
-    animation: slideInUp 1.5s;
-    box-shadow: 1px 1px 1px 1px 10px rgba(0, 0, 0, 0.274);
-    transition: 0.5s;
-    text-indent: 20px;
     /* Safari */
     -moz-user-select: none;
     /* Firefox */
@@ -151,23 +146,17 @@ a {
     /* Versões padrão */
 }
 
-.titulo{
-    background-color: #d5212100;
-    margin-bottom: 20px;
-    font-family: Verdana;
-    font-size: 15px;
-}
 .continuar {
     text-decoration: none;
     cursor: pointer;
     width: 45%;
-    height: 100%;
-    border-radius: 30px;
+    height: 90%;
+    border-radius: 100px;
     border: none;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    background-color: #620f0f;
+    background-color: #213150;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -175,12 +164,16 @@ a {
     justify-items: center;
     justify-content: center;
     transition: 0.5s;
-    border: 2px black solid;
   }
 
 .continuar:hover {
-    background-color: #d52121;
-    border: 2px rgb(42, 18, 18) solid;
+    background-color: #2c59b4;
+    border: 1px solid rgba(255, 255, 255, 0.699);
     color: white;
     cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
+}
+.erro{
+    color: red;
+    font-weight: bold;
 }
