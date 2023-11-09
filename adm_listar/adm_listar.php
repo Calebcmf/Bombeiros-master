@@ -1,5 +1,5 @@
 <?php
-include("../conecta.php");
+include("conecta.php");
 $nome_paciente = $_POST['nome_paciente'];
 $id_paciente = $_POST['id_paciente'];
 $local_ocorrencia = $_POST['local_ocorrencia'];

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login_adm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Entrar Administrador</title>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="barra">
+            <img src="../img/logo_pequena.png" height="70%">
+        </div>
+        <div class="meio">
+            <form class="formulario" id="loginForm" action="loginbomb.php" method="post">
+                <fieldset>
+                    <legend>Login Administrador</legend>
+                    <div class="texto"> E-mail:</div>
+                    <input type="text" class="caixa_larga" id="email" name="email">
+                    <br>
+                    <div class="texto">Senha:</div>
+                    <input type="password" class="caixa_larga" id="senha" name="senha">
+                    <a href="../login_bomb/login.html" class="redirecionamento">Entrar como Bombeiro</a>
+                </fieldset>
+                <div class="botoes">
+                    <button type="submit" class="continuar">Login</button>
+                </div>
+            </form>
+            <div id="mensagemErro" class="erro"></div>
+        </div>
+    </div>
+
+    <!-- Inclua a biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Intercepta o envio do formulário
+            $("#loginForm").submit(function (event) {
+                event.preventDefault(); // Impede o envio tradicional do formulário
+                var formData = $(this).serialize(); // Obtém os dados do formulário
+
+                $.ajax({
+                    type: "POST",
+                    url: "login2.php", // Arquivo PHP que irá processar a solicitação
+                    data: formData,
+                    success: function (response) {
+                        if (response === "success") {
+                            // Login bem-sucedido, redireciona para a página de destino
+                            window.location.href = "cadastro.html";
+                        } else {
+                            // Exibe a mensagem de erro
+                            $("#mensagemErro").text("Senha ou email incorretos.");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

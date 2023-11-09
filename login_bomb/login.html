@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Entrar Bombeiro</title>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="barra">
+            <img src="../img/logo_pequena.png" height="70%">
+        </div>
+        <div class="meio">
+            <form class="formulario" id="loginForm" method="post">
+                <fieldset>
+                    <legend>Login Bombeiro</legend>
+                    <div class="texto"> E-mail:</div>
+                    <input type="text" class="caixa_larga" id="email" name="email">
+                    <br>
+                    <div class="texto">Senha:</div>
+                    <input type="password" class="caixa_larga" id="senha" name="senha">
+                    <a href="../login_adm/login_adm.html" class="redirecionamento">Entrar como Administrador</a>
+                </fieldset>
+                <div class="botoes">
+                    <button type="submit" class="continuar">Login</button>
+                </div>
+            </form>
+            <div id="mensagemErro" class="erro"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").submit(function (event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "login.php",
+                    data: formData,
+                    success: function (response) {
+                        if (response === "success") {
+                            window.location.href = "../pagina_principal/pagina_principal.php";
+                        } else {
+                            // Exibe a mensagem de erro
+                            $("#mensagemErro").text("Senha ou email incorretos.");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -44,6 +44,7 @@
             <a class="opition" href="#objetos_recolhidos">Objetos Recolhidos</a>
             <a class="opition" href="#avaliacao_cinematica">Avaliação da Cinemática</a>
             <a class="opition" href="#sinais_sintomas">Sinais e Sintomas</a>
+            <a class="opition" href="#anamnese_emergencia">Anamnese de Emergência</a>
             <a class="opition" href="#anamnese_gestacional">Anamnese Gestacional</a>
             <a class="opition" href="#materiais_utilizados">Materiais Utilizados</a>
         </div>
