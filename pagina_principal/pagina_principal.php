@@ -109,7 +109,7 @@
                 include("../anamnese_emergencia/anamnese_emergencia.html")
             ?>
         </div>
-        <div class="pagina11" id="anamnese_gestacional">
+        <div class="pagina11 " id="anamnese_gestacional">
             <?php
                 include("../anamnese_gestacional/anamnese_gestacional.html")
             ?>

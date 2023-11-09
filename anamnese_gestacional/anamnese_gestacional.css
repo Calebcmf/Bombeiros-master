@@ -1,44 +1,20 @@
-.texto{
-    width: 100%;
-    height: 70px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 12px;
 
-}
 
 .sinais{
     display: flex;
     background-color: #D9D9D9;
     border: none;
     border-bottom: 0px solid transparent;
-    transition: 2s;
+    transition: .5s;
     margin-bottom: 2%;
 }
 
-.tc{
-    
-
-    color: #1E232C;
-    padding: .5%;
-    border-bottom: 10px solid #ACACAC;
-    margin: 1%;
-    font-size: 16px;
-    display: flex;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    
-}
 
 .sinais:focus{
     border: none;
     outline: none;
     border-radius: 0%;
-    transition: 2s; 
+    transition: .5s; 
     border-bottom: 10px solid #ACACAC;
 }
 .opcoesE{

@@ -1,27 +1,32 @@
 .texto{
-    width: 100%;
-    height: 70px;
+    width: 50%;
+    height: 100px;
     font-size: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+  
     flex-direction: column;
     font-size: 12px;
 
 }
 
+.ae,.af{
+    height: 5%;
+}
+
+
 .sinais{
     display: flex;
     background-color: #D9D9D9;
-    border: none;
-    transition: 2s;
+    border: 0px;
+    transition: 1s;
     width: 50%;
+    height: 50px;
     margin-bottom: 2%;
 }
 
 .tempo{
     width: 30%;
-    padding: 1%;
+   
     background-color: #D9D9D9;
     outline: none;
     border: none;
@@ -32,29 +37,33 @@
 }
 
 .tempo[type="time"]:checked{
-    border-bottom: 2px solid #1E232C;
+    border-bottom: 2px solid #75777D;
 }
 
 .tc{
     
 
     color: #1E232C;
-    padding: 1%;
 
-    margin: 1%;
+    margin-top: 20px ;
+    border-bottom: 10px solid #C0C0C0;
+
     font-size: 16px;
     display: flex;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    
+    width: 100%;
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+ 
+ 
 }
 
 .sinais:focus{
     border: none;
     outline: none;
     border-radius: 0%;
-    transition: 2s; 
+    
+    border-bottom: 5px solid #B1B1B1;
+    transition: .5s; 
 }
 .opcoesE{
     width: 50%;
@@ -66,10 +75,15 @@
 }
 
 .opc[type="radio"]{
-    height: 30px;
-    width: 30px;   
+    height: 25px;
+    width: 25px;   
     display: flex;
+    
+    appearance: none;
+    border: 1px solid #B1B1B1;
+    border-radius: 50%;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5) ;
     outline: #1E232C;
     margin:1%;
     transition: .5s;
@@ -81,6 +95,7 @@
     appearance: none;
     background: #1E232C;
     border: none;
+    border-radius: 0%;
     outline: 10px solid #D9D9D9; 
     width: 30px;  
     height: 30px;  
@@ -95,10 +110,11 @@
     width: 100%;
     height: 50%;
     display: flex;
-
+    margin-top: 10px;
+   
     align-items: center;
-    justify-content: center;
-    margin-bottom: 3%;
+   
+    
 }
 
 .p{
