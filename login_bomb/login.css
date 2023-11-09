@@ -62,7 +62,7 @@ fieldset {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     width: 80%;
-    height: 70%;
+    height: 55%;
     font-size: 25px;
     border: none;
     text-indent: 10px;
@@ -75,33 +75,6 @@ fieldset {
     border: 2px black solid;
     border-radius: 30px;
     padding-left: 10px;
-}
-
-.escrita {
-    color: black;
-    font-size: 120%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 87%;
-}
-
-a.voltar {
-    text-decoration: none;
-    cursor: pointer;
-    width: 45%;
-    height: 90%;
-    border-radius: 100px;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
-    background-color: #cfcfcf;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    transition: 0.5s;
-    text-indent: -1px;
 }
 
 .barra {
@@ -124,6 +97,11 @@ a.voltar {
 
 a {
     cursor: pointer;
+}
+.redirecionamento{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
 .formulario {
