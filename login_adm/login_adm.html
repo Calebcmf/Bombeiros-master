@@ -5,34 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="stylesheet" type="text/css" href="login_adm.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        .erro {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
-    <title>Entrar</title>
+    <title>Entrar Administrador</title>
 </head>
 
 <body>
     <div class="fundo">
         <div class="barra">
-            <img src="../imagens/noar.png" height="70%">
+            <img src="../img/logo_pequena.png" height="70%">
         </div>
         <div class="meio">
             <form class="formulario" id="loginForm" action="loginbomb.php" method="post">
                 <fieldset>
-                    <legend>ENTRAR</legend>
+                    <legend>Login Administrador</legend>
                     <div class="texto"> E-mail:</div>
                     <input type="text" class="caixa_larga" id="email" name="email">
                     <br>
                     <div class="texto">Senha:</div>
                     <input type="password" class="caixa_larga" id="senha" name="senha">
+                    <a href="../login_bomb/login.html" class="redirecionamento">Entrar como Bombeiro</a>
                 </fieldset>
                 <div class="botoes">
-                    <a href="adm_principal" target="_self" class="voltar">Voltar</a>
                     <button type="submit" class="continuar">Login</button>
                 </div>
             </form>
