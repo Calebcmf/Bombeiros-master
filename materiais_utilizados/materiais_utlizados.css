@@ -95,6 +95,15 @@ h1{
    
 }
 
+.cabecalho{
+    height: 150px;
+   
+}
+
+.sutitulo{
+    height: 100px;
+}
+
 
 .contCheck[type="checkbox"]{
     width: 20px;
@@ -120,6 +129,59 @@ h1{
     display: flex;
     background-color: #363C48;
     border: 15px solid #1E232C;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .coluna,.coluna2 {
+        display: flex;
+        width: 80%;
+        
+    }
+    .contD{
+        flex-direction: column;
+      
+        justify-content: baseline;
+        justify-self: baseline;
+        height: 2000px;
+    }
+
+    .campoCont{
+        height: 20%;
+        
+        
+    }
+
+    .contCheck[type="checkbox"]{
+        height: 80%;
+        width: 22%;
+    }
+    
+
+    .bc[type="radio"]{
+        height: 50%;
+        width: 10%;
+    
+    }
+    
+
+    .qn{
+        align-items: center;
+        justify-content: center;
+    }
+   
+    .pagina12{
+        height: 4500px;
+        display: flex;
+    }
+
+    .coluna2,.coluna{
+        height: 500px;
+    }
+
+   
+
 }
 
 

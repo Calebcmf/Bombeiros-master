@@ -40,7 +40,7 @@ input.oco{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
    
     overflow-y: auto;
 }
@@ -139,12 +139,21 @@ input.oco{
   margin-bottom: 10px;
 }
 
+
+
 .oco[type="checkbox"]:checked + label {
   border-bottom: 1px solid white;
   color: white;
   background-color: #AF1521;
   height: 40px;
   transition: 1s;
+}
+
+.btnPesq{
+    width: 50%;
+    height: 20px;
+    background-color: #AF1521;
+    display: flex;
 }
 
 @media only screen and (min-width: 600px) {
@@ -178,6 +187,7 @@ input.oco{
         padding: 1%;
         height: 400px;
         width: 50%;
+
         max-height: 400px;
     }
 
