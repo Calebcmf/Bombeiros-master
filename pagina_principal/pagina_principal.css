@@ -21,7 +21,9 @@ body {
 .pagina9,
 .pagina10,
 .pagina11,
-.pagina12 {
+.pagina12,
+.pagina13,
+.pagina14{
     width: 100%;
     height: auto;
     display: flex;
@@ -52,7 +54,6 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    background-color: rgb(15, 80, 153);
 }
 
 .imagem_logo {
@@ -78,7 +79,7 @@ a.suporte {
 .menu {
     width: 20%;
     height: 100%;
-    background-color: rgb(15, 80, 153);
+    background-color: #1d4983;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

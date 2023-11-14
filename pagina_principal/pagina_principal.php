@@ -39,7 +39,7 @@
             <a class="opition" href="#tipo_ocorrencia">Tipo de Ocorrência</a>
             <a class="opition" href="#localizacao_traumas">Localização Traumas</a>
             <a class="opition" href="#observacoes">Observações Importantes</a>
-            <a class="opition" href="#nivel_consciencia">Nível de Consciencia</a>
+            <a class="opition" href="#nivel_consciencia">Nível de Consciência</a>
             <a class="opition" href="#salvar_imagem">Imagem da Ocorrência</a>
             <a class="opition" href="#objetos_recolhidos">Objetos Recolhidos</a>
             <a class="opition" href="#avaliacao_cinematica">Avaliação da Cinemática</a>
@@ -47,6 +47,7 @@
             <a class="opition" href="#anamnese_emergencia">Anamnese de Emergência</a>
             <a class="opition" href="#anamnese_gestacional">Anamnese Gestacional</a>
             <a class="opition" href="#materiais_utilizados">Materiais Utilizados</a>
+            
         </div>
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
@@ -117,6 +118,11 @@
         <div class="pagina12" id="materiais_utilizados">
             <?php
                 include("../materiais_utilizados/materiais_utlizados.html")
+            ?>
+        </div>
+        <div class="pagina13" id="sinais_vitais">
+            <?php
+                include("../sinais_vitais/sinais_vitais.html")
             ?>
         </div>
        
