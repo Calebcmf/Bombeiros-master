@@ -26,32 +26,42 @@ input.oco{
     background-color: transparent;
   
     border: none;
-    border-bottom: 2px solid #C1121F;
+    border-bottom: 2px solid #1272c1;
 }
 
 
 
-.tipos{
-    background-color: #C0C0C0;
+
+.tiposO {
+    background-color: #c5c5c5;
     width: 80%;
     height: 250px;
     max-height: 250px;
-    
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-   
+    align-items: center;
     overflow-y: auto;
+
+    
 }
 
-.tipos{
+.tiposO {
     grid-template-columns: 100%;
     display: grid;
-    padding: 3%;
-}
 
-.c3{
+
+    grid-template-columns: repeat(1, 1fr);
+        
+        grid-auto-rows: 50%;
+        padding-top: 240%;
+        height: 500px;
+        width: 80%;
+
+        max-height: 200px;
+    }
+
+    .c3{
     background-color: #555555;
 }
 
@@ -78,7 +88,7 @@ input.oco{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #AF1521;
+    background-color: #1272c1;
     padding-bottom: 5%;
     padding-top: 2.5%;
     color: white;
@@ -104,7 +114,7 @@ input.oco{
 
 .esco{
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +136,7 @@ input.oco{
   
 
   cursor: pointer;
-  height: 35px;
+  height: 130%;
   width: 80%;
   font-size: 15px;
   display: flex;
@@ -135,8 +145,8 @@ input.oco{
   justify-content: center;
   border-bottom: 1px solid #1E232C;
   color: white;
-  background-color: #5B5B5B;
-  margin-bottom: 10px;
+  background-color: #1d4983;
+  
 }
 
 
@@ -144,29 +154,29 @@ input.oco{
 .oco[type="checkbox"]:checked + label {
   border-bottom: 1px solid white;
   color: white;
-  background-color: #AF1521;
-  height: 40px;
+  background-color: #0a599b;
+  height: 150%;
   transition: 1s;
 }
 
 .btnPesq{
     width: 50%;
     height: 20px;
-    background-color: #AF1521;
+    background-color: #167ccf;
     display: flex;
 }
 
 @media only screen and (min-width: 600px) {
     
     .oco[type="checkbox"] + label{
-        height: 50%;
+        height: 100%;
     }
 
     .oco[type="checkbox"]:checked + label {
         border-bottom: 1px solid white;
         color: white;
-        background-color: #AF1521;
-        height: 60%;
+        background-color: #1272c1;
+        height: 125%;
         transition: 1s;
       }
 
@@ -181,14 +191,15 @@ input.oco{
         width: 100%;
     }
 
-    .tipos{
+    .tiposO{
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 30%;
-        padding: 1%;
-        height: 400px;
+        
+        grid-auto-rows: 50%;
+        padding-top: 35%;
+        height: 500px;
         width: 50%;
 
-        max-height: 400px;
+        max-height: 200px;
     }
 
    
@@ -198,7 +209,6 @@ input.oco{
     }
    
   }
-
 
 
 

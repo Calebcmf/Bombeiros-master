@@ -139,6 +139,7 @@ input.oco_ac {
 .oco_ac[type="checkbox"]+label:hover {
     background-color: #0a599b;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.548);
+    transition: 0.5s;
 }
 
 
@@ -154,6 +155,7 @@ input.oco_ac {
 
     .oco_ac[type="checkbox"]+label {
         height: 50%;
+        transition: 0.5s;
     }
 
     .oco_ac[type="checkbox"]:checked+label {
