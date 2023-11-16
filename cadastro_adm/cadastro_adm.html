@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro_adm.css">
+    <title>Cadastro de Bombeiros</title>
+</head>
+
+<script type="text/javascript" src="../Scripts/jquery-1.8.2.min.js"></script>
+
+<script type="text/javascript">
+    function Listar() {
+        var dados = $('#form1').serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "cadastro_adm.php",
+            data: dados,
+            dataType: 'json',
+            success: function (meu_json) {
+                if (meu_json.error) {
+                    // Exibir a mensagem de erro
+                    $('#mensagem').text(meu_json.error);
+                    $('#mensagem').css('color', 'red');
+                    $('#mensagem').show();
+                } else {
+                    var valores = meu_json;
+                    var lista = valores.empregados;
+
+                    for (x = 0; x < lista.length; x++) {
+                        console.log(lista[x].nome);
+                        console.log(lista[x].email);
+                        console.log(lista[x].senha);
+                        console.log(lista[x].telefone);
+                    }
+
+                    // Exibir a mensagem de cadastro concluído
+                    $('#mensagem').text('Cadastro concluído!');
+                    $('#mensagem').css('color', 'green');
+                    $('#mensagem').show();
+
+                    // Limpar o formulário após o sucesso
+                    $('#form1')[0].reset();
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Ocorreu um erro ao enviar os dados: ' + error);
+            },
+            beforeSend: function (xhr) {
+                // Faz algo antes do envio, como exibir uma animação por exemplo.
+            },
+            complete: function (xhr, status) {
+                // Faz algo após a conclusão, como ocultar uma animação por exemplo.
+            },
+            timeout: 5000
+        });
+    }
+</script>
+
+<body>
+    <div class="fundo">
+        <div class="barra">
+            <img src="../img/logo_pequena.png" height="70%">
+        </div>
+        <div class="meio">
+            <form class="formulario" id="form1" action="cadastro_adm.php" method="post">
+                <fieldset>
+                    <legend>Cadastro de Administrador</legend>
+                    <div class="texto">E-mail:</div>
+                    <input type="text" class="caixa_larga" id="email" name="email">
+                    <br>
+                    <div class="texto">Nome:</div>
+                    <input type="text" class="caixa_larga" id="nome" name="nome">
+                    <br>
+                    <div class="texto">Telefone:</div>
+                    <input type="text" class="caixa_larga" id="telefone" name="telefone">
+                    <br>
+                    <div class="texto">Senha:</div>
+                    <input type="password" class="caixa_larga" id="senha" name="senha">
+                </fieldset>
+                <div class="botoes">
+                    <a href="../adm/adm_principal.html" target="_self" class="voltar">Voltar</a>
+                    <input type="button" name="enviar" class="continuar" value="Enviar" onclick="Listar();" />
+                </div>
+            </form>
+            
+            <!-- Mensagem de cadastro concluído -->
+            <div id="mensagem" style="display: none; color: green;">Cadastro concluído!</div>
+        </div>
+    </div>
+</body>
+</html>

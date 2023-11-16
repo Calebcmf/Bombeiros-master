@@ -1,0 +1,172 @@
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+
+.fundo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+.meio {
+    width: 30%;
+    height: 60%;
+    background-color: #1e232c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    animation: slideInUp 1.5s;
+    box-shadow: 1px 1px 1px 1px 10px rgba(0, 0, 0, 0.274);
+    transition: 0.5s;
+    text-indent: 20px;
+}
+
+.botoes {
+    width: 85%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 30%;
+}
+
+fieldset {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    width: 80%;
+    height: 80%;
+    font-size: 25px;
+    border: none;
+    text-indent: 10px;
+}
+
+.caixa_larga {
+    width: 95%;
+    height: 45px;
+    font-size: 80%;
+    border: 2px black solid;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+.escrita {
+    color: black;
+    font-size: 120%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 87%;
+}
+
+a.voltar {
+    text-decoration: none;
+    cursor: pointer;
+    width: 45%;
+    height: 90%;
+    border-radius: 100px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: #cfcfcf;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    text-indent: -1px;
+}
+
+.barra {
+    width: 85%;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    animation: slideInDown 1.5s;
+    position: fixed;
+    top: 10px;
+}
+
+a.voltar:hover {
+    background-color: white;
+}
+
+a {
+    cursor: pointer;
+}
+
+.formulario {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Versões padrão */
+}
+
+.continuar {
+    text-decoration: none;
+    cursor: pointer;
+    width: 45%;
+    height: 90%;
+    border-radius: 100px;
+    border: none;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: #213150;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+
+.continuar:hover {
+    background-color: #2c59b4;
+    border: 1px solid rgba(255, 255, 255, 0.699);
+    color: white;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
+}
