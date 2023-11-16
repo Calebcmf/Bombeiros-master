@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
     <title>Página Principal</title>
     <link rel="stylesheet" href="pagina_principal.css">
     <script src="pagina_principal.js"></script>
@@ -45,9 +46,9 @@
             <a class="opition" href="#avaliacao_cinematica">Avaliação da Cinemática</a>
             <a class="opition" href="#sinais_sintomas">Sinais e Sintomas</a>
             <a class="opition" href="#anamnese_emergencia">Anamnese de Emergência</a>
-            <a class="opition" href="#anamnese_gestacional">Anamnese Gestacional</a>
+            <a class="opition" href="#anamnese_gestacional" id="menu_anamnese" style="display: none;">Anamnese Gestacional</a>
             <a class="opition" href="#materiais_utilizados">Materiais Utilizados</a>
-            
+            <a class="opition" href="#sinais_vitais">Sinais Vitais</a>            
         </div>
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
@@ -110,7 +111,7 @@
                 include("../anamnese_emergencia/anamnese_emergencia.html")
             ?>
         </div>
-        <div class="pagina11 " id="anamnese_gestacional">
+        <div class="pagina11" id="anamnese_gestacional">
             <?php
                 include("../anamnese_gestacional/anamnese_gestacional.html")
             ?>
