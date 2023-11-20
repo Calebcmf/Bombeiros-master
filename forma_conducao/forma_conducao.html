@@ -4,31 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forma_conducao.css">
+    <link rel="stylesheet" href="../forma_conducao/forma_conducao.css">
     <title>Forma de Condução</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', (event) => {
+                    // Desmarque as outras checkboxes
+                    checkboxes.forEach(otherCheckbox => {
+                        if (otherCheckbox !== event.target) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div class="cabecalho">
-        <div class="titulo">
+    <div class="fundo">
+        <div class="title23">
             Forma de Condução
         </div>
-        <div class="subtitulo">
+        <br>
+        <div class="tabela2">
+            <table border="2">
+                <tr>
+                    <td>DEITADA</td>
+                    <td>
+                        <form action="formaconducao.php" method="post">
+                            <input type="checkbox" name="resposta1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>SEMI-SENTADA</td>
+                    <td>
+                        <input type="checkbox" name="resposta2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>SENTADA</td>
+                    <td>
+                        <input type="checkbox" name="resposta3">
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" name="enviar">
+            </form>
         </div>
     </div>
-    <form class="tipos">
-        <div class="esco_ac">
-            <input type="radio" id="esco_1" class="oco_ac" name="forma_conduçao">
-            <label for="esco_1" class="check">DEITADA</label>
-        </div>
-        <div class="esco_ac">
-            <input type="radio" id="esco_2" class="oco_ac" name="forma_conduçao">
-            <label for="esco_2" class="check">SEMI-DEITADA</label>
-        </div>
-        <div class="esco_ac">
-            <input type="radio" id="esco_3" class="oco_ac" name="forma_conduçao">
-            <label for="esco_3" class="check">SENTADA</label>
-        </div>
 </body>
 
 </html>

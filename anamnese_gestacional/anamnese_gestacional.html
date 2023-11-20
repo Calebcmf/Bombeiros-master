@@ -9,175 +9,177 @@
 </head>
 <body>
 
-      <div class="cabecalho ae">
-          <div class="titulo">
-            Anamnese 
-          </div>
-          <div class="subtitulo ae">
-              Gestacional
-          </div>
-        </div>
-        
-        <div class="texto">
+  <div class="cabecalho ae">
+      <div class="titulo">
+          Anamnese
+      </div>
+      <div class="subtitulo ae">
+          Gestacional
+      </div>
+  </div>
+  <form action="../anamnese_gestacional/anamnese_gestacional.php" method="post">
+      <div class="texto">
           <div class="tc">
               Periodo da gestação
-          </div></div>
-        <input name="sinais" id="sinais" class="sinais" cols="20" rows="10" placeholder="..." a></input>
-        
-        
-        <div class="texto alt">
+          </div>
+      </div>
+      <input type="text" name="per1" id="sinais" class="sinais" cols="20" rows="10" placeholder="..." a></input>
+
+
+      <div class="texto alt">
           <div class="tc ">
               Fez pré natal?
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim
-                  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
+          <div class="a">
+              <input type="radio" name="escolha1" id="masculino" class="opc" value="Sim">
+              Sim
 
-        <div class="texto alt">
+              <input type="radio" name="escolha1" id="feminino" class="opc" value="Nao">
+              Não
+          </div>
+      </div>
+
+      <div class="texto alt">
           <div class="tc">
               Existe possibilidade da complicações?
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo2" id="masculino" class="opc">
-                  Sim
-                  
-                  <input type="radio" name="sexo2" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
+          <div class="a">
+              <input type="radio" name="escolha2" id="masculino" class="opc" value="Sim">
+              Sim
 
-        <div class="texto alt">
+              <input type="radio" name="escolha2" id="feminino" class="opc" value="Nao">
+              Não
+          </div>
+      </div>
+
+      <div class="texto alt">
           <div class="tc">
               É o primeiro filho?
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo3" id="masculino" class="opc">
-                  Sim
-                  
-                  <input type="radio" name="sexo3" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-        
-        <div class="texto">
-          <div class="tc">
-            Quantos?
-          </div>
-        </div>
-        <input name="sinais" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+          <div class="a">
+              <input type="radio" name="escolha3" id="masculino" class="opc" value="Sim">
+              Sim
 
-              
-        <div class="texto">
-          <div class="tc">
-            Que horas iniciaram as contrações?
+              <input type="radio" name="escolha3" id="feminino" class="opc" value="Nao">
+              Não
           </div>
-        </div>
-        <input name="sinais" type="time" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-        
-              
-        <div class="texto">
+      </div>
+
+      <div class="texto">
           <div class="tc">
-            Tempo das contrações 
+              Quantos?
           </div>
-        </div>
-        <div class="texto">
+      </div>
+      <input type="text" name="per2" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+
+
+      <div class="texto">
           <div class="tc">
-            Duração
+              Que horas iniciaram as contrações?
           </div>
-        </div>
-        
-        <input name="sinais"  id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-        <div class="texto">
+      </div>
+      <input name="per3" type="time" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+
+
+      <div class="texto">
           <div class="tc">
-            Intervalo 
+              Tempo das contrações
           </div>
-        </div>
-        <input name="sinais"  id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-        
-        <div class="texto alt">
+      </div>
+      <div class="texto">
+          <div class="tc">
+              Duração
+          </div>
+      </div>
+
+      <input type="text" name="per4" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+      <div class="texto">
+          <div class="tc">
+              Intervalo
+          </div>
+      </div>
+      <input type="text" name="per5" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+
+      <div class="texto alt">
           <div class="tc">
               Sente pressão na região do quadril ou vontade de evacuar?
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-        
-        
-        <div class="texto alt">
+          <div class="a">
+              <input type="radio" name="escolha4" id="masculino" class="opc" value="Sim">
+              Sim
+              <input type="radio" name="escolha4" id="feminino" class="opc" value="Nao">
+              Não
+          </div>
+      </div>
+
+
+      <div class="texto alt">
           <div class="tc">
               Já houve ruptura da bolsa?
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
+          <div class="a">
+              <input type="radio" name="escolha5" id="masculino" class="opc" value="Sim">
+              Sim
+              <input type="radio" name="escolha5" id="feminino" class="opc" value="Sim">
+              Não
+          </div>
+      </div>
 
-        
-        <div class="texto alt">
+
+      <div class="texto alt">
           <div class="tc">
               Foi feito inspeção visual?
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
+          <div class="a">
+              <input type="radio" name="escolha6" id="masculino" class="opc" value="Sim">
+              Sim
+              <input type="radio" name="escolha6" id="feminino" class="opc" value="Nao">
+              Não
+          </div>
+      </div>
 
-        
-        <div class="texto alt">
+
+      <div class="texto alt">
           <div class="tc">
               Parto realizado
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-
-        
-    
-        <div class="texto">
-          <div class="tc">
-           Hora do nascimento
+          <div class="a">
+              <input type="radio" name="escolha7" id="masculino" class="opc" value="Sim">
+              Sim
+              <input type="radio" name="escolha7" id="feminino" class="opc" value="Nao">
+              Não
           </div>
-        </div>
-        <input name="sinais"  type="time" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+      </div>
 
-        <div class="texto alt">
+
+
+      <div class="texto">
+          <div class="tc">
+              Hora do nascimento
+          </div>
+      </div>
+      <input name="per6" type="time" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+
+      <div class="texto alt">
           <div class="tc">
               Sexo do bebe
           </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Fem
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Mas
-              </div>
-        </div>
-        
-        <div class="texto">
-          <div class="tc">
-           Nome do Bebe
+          <div class="a">
+              <input type="radio" name="escolha8" id="masculino" class="opc" value="Fem">
+              Fem
+              <input type="radio" name="escolha8" id="feminino" class="opc" value="Mas">
+              Mas
           </div>
-        </div>
+      </div>
 
-        <input name="sinais"  id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-      
+      <div class="texto">
+          <div class="tc">
+              Nome do Bebe
+          </div>
+      </div>
+
+      <input type="text" name="per7" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+      <input type="submit" name="enviar">
+  </form>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
+session_start();
 include("../conecta.php");
+$id = $_SESSION["id_paciente"];
 
 if (isset($_POST['enviar'])) {
     if (isset($_POST['check_10'])) {
@@ -106,7 +108,7 @@ if (isset($_POST['enviar'])) {
 
     }
 
-    $comando = $pdo->prepare("INSERT INTO tipo_ocorrencia_pre_hospitalar(tipo_ocorrencia) VALUES('$valor')");
+    $comando = $pdo->prepare("INSERT INTO tipo_ocorrencia_pre_hospitalar(tipo_ocorrencia, id_paciente) VALUES('$valor', $id)");
 	$resultado = $comando->execute();
 }
 ?>

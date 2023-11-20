@@ -6,38 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../sinais_vitais/sinais_vitais.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".formulario").submit(function (event) {
+                event.preventDefault(); // Impede o envio do formulário padrão
+
+                // Coleta os dados do formulário
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "../sinais_vitais/sinais_vitais.php",
+                    data: formData,
+                    success: function (response) {
+                        // Aqui você pode manipular a resposta da requisição
+                        alert("Dados enviados com sucesso!");
+                    },
+                    error: function () {
+                        alert("Erro ao enviar os dados.");
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const radioButtons = document.querySelectorAll('.oco');
+
+            radioButtons.forEach(radioButton => {
+                radioButton.addEventListener('click', (event) => {
+                    // Desmarque os outros botões de rádio com nomes diferentes
+                    const currentName = event.target.name;
+                    radioButtons.forEach(otherRadioButton => {
+                        if (otherRadioButton.name !== currentName) {
+                            otherRadioButton.checked = false;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div class="cabecalho">
-        <div class="titulo">
-            Sinais Vitais
+    <div class="tudo">
+
+        <div class="cabecalho">
+            <legend>Sinais Vitais</legend>
         </div>
+        <form class="formulario" method="post">
+            <div class="uh">
+
+                <div class="container_sinais">
+                    Pressão Arterial:<input type="text" id="pressao_arterial" name="pressao">mmHg
+                </div><br>
+
+                <div class="container_sinais">
+                    Pulso: <input type="text" id="pulso" name="pulso">B.C.P.M.
+                </div><br>
+
+                <div class="container_sinais">
+                    Respiração: <input type="text" id="respiracao" name="respiracao">M.R.M.
+                </div><br>
+
+                <div class="container_sinais">
+                    Saturação: <input type="number" id="saturacao" name="saturacao">%
+                </div><br>
+
+                <div class="container_sinais">
+                    HGT: <input type="text" id="hgt" name="hgt">
+                </div><br>
+
+                <div class="container_sinais">
+                    Temperatura: <input type="number" id="temperatura" name="temperatura">°C
+                </div><br>
+
+            </div>
+
+            <div class="container_sinais">Perfuração:
+
+                <input type="radio" name="perfuracao_maior" id="maior_2" class="oco">Maior que 2seg.
+                <input type="radio" name="perfuracao_menor" id="menor_2" class="oco">Menor que 2seg.
+
+            </div>
+
+            <div class="segurab">
+                <div class="botoes">
+
+                    <a href="loginbomb.html" target="_self" class="voltar">Voltar</a>
+                    <input type="submit" class="continuar" name="enviar">
+
+                </div>
+            </div>
+
+        </form>
+
     </div>
-    <div class="container_principal_sv">
-        <div class="container_sinais">
-            Pressão Arterial:<input type="text" id="pressao_arterial">mmHg
-        </div><br>
-        <div class="container_sinais">
-            Pulso: <input type="text" id="pulso">B.C.P.M.
-        </div><br>
-        <div class="container_sinais">
-            Respiração: <input type="text" id="respiracao">M.R.M.
-        </div><br>
-        <div class="container_sinais">
-            Saturação: <input type="number" id="saturacao">%
-        </div>
-        <div class="container_sinais">
-            HGT: <input type="text" id="hgt">
-        </div><br>
-        <div class="container_sinais">
-            Temperatura: <input type="number" id="temperatura">°C
-        </div><br>
-        <div class="container_sinais">Perfuração:
-            <input type="radio" name="perfuracao" id="maior_2">Maior que 2seg.
-            <input type="radio" name="perfuracao" id="maior_2">Menor que 2seg.
-        </div>
-    </div>
+
 </body>
 
 </html>

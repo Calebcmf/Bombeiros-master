@@ -16,22 +16,25 @@
             Utilizados
         </div>
     </div>
-    
+
     <div class="textoMaterial">
-       <h1>Descartável</h1> 
+        <h1>Descartável</h1>
     </div>
     <div class="contD">
         <div class="coluna">
-            <div class="tituloCont"><h1>Material</h1></div>
+            <div class="tituloCont">
+                <h1>Material</h1>
+            </div>
             <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Ataduras</label>
-                <input type="radio" name="p" id="p" class="bc">
-                <label for="">P</label>
-                <input type="radio" name="p" id="m" class="bc">
-                <label for="">M</label>
-                <input type="radio" name="p" id="g" class="bc">
-                <label for="">G</label>                
+                <form action="../materiais_utilizados/materiais_utilizados_desc.php" method="post">
+                    <input type="checkbox" class="contCheck">
+                    <label for="">Ataduras</label>
+                    <input type="radio" id="p" name="tamanho_atadura" class="bc" value="P">
+                    <label for="">P</label>
+                    <input type="radio" id="m" name="tamanho_atadura" class="bc" value="M">
+                    <label for="">M</label>
+                    <input type="radio" id="g" name="tamanho_atadura" class="bc" value="G">
+                    <label for="">G</label>
 
             </div>
             <div class="campoCont">
@@ -45,12 +48,12 @@
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
                 <label for="">Kit's</label>
-                <input type="radio" name="p" id="p" class="bc">
+                <input type="radio" id="p" name="tamanho_kit" class="bc" value="H">
                 <label for="">H</label>
-                <input type="radio" name="p" id="m" class="bc">
+                <input type="radio" id="m" name="tamanho_kit" class="bc" value="P">
                 <label for="">P</label>
-                <input type="radio" name="p" id="g" class="bc">
-                <label for="">Q</label>  
+                <input type="radio" id="g" name="tamanho_kit" class="bc" value="Q">
+                <label for="">Q</label>
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
@@ -62,176 +65,186 @@
             </div>
         </div>
         <div class="coluna2">
-            <div class="tituloCont"><h1>Quantidade</h1></div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-                
+            <div class="tituloCont">
+                <h1>Quantidade</h1>
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="quantidade_atadura">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" name="cateter" class="contInput">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" name="compressa_comum" class="contInput">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="quantidade_kit">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="luvas_desc">
+            </div>
+            <div class="campoCont"><input type="text" class="contInput" name="mascara_desc">
             </div>
         </div>
         <div class="coluna">
-            <div class="tituloCont"><h1>Material</h1></div>
+            <div class="tituloCont">
+                <h1>Material</h1>
+            </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
                 <label for="">Manta Aluminizada</label>
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
-                <label for="">Pás do DEA</label> 
+                <label for="">Pás do DEA</label>
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
-                <label for="">Sonda de aspiração</label> 
+                <label for="">Sonda de aspiração</label>
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
-                <label for="">Soro Fisiológico</label> 
+                <label for="">Soro Fisiológico</label>
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
-                <label for="">Tapas PAP</label> 
-                <input type="radio" name="p" id="p" class="bc">
+                <label for="">Tapas PAP</label>
+                <input type="radio" id="P" name="tamanho_tala" class="bc" value="P">
                 <label for="">P</label>
-                <input type="radio" name="p" id="m" class="bc">
+                <input type="radio" id="G" name="tamanho_tala" class="bc" value="G">
                 <label for="">G</label>
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
-                <label for="">Pás do DEA</label> 
+                <label for="">Outros</label>
             </div>
         </div>
         <div class="coluna2">
-            <div class="tituloCont"><h1>Quantidade</h1></div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="tituloCont">
+                <h1>Quantidade</h1>
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="manta_aluminizada">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="pas_do_dea">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="sonda_de_aspiracao">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="soro_fisiologico">
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="campoCont"><input type="text" class="contInput" name="quantidade_tala">
             </div>
+            <div class="campoCont"><input type="text" class="contInput" name="outros">
+            </div>
+            <br><input type="submit" name="enviar">
+            </form>
         </div>
-        
+
     </div>
     <div class="textoMaterial">
-       <h1> Deixados no Hospital   </h1>
+        <h1> Deixados no Hospital </h1>
     </div>
     <div class="contD">
         <div class="coluna">
-            <div class="tituloCont"><h1>Material</h1></div>
-            <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Ataduras</label>
-                <input type="radio" name="p" id="p" class="bc">
-                <label for="">P</label>
-                <input type="radio" name="p" id="m" class="bc">
-                <label for="">M</label>
-                <input type="radio" name="p" id="g" class="bc">
-                <label for="">G</label>                
-
-            </div>
-            <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Cateter TP Oculos</label>
-            </div>
-            <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Compressa Comum</label>
-            </div>
-            <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Kit's</label>
-                <input type="radio" name="p" id="p" class="bc">
-                <label for="">H</label>
-                <input type="radio" name="p" id="m" class="bc">
-                <label for="">P</label>
-                <input type="radio" name="p" id="g" class="bc">
-                <label for="">Q</label>  
-            </div>
-            <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Luvas Desc(Pares)</label>
-            </div>
-            <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Mascara Desc</label>
-            </div>
+            <form action="../materiais_utilizados/materiais_utilizados_deixado.php" method="post">
+                <div class="tituloCont">
+                    <h1>Material</h1>
+                </div>
+                <div class="campoCont">
+                    <input type="checkbox" class="contCheck">
+                    <label for="">Base do Estabiliza</label>
+                </div>
+                <div class="campoCont">
+                    <input type="checkbox" class="contCheck">
+                    <label for="">Talas PAP</label>
+                    <input type="radio" name="tamanho_tala2" id="p" class="bc" value="N">
+                    <label for="">N</label>
+                    <input type="radio" name="tamanho_tala2" id="m" class="bc" value="PP">
+                    <label for="">PP</label>
+                    <input type="radio" name="tamanho_tala2" id="m" class="bc" value="P">
+                    <label for="">P</label>
+                </div>
+                <div class="campoCont">
+                    <input type="checkbox" class="contCheck">
+                    <label for="">Colar</label>
+                    <input type="radio" name="tamanho_colar" id="p" class="bc" value="M">
+                    <label for="">M</label>
+                    <input type="radio" name="tamanho_colar" id="m" class="bc" value="G">
+                    <label for="">G</label>
+                </div>
+                <div class="campoCont">
+                    <div class="campoCont">
+                        <input type="checkbox" class="contCheck">
+                        <label for="">Coxins Estabiliza</label>
+                    </div>
+                </div>
+                <div class="campoCont">
+                    <input type="checkbox" class="contCheck">
+                    <label for="">Ked</label>
+                    <input type="radio" name="tamanho_ked" id="p" class="bc" value="Adul.">
+                    <label for="">Adul.</label>
+                    <input type="radio" name="tamanho_ked" id="m" class="bc" value="Infa.">
+                    <label for="">Infa.</label>
+                </div>
+                <div class="campoCont">
+                    <div class="campoCont">
+                        <input type="checkbox" class="contCheck">
+                        <label for="">Marca Rígida</label>
+                    </div>
+                </div>
         </div>
         <div class="coluna2">
-            <div class="tituloCont"><h1>Quantidade</h1></div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-                
+            <div class="tituloCont">
+                <h1>Quantidade</h1>
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
+            <div class="campoCont"><input type="text" class="contInput" name="base_do_estabiliza"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="quantidade_tala2"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="quantidade_colar"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="coxins_estabiliza"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="quantidade_ked"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="marca_rigida"></div>
         </div>
         <div class="coluna">
-            <div class="tituloCont"><h1>Material</h1></div>
-            <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Manta Aluminizada</label>
+            <div class="tituloCont">
+                <h1>Material</h1>
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
-                <label for="">Pás do DEA</label> 
+                <label for="">T.T.F</label>
+                <input type="radio" name="tamanho_ttf" id="p" class="bc">
+                <label for="">Adul.</label>
+                <input type="radio" name="tamanho_ttf" id="m" class="bc">
+                <label for="">Infa.</label>
             </div>
             <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Sonda de aspiração</label> 
+                <div class="campoCont">
+                    <input type="checkbox" class="contCheck">
+                    <label for="">Tirante Aranha</label>
+                </div>
             </div>
             <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Soro Fisiológico</label> 
+                <div class="campoCont">
+                    <input type="checkbox" class="contCheck">
+                    <label for="">Cânula</label>
+                </div>
             </div>
             <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Tapas PAP</label> 
-                <input type="radio" name="p" id="p" class="bc">
-                <label for="">P</label>
-                <input type="radio" name="p" id="m" class="bc">
-                <label for="">G</label>
+                <input type="text" name="outros1_texto" class="contInput">
             </div>
             <div class="campoCont">
-                <input type="checkbox" class="contCheck">
-                <label for="">Pás do DEA</label> 
+                <input type="text" name="outros2_texto" class="contInput">
+            </div>
+            <div class="campoCont">
+                <input type="text" name="outros3_texto" class="contInput">
             </div>
         </div>
         <div class="coluna2">
-            <div class="tituloCont"><h1>Quantidade</h1></div>
-            <div class="campoCont qn"><input type="text" class="contInput">
+            <div class="tituloCont">
+                <h1>Quantidade</h1>
             </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
-            <div class="campoCont qn"><input type="text" class="contInput">
-            </div>
+            <div class="campoCont"><input type="text" class="contInput" name="quantidade_ttf"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="tirante_aranha"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="canula"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="outros_1"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="outros_2"></div>
+            <div class="campoCont"><input type="text" class="contInput" name="outros_3"></div>
         </div>
-        
+        <br><input type="submit" name="enviar">
+        </form>
     </div>
 
 

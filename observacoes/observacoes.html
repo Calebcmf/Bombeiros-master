@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../observacoes/observacoes.css">
+  <script src="../Scripts/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
@@ -16,8 +17,27 @@
       <div class="subtitulo"></div>
     </div>
     <br><br>
-    <textarea name="observacao" id="observacao" cols="40" rows="20" placeholder="Observações..." a></textarea>
+    <textarea id="observacao" cols="40" rows="20" placeholder="Observações..."></textarea>
+    <button id="enviar">Enviar</button>
+    <div id="resultado"></div>
   </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#enviar').click(function () {
+        var observacao = $('#observacao').val();
+
+        $.ajax({
+          type: 'POST',
+          url: '../observacoes/observacoes.php',
+          data: { observacao: observacao },
+          success: function (response) {
+            $('#resultado').html(response);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

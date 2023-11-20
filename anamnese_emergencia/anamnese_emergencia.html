@@ -1,130 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../anamnese_emergencia/anamnese_emergencia.css">
-    <title>Document</title>
-</head>
-<body>
 
-      <div class="cabecalho ae">
-          <div class="titulo">
-            Anamnese 
-          </div>
-          <div class="subtitulo ae">
-              Da Emergência Médica
-          </div>
-        </div>
-        
-        <div class="texto">
-          <div class="tc">
-              O que Aconteceu?
-          </div></div>
-        <input name="sinais" id="sinais" class="sinais" cols="20" rows="10" placeholder="..." a></input>
-        
-        
-        <div class="texto alt">
-          <div class="tc ">
-              Aconteceu outras vezes?
-          </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim
-                  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-        
-        
-      
-        <div class="texto">
-          <div class="tc">
-              A quanto tempo isso aconteceu?
-          </div>
-        
-        </div>
-        <input name="sinais" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-        <div class="texto alt">
-          <div class="tc ">
-              Possui algum problema de saúde?
-          </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-        <div class="texto">
-          <div class="tc">
-            Quais?
-          </div>
-        </div>
-        <input name="sinais" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-        <div class="texto alt">
-          <div class="tc">
-              Faz uso de medicação
-          </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-        <div class="texto ">
-          <div class="tc">
-            Horario da última medicação
-          </div>
-        </div>
-        <input type="time" class="tempo">
-        <div class="texto">
-          <div class="tc">
-            Quais?
-          </div>
-        </div>
-        <input name="sinais" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-        <div class="texto alt">
-          <div class="tc">
-              Alérgico a alguma coisa
-          </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-    
-        <div class="texto ">
-          <div class="tc">
-            Quais?
-          </div>
-        </div>
-        <input name="sinais" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input> 
-        <div class="texto alt">
-          <div class="tc">
-              Ingeriu alimento ou líquido >= 6 horas
-          </div>
-              <div class="a">
-                  <input type="radio" name="sexo" id="masculino" class="opc">
-                  Sim  
-                  <input type="radio" name="sexo" id="feminino" class="opc">
-                  Não
-              </div>
-        </div>
-        <div class="texto  ">
-          <div class="tc">
-            Que Horas?
-          </div>
-        </div>
-        <div class="texto">
-          <input type="time" class="tempo">
-        </div>
-     
-      
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../anamnese_emergencia/anamnese_emergencia.css">
+</head>
+
+<body>
+  <div class="cabecalho">
+    <div class="titulo">
+      Anamnese
+    </div>
+    <div class="subtitulo">
+      Da Emergência Médica
+    </div>
+  </div>
+
+  <div class="texto">
+    <div class="tc">
+      O que Aconteceu?
+    </div>
+  </div>
+  <form action="../anamnese_emergencia/anamnese_emergencia.php" method="post">
+    <input type="text" name="per1" id="sinais" class="sinais" cols="20" rows="10" placeholder="..." a></input>
+    <div class="texto">
+      <div class="tc">
+        Aconteceu outras vezes?
+      </div>
+      <div class="a">
+        <input type="radio" name="escolha1" value="Sim" id="masculino" class="opc">
+        Sim
+
+        <input type="radio" name="escolha1" value="Nao" id="feminino" class="opc">
+        Não
+      </div>
+    </div>
+    <div class="texto">
+      <div class="tc">
+        A quanto tempo isso aconteceu?
+      </div>
+    </div>
+    <input type="text" name="per2" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+    <div class="texto">
+      <div class="tc">
+        Possui algum problema de saúde?
+      </div>
+      <div class="a">
+        <input type="radio" name="escolha2" value="Sim" id="masculino" class="opc">
+        Sim
+        <input type="radio" name="escolha2" value="Nao " id="feminino" class="opc">
+        Não
+      </div>
+    </div>
+    <div class="texto">
+      <div class="tc">
+        Quais?
+      </div>
+    </div>
+    <input type="text" name="per3" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+    <div class="texto">
+      <div class="tc">
+        Faz uso de medicação
+      </div>
+      <div class="a">
+        <input type="radio" name="escolha3" value="Sim" id="masculino" class="opc">
+        Sim
+        <input type="radio" name="escolha3" value="Nap" id="feminino" class="opc">
+        Não
+      </div>
+    </div>
+    <div class="texto">
+      <div class="tc">
+        Horario da última medicação
+      </div>
+    </div>
+    <input type="time" class="tempo" name="per4">
+    <div class="texto">
+      <div class="tc">
+        Quais?
+      </div>
+    </div>
+    <input type="text" name="per5" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+    <div class="texto">
+      <div class="tc">
+        Alérgico a alguma coisa
+      </div>
+      <div class="a">
+        <input type="radio" name="escolha4" value="Sim" id="masculino" class="opc">
+        Sim
+        <input type="radio" name="escolha4" value="Nao" id="feminino" class="opc">
+        Não
+      </div>
+    </div>
+    <div class="texto">
+      <div class="tc">
+        Quais?
+      </div>
+    </div>
+    <input type="text" name="per6" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
+    <div class="texto">
+      <div class="tc">
+        Ingeriu alimento ou líquido >= 6 horas
+      </div>
+      <div class="a">
+        <input type="radio" name="escolha5" value="Sim" id="masculino" class="opc">
+        Sim
+        <input type="radio" name="escolha5" value="Nao" id="feminino" class="opc">
+        Não
+      </div>
+    </div>
+    <div class="texto">
+      <div class="tc">
+        Que Horas?
+      </div>
+    </div>
+    <input type="time" name="per7" class="tempo">
+    <input type="submit" name="enviar">
+  </form>
+
 </body>
+
 </html>
