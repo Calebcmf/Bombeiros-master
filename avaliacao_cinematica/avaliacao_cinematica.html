@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../avaliacao_cinematica/avaliacao_cinematica.css">
 
 </head>
+
 <body>
     <div class="cabecalho">
         <div class="titulo">
@@ -16,38 +18,37 @@
         <div class="subtitulo">
         </div>
     </div>
-    <div class="pesquisa">
-        <input type="text"></input>
-    </div>
-    <form class="tipos">
+    <form class="tipos" method="post" action="../avaliacao_cinematica/avaliacao_cinematica.php">
         <div class="esco_ac">
-            <input type="checkbox" id="esco_1" class="oco_ac" >
-            <label for="esco_1" class="check">DISTURBIO DE COMPORTAMENTO</label>    
+            <input type="checkbox" name="resposta1" id="esco_1" class="oco_ac">
+            <label for="esco_1" class="check">DISTURBIO DE COMPORTAMENTO</label>
         </div>
         <div class="esco_ac">
-            <input type="checkbox" id="esco_2" class="oco_ac" >
-            <label for="esco_2"class="check">ENCONTRADO DE CAPACETE</label>    
+            <input type="checkbox" name="resposta2" id="esco_2" class="oco_ac">
+            <label for="esco_2" class="check">ENCONTRADO DE CAPACETE</label>
         </div>
         <div class="esco_ac">
-            <input type="checkbox" id="esco_3" class="oco_ac" >
-            <label for="esco_3"class="check">ENCONTRADO DE CINTO</label>    
+            <input type="checkbox" name="resposta3" id="esco_3" class="oco_ac">
+            <label for="esco_3" class="check">ENCONTRADO DE CINTO</label>
         </div>
         <div class="esco_ac">
-            <input type="checkbox" id="esco_4"class="oco_ac" >
-            <label for="esco_4"class="check">PARA-BRISA AVARIADO</label>    
+            <input type="checkbox" name="resposta4" id="esco_4" class="oco_ac">
+            <label for="esco_4" class="check">PARA-BRISA AVARIADO</label>
         </div>
         <div class="esco_ac">
-            <input type="checkbox" id="esco_5"class="oco_ac" >
-            <label for="esco_5"class="check">CAMINHANDO NA CENA</label>    
+            <input type="checkbox" name="resposta5" id="esco_5" class="oco_ac">
+            <label for="esco_5" class="check">CAMINHANDO NA CENA</label>
         </div>
         <div class="esco_ac">
-            <input type="checkbox" id="esco_6"class="oco_ac" >
-            <label for="esco_6"class="check">PAINEL AVARIADO</label>    
+            <input type="checkbox" name="resposta6" id="esco_6" class="oco_ac">
+            <label for="esco_6" class="check">PAINEL AVARIADO</label>
         </div>
         <div class="esco_ac">
-            <input type="checkbox" id="esco_7"class="oco_ac" >
-            <label for="esco_7"class="check">VOLANTE TORCIDO</label>    
+            <input type="checkbox" name="resposta7" id="esco_7" class="oco_ac">
+            <label for="esco_7" class="check">VOLANTE TORCIDO</label>
         </div>
+        <input type="submit" name="enviar">
     </form>
 </body>
+
 </html>
