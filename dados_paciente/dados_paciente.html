@@ -7,6 +7,46 @@
   <link rel="stylesheet" href="../dados_paciente/dados_paciente.css">
   <script src="../nivel_consciencia/nivel_consciencia.js"></script>
   <title>Dados do Paciente</title>
+  <script>
+    $(document).ready(function () {
+      $(".formulario").submit(function (event) {
+        event.preventDefault(); // Impede o envio do formulário padrão
+
+        // Coleta os dados do formulário
+        var formData = $(this).serialize();
+
+        $.ajax({
+          type: "POST",
+          url: "../dados_paciente/dados_paciente.php",
+          data: formData,
+          success: function (response) {
+            // Aqui você pode manipular a resposta da requisição
+            alert("Dados enviados com sucesso!");
+          },
+          error: function () {
+            alert("Erro ao enviar os dados.");
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const radioButtons = document.querySelectorAll('.radio_sexo');
+
+      radioButtons.forEach(radioButton => {
+        radioButton.addEventListener('click', (event) => {
+          // Desmarque os outros botões de rádio com nomes diferentes
+          const currentName = event.target.name;
+          radioButtons.forEach(otherRadioButton => {
+            if (otherRadioButton.name !== currentName) {
+              otherRadioButton.checked = false;
+            }
+          });
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -21,7 +61,7 @@
 
   </div>
   <br><br>
-  <form class="formulario" method="post" action="paciente.php">
+  <form class="formulario" method="post">
     <table class="tabela">
       <TR BGCOLOR=#1E232C>
 
@@ -41,10 +81,10 @@
           Sexo:
         </td>
         <td style="display: flex; flex-direction: row;">
-          <input type="radio" name="sexo" id="masculino" class="radio_sexo" onchange="AnamnseFuncao();" value="masculino">
+          <input type="radio" name="sexo_m" id="masculino" class="radio_sexo">
           <label for="masculino" class="sexo_check"><img src="../img/masc.png"></label>
 
-          <input type="radio" name="sexo" id="feminino" class="radio_sexo" onchange="AnamnseFuncao();" value="feminino">
+          <input type="radio" name="sexo_f" id="feminino" class="radio_sexo">
           <label for="feminino" class="sexo_check"><img src="../img/fem.png"></label>
         </td>
       </tr>
@@ -95,7 +135,7 @@
           CEP:
         </td>
         <td>
-          <input type="text" id="cep_local" class="caixa">
+          <input type="text" id="cep_local" name="cep" class="caixa">
         </td>
       </tr>
       <tr>
@@ -103,11 +143,11 @@
           Local:
         </td>
         <td>
-          <input type="text" id="local" class="caixa">
+          <input type="text" id="local" name="local" class="caixa">
         </td>
       </tr>
     </table>
-
+    <input type="submit" name="enviar">
   </form>
 </body>
 <script>
