@@ -29,7 +29,7 @@ html {
 }
 .meio {
     width: 30%;
-    height: 45%;
+    min-height: 45%;
     background-color: #1e232c;
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@ fieldset {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     width: 80%;
-    height: 55%;
+    min-height: 55%;
     font-size: 25px;
     border: none;
     text-indent: 10px;
