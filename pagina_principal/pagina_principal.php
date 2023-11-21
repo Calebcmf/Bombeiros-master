@@ -48,7 +48,8 @@
             <a class="opition" href="#anamnese_emergencia">Anamnese de Emergência</a>
             <a class="opition" href="#anamnese_gestacional" id="menu_anamnese" style="display: none;">Anamnese Gestacional</a>
             <a class="opition" href="#materiais_utilizados">Materiais Utilizados</a>
-            <a class="opition" href="#sinais_vitais">Sinais Vitais</a>            
+            <a class="opition" href="#sinais_vitais">Sinais Vitais</a>
+            <a class="opition" href="#forma_conducao">Forma de Condução</a>
         </div>
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
@@ -126,7 +127,12 @@
                 include("../sinais_vitais/sinais_vitais.html")
             ?>
         </div>
-       
+        <div class="pagina14" id="forma_conducao">
+            <?php
+                include("../forma_conducao/forma_conducao.html")
+            ?>
+        </div>
+        <button href="../concluido/concluido.html">Enviar</button>
     </div>
     
 </body>

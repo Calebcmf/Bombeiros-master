@@ -103,7 +103,7 @@ a.suporte {
 }
 
 .opcoes {
-    height: auto;
+    max-height: 90%;
     width: 100%;
     padding: 10px;
     display: flex;
@@ -112,6 +112,7 @@ a.suporte {
     justify-items: center;
     align-items: center;
     align-content: center;
+    overflow-y: auto;
 }
 
 .opition {
