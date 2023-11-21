@@ -9,15 +9,30 @@
 </head>
 
 <body>
-    <div class="logos">
+    <!-- <div class="logos">
         <img src="../img/logo_medicina.png" height="80px">
         <img src="../img/logo_pequena.png" height="80px">
-    </div>
-    <div class="meio">
-        <a href="../cadastro/cadastro.html" class="botao">Cadastrar Bombeiro</a>
-        <a href="../cadastro_adm/cadastro_adm.html" class="botao">Cadastrar Administrador</a>
-        <a href="../adm_listar/adm_listar.html" class="botao">Listar Bombeiros</a>
-    </div>
-</body>
+    </div> -->
+    <div class="cabecalho" id="cabecalho">CADASTRO</div>
+    <div class="principal">
+     
+        <div class="Lateral">
+            <div class="opcLateral" onclick="abrir(1)"><img src="../img/cadastro.png" class="imL" alt="" height="50px" ></img></div>
+            <div class="opcLateral" onclick="abrir(2)"><img src="../img/list.png"  class="imL" alt="" height="50px" ></img></div>
+        </div>
+        <div class="meio" id="1">
+            <a href="../cadastro/cadastro.html" class="botao"> Cadastrar Bombeiro</a>
+            <a href="../cadastro_adm/cadastro_adm.html" class="botao"> Cadastrar Administrador</a>
+        </div>
 
+        <div class="meio m2" id="2">
+            <a href="../adm_listar/adm_listar.html" class="botao">Listar Bombeiros</a> 
+            <a href="../adm_listar/adm_listar.html" class="botao">Listar Administradores</a> 
+        </div>
+        
+    </div>
+    
+   
+</body>
+    <script src="adm.js"></script>
 </html>
