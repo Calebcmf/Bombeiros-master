@@ -53,51 +53,39 @@
     <div class="tudo">
 
         <div class="cabecalho">
-            <legend>Sinais Vitais</legend>
+            <div class="titulo">Sinais Vitais</div>
         </div>
+        <br><br>
         <form class="formulario" method="post">
             <div class="uh">
-
                 <div class="container_sinais">
-                    Pressão Arterial:<input type="text" id="pressao_arterial" name="pressao">mmHg
+                    Pressão Arterial:<input type="text" id="pressao_arterial" name="pressao" class="caixa_texto">mmHg
                 </div><br>
-
                 <div class="container_sinais">
-                    Pulso: <input type="text" id="pulso" name="pulso">B.C.P.M.
+                    Pulso: <input type="text" id="pulso" name="pulso" class="caixa_texto">B.C.P.M.
                 </div><br>
-
                 <div class="container_sinais">
-                    Respiração: <input type="text" id="respiracao" name="respiracao">M.R.M.
+                    Respiração: <input type="text" id="respiracao" name="respiracao" class="caixa_texto">M.R.M.
                 </div><br>
-
                 <div class="container_sinais">
-                    Saturação: <input type="number" id="saturacao" name="saturacao">%
+                    Saturação: <input type="number" id="saturacao" name="saturacao" class="caixa_numero">%
                 </div><br>
-
                 <div class="container_sinais">
-                    HGT: <input type="text" id="hgt" name="hgt">
+                    HGT: <input type="text" id="hgt" name="hgt" class="caixa_texto">
                 </div><br>
-
                 <div class="container_sinais">
-                    Temperatura: <input type="number" id="temperatura" name="temperatura">°C
+                    Temperatura: <input type="number" id="temperatura" name="temperatura" class="caixa_numero">°C
                 </div><br>
-
             </div>
-
             <div class="container_sinais">Perfuração:
-
-                <input type="radio" name="perfuracao_maior" id="maior_2" class="oco">Maior que 2seg.
-                <input type="radio" name="perfuracao_menor" id="menor_2" class="oco">Menor que 2seg.
-
+                <input type="radio" name="perfuracao" id="maior_2">
+                <label for="maior_2">Maior que 2seg.</label>
+                <input type="radio" name="perfuracao" id="menor_2">
+                <label for="menor_2">Menor que 2seg.</label>
             </div>
 
-            <div class="segurab">
-                <div class="botoes">
-
-                    <a href="loginbomb.html" target="_self" class="voltar">Voltar</a>
-                    <input type="submit" class="continuar" name="enviar">
-
-                </div>
+            <div class="botoes">
+                <input type="submit" class="continuar" name="enviar">
             </div>
 
         </form>

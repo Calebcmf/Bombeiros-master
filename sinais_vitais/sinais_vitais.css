@@ -1,0 +1,18 @@
+.tudo {
+    width: 100%;
+}
+
+.caixa_texto {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: solid 2px black;
+}
+.caixa_numero {
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: solid 2px black;
+}
