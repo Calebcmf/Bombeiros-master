@@ -1,6 +1,7 @@
 html,
 body {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 
@@ -105,6 +106,112 @@ B {
 
 .radio_sexo:checked+.sexo_check {
   background-color: #AF1521;
+}
+
+.rodape_menu {
+  width: 80%;
+  height: 10%;
+  margin-left: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagem_logo {
+  width: 30%;
+}
+
+a.suporte {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(69, 145, 231);
+}
+
+.fale_conosco {
+  cursor: pointer;
+  color: rgb(69, 145, 231);
+}
+
+.ajuda {
+  cursor: pointer;
+  color: rgb(69, 145, 231);
+}
+
+.menu {
+  width: 20%;
+  height: 100%;
+  background-color: #1d4983;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 50;
+  transition: 0.5s;
+}
+
+.logos {
+  margin-top: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.opcoes {
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.opition {
+  width: 80%;
+  height: 22px;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: rgb(23, 103, 194);
+  color: white;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+a.opition {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a.opition:hover {
+  background-color: rgb(47, 150, 219);
+
+}
+
+.pop-up_faleconosco {
+  position: fixed;
+  left: 35%;
+  top: 15%;
+  width: 30%;
+  height: 50%;
+  z-index: 100;
+  background-color: rgb(13, 70, 134);
+  border-radius: 10px;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
 }
 
 @media (max-width: 600px) {
