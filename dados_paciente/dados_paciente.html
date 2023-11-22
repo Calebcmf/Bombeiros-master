@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dados_paciente/dados_paciente.css">
+  <link rel="stylesheet" href="../pagina_principal/pagina_principal.css">
   <script src="../nivel_consciencia/nivel_consciencia.js"></script>
   <title>Dados do Paciente</title>
   <script>
@@ -21,7 +22,7 @@
           data: formData,
           success: function (response) {
             // Aqui você pode manipular a resposta da requisição
-            alert("Dados enviados com sucesso!");
+            
           },
           error: function () {
             alert("Erro ao enviar os dados.");
@@ -92,8 +93,7 @@
       <a class="opition" href="#sinais_vitais">Sinais Vitais</a>
     </div>
     <div class="rodape_menu">
-      <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
-      <div class="ajuda">Ajuda</div>
+      <div class="ajuda" href="https://drive.google.com/file/d/1InkeVS7bkLO14Tya5JILE7_YbtGm3fFH/view">Ajuda</div>
     </div>
   </div>
 
@@ -193,7 +193,7 @@
           <input type="text" id="local" name="local" class="caixa">
         </td>
         <tr >
-         
+         <td></td>
           
           <td class="hf"> <input type="submit" id="local" name="local" class="btnE" value="Enviar">  </td>
           

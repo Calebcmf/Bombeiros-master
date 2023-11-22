@@ -52,8 +52,8 @@ select.select_nc {
   .container_nivel-consciencia{
     width: 85%;
   }
-  select {
-    width: 250px;
+  select.select_nc {
+    width: 300px;
   }
 }
 @media(max-width:300px){

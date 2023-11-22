@@ -31,12 +31,14 @@ try {
         echo "Atualizando paciente existente...\n";
         $comandoPaciente = $pdo->prepare("UPDATE dados_paciente SET nome_paciente = ?, idade_paciente = ?, fone_paciente = ?, local_ocorrencia = ?, cep = ?, sexo = ? WHERE id_paciente = ?");
         $resultadoPaciente = $comandoPaciente->execute([$nome, $idade, $telefone, $local, $cep, $sexo, $pacienteexisteId]);
+        header("Location:../tipo_ocorrencia/tipo_ocorrencia.html");
     } else {
         echo "Inserindo novo paciente...\n";
         $comandoPaciente = $pdo->prepare("INSERT INTO dados_paciente (nome_paciente, cpf_paciente, idade_paciente, fone_paciente, local_ocorrencia, cep, sexo) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $resultadoPaciente = $comandoPaciente->execute([$nome, $cpf, $idade, $telefone, $local, $cep, $sexo]);
         $pacienteexisteId = $pdo->lastInsertId(); 
         $_SESSION["id_paciente"] = $pacienteexisteId;
+        header("Location:../tipo_ocorrencia/tipo_ocorrencia.html");
     }
 
     if ($resultadoPaciente) {

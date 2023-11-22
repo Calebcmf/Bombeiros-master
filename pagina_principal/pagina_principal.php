@@ -52,8 +52,7 @@
             <a class="opition" onclick="mostrarTela(14)">Forma de Condução</a>
         </div>
         <div class="rodape_menu">
-            <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
-            <div class="ajuda">Ajuda</div>
+            <div class="ajuda" href="https://drive.google.com/file/d/1InkeVS7bkLO14Tya5JILE7_YbtGm3fFH/view">Ajuda</div>
         </div>
     </div>
 

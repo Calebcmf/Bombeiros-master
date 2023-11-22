@@ -110,5 +110,6 @@ if (isset($_POST['enviar'])) {
 
     $comando = $pdo->prepare("INSERT INTO tipo_ocorrencia_pre_hospitalar(tipo_ocorrencia, id_paciente) VALUES('$valor', $id)");
 	$resultado = $comando->execute();
+    
 }
 ?>

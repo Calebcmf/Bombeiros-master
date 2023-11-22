@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../tipo_ocorrencia/tipo_ocorrencia.css">
+    <link rel="stylesheet" href="../pagina_principal/pagina_principal.css">
+
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             const radioButtons = document.querySelectorAll('.oco');
@@ -37,8 +39,9 @@
     </div>
     <!-- <div class="pesquisa" id="pesquisaC">
         <input type="text"></input> -->
-    
-    <form class="tipos" id="pai" method="post" action="tipo_ocorrencia.php">
+    <br><br>
+    <form class="tipos" id="pai" method="post" action="../tipo_ocorrencia/tipo_ocorrencia.php">
+        <br><br>
         <div class="esco">
             <input type="radio" name="check_10" id="check_11"  class="oco">
             <label for="check_10" class="check" id="var_0">CAUSADO POR ANIMAIS</label>
@@ -120,7 +123,7 @@
             <input type="radio" name="check_30" id="check_30"class="oco">
             <label for="check_30" class="check"id="var_3">TRANSFERÊNCIA</label>
         </div>
-        <td class="hf"> <input id="enviar" name="enviar" class="btnE toco" value="Enviar">  </td>
+        <td class="hf"> <input id="enviar" type="submit" name="enviar" class="btnE toco" value="Enviar">  </td>
     </form>
 </body>
 <script src="../tipo_ocorrencia/tipo_ocorrencia.js"></script>
