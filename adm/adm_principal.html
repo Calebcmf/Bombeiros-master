@@ -17,17 +17,34 @@
     <div class="principal">
      
         <div class="Lateral">
-            <div class="opcLateral" onclick="abrir(1)"><img src="../img/cadastro.png" class="imL" alt="" height="50px" ></img></div>
-            <div class="opcLateral" onclick="abrir(2)"><img src="../img/list.png"  class="imL" alt="" height="50px" ></img></div>
+            <div class="opcLateral" onclick="abrir(1,'CADASTRAR')"><img src="../img/cadastro.png" class="imL" alt="" height="50px" ></img></div>
+            <div class="opcLateral" onclick="abrir(2,'LISTAR')"><img src="../img/list.png"  class="imL" alt="" height="50px" ></img></div>
+            <div class="opcLateral" onclick="abrir(3,'DELETAR')"><img src="../img/delete.png" class="imL" alt="" height="50px" ></img></div>
+            <div class="opcLateral" onclick="abrir(4,'ALTERAR')"><img src="../img/update.png"  class="imL" alt="" height="50px" ></img></div>
         </div>
         <div class="meio" id="1">
-            <a href="../cadastro/cadastro.html" class="botao"> Cadastrar Bombeiro</a>
-            <a href="../cadastro_adm/cadastro_adm.html" class="botao"> Cadastrar Administrador</a>
+            <a class="botao" href="../cadastro_bomb/cadastro_bomb.html">Cadastrar Bombeiro</a>
+            <a class="botao" href="../cadastro_adm/cadastro_adm.html">Cadastrar Administrador</a>
+            <a class="botao" href="../pagina_principal/pagina_principal.php">Cadastrar Paciente</a>
+            
         </div>
 
         <div class="meio m2" id="2">
-            <a href="../adm_listar/adm_listar.html" class="botao">Listar Bombeiros</a> 
-            <a href="../adm_listar/adm_listar.html" class="botao">Listar Administradores</a> 
+            <a class="botao"  href="../listar_bombeiros/listar_bombeiros.html">Listar Bombeiros</a> 
+            <a class="botao"  href="../listar_administradores/listar_administradores.html">Listar Administradores</a> 
+            <a class="botao"  href="../listar_paciente/listar_paciente.html">Listar Paciente</a> 
+        </div>
+
+        <div class="meio m2" id="3">
+            <a class="botao" >Deletar Bombeiros</a> 
+            <a class="botao" >Deletar Administradores</a> 
+            <a class="botao" >Deletar Paciente</a> 
+        </div>
+
+        <div class="meio m2" id="4">
+            <a class="botao" >Alterar Bombeiros</a> 
+            <a class="botao" >Alterar Administradores</a> 
+            <a class="botao" >Alterar Paciente</a> 
         </div>
         
     </div>
@@ -35,4 +52,3 @@
    
 </body>
     <script src="adm.js"></script>
-</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../listar_paciente/listar_paciente.css">
+    <title>Listar</title>
+</head>
+
+<body>
+<body>
+
+    <img src="../img/logo_pequena.png" class="imagem">
+    <div class="container">
+       
+        <form id="myForm">
+            Listar pelo nome do paciente:
+            <input type="text" name="nome_paciente" class="texto">
+            <input type="button" value="Listar" class="botao" data-option="listar1"> <br><br>
+            Listar pelo Id Paciente:
+            <input type="text" name="id_paciente" class="texto">
+            <input type="button" value="Listar" class="botao" data-option="listar2"> <br><br>
+            Listar pelo local da ocorrencia:
+            <input type="text" name="local_ocorrencia" class="texto">
+            <input type="button" value="Enviar" class="botao" data-option="listar3"> <br><br>
+        </form>
+        <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
+        
+       
+    </div>
+    <div class="container cont2">
+        <div id="result" class="resultado">
+          
+            
+        </div>
+        
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+    $('input[type="button"]').click(function () {
+        var option = $(this).data('option');
+        var formData = $('#myForm').serialize() + '&' + option + '=true';
+
+        $.ajax({
+            type: 'POST',
+            url: '../listar_paciente/listar_paciente.php',
+            data: formData,
+            success: function (response) {
+            
+            var tableContent = '<table class="resultado"><tr><th class="dif">Nome </th><th class="dif">Cpf </th><th class="dif">Sexo </th><th class="dif">Idade</th><th class="dif">Fone</th><th class="dif">ID</th><th class="dif">L.O</th><th class="dif">Cep</th></tr>';
+            tableContent += response; 
+
+            tableContent += '</table>';
+
+            
+            $('#result').html(tableContent);
+}
+        });
+    });
+});
+</script>
+
+</body>
+
+</html>
