@@ -25,17 +25,19 @@
             <div class="tituloCont">
                 <h1>Material</h1>
             </div>
-            <div class="campoCont">
-                <form action="../materiais_utilizados/materiais_utilizados_desc.php" method="post">
-                    <input type="checkbox" class="contCheck">
-                    <label for="">Ataduras</label>
-                    <input type="radio" id="p" name="tamanho_atadura" class="bc" value="P">
-                    <label for="">P</label>
-                    <input type="radio" id="m" name="tamanho_atadura" class="bc" value="M">
-                    <label for="">M</label>
-                    <input type="radio" id="g" name="tamanho_atadura" class="bc" value="G">
-                    <label for="">G</label>
-
+        
+         
+    <form action="../materiais_utilizados/materiais_utilizados_desc.php" method="post">
+        <div class="campoCont">
+            <input type="checkbox" class="contCheck">
+            <label for="">Ataduras</label>
+            <input type="radio" id="p" name="tamanho_atadura" class="bc" value="P">
+            <label for="">P</label>
+            <input type="radio" id="m" name="tamanho_atadura" class="bc" value="M">
+            <label for="">M</label>
+            <input type="radio" id="g" name="tamanho_atadura" class="bc" value="G">
+            <label for="">G</label>
+                
             </div>
             <div class="campoCont">
                 <input type="checkbox" class="contCheck">
@@ -63,6 +65,7 @@
                 <input type="checkbox" class="contCheck">
                 <label for="">Mascara Desc</label>
             </div>
+            
         </div>
         <div class="coluna2">
             <div class="tituloCont">
@@ -131,10 +134,11 @@
             <div class="campoCont"><input type="text" class="contInput" name="outros">
             </div>
             <br>
-            </form>
+    </form>
         </div>
 
     </div>
+    <td class="hf"> <input id="enviar" name="enviar" class="btnE " value="Enviar">  </td>
     <div class="textoMaterial">
         <h1> Deixados no Hospital </h1>
     </div>
@@ -246,7 +250,7 @@
         <br>
         </form>
     </div>
-
+    <td class="hf"> <input id="enviar" name="enviar" class="btnE " value="Enviar">  </td>
 
 </body>
 </html>

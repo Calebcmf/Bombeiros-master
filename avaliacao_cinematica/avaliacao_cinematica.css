@@ -113,11 +113,12 @@ input.oco_ac {
 }
 
 .oco_ac[type="checkbox"]:not(:checked),
-.oco_ac[type="checkbox"]:checked {
+.oco_ac[type="checksbox"]:checked {
     position: absolute;
     left: -9999%;
 
 }
+
 
 .oco_ac[type="checkbox"]+label {
     cursor: pointer;

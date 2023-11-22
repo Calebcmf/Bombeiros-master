@@ -9,30 +9,7 @@ if (isset($_POST["listar1"])) {
   $comando->bindParam(':nome', $nome);
   $resultado = $comando->execute();
 
-  $data = ""; 
-
-  while ($linhas = $comando->fetch()) {
-      $a = $linhas["nome"];
-      $b = $linhas["email"];
-      $c = $linhas["telefone"];
-
-   
-      $data .= '<tr>';
-      $data .= '<td>' . $a . '</td>';
-      $data .= '<td>' . $b . '</td>';
-      $data .= '<td>' . $c . '</td>';
-      $data .= '</tr>';
-  }
-
-  echo $data; 
-}
-
-if (isset($_POST["listar2"])) {
-  $comando = $pdo->prepare("SELECT * FROM cadastro_cadastro_admin WHERE email = :email");
-  $comando->bindParam(':email', $email);
-  $resultado = $comando->execute();
-
-  $data = ""; 
+  $data = ""; // Initialize an empty string to store the table rows
 
   while ($linhas = $comando->fetch()) {
       $a = $linhas["nome"];
@@ -47,7 +24,30 @@ if (isset($_POST["listar2"])) {
       $data .= '</tr>';
   }
 
-  echo $data; 
+  echo $data; // Return all constructed rows
+}
+
+if (isset($_POST["listar2"])) {
+  $comando = $pdo->prepare("SELECT * FROM cadastro_admin WHERE email = :email");
+  $comando->bindParam(':email', $email);
+  $resultado = $comando->execute();
+
+  $data = ""; // Initialize an empty string to store the table rows
+
+  while ($linhas = $comando->fetch()) {
+      $a = $linhas["nome"];
+      $b = $linhas["email"];
+      $c = $linhas["telefone"];
+
+      // Construct a row for each result
+      $data .= '<tr>';
+      $data .= '<td>' . $a . '</td>';
+      $data .= '<td>' . $b . '</td>';
+      $data .= '<td>' . $c . '</td>';
+      $data .= '</tr>';
+  }
+
+  echo $data; // Return all constructed rows
 }
 
 if (isset($_POST["listar3"])){
@@ -55,14 +55,14 @@ if (isset($_POST["listar3"])){
   $comando->bindParam(':telefone', $telefone);
   $resultado = $comando->execute();
 
-  $data = ""; 
+  $data = ""; // Initialize an empty string to store the table rows
 
   while ($linhas = $comando->fetch()) {
       $a = $linhas["nome"];
       $b = $linhas["email"];
       $c = $linhas["telefone"];
 
-    
+      // Construct a row for each result
       $data .= '<tr>';
       $data .= '<td>' . $a . '</td>';
       $data .= '<td>' . $b . '</td>';

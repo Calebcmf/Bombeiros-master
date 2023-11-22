@@ -30,3 +30,32 @@ function AnamnseFuncao() {
         }
     }
 }
+
+let currentPage = 1; // Variable to track the current page
+
+function mostrarTela(id){
+    document.getElementById(currentPage).style.display = "none";
+   
+    currentPage = id;
+    document.getElementById(currentPage).style.display = "flex";
+}
+
+function MostrarProximaPagina() {
+    
+    document.getElementById(currentPage).style.display = "none";
+    currentPage ++;
+    document.getElementById(currentPage).style.display = "flex";
+
+}
+
+function MostrarAnteriorPagina() {
+    if (currentPage > 1){
+    document.getElementById(currentPage).style.display = "none";
+    currentPage --;
+    document.getElementById(currentPage).style.display = "flex";
+    }
+    
+
+}
+
+

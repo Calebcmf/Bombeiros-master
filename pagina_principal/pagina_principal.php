@@ -7,7 +7,7 @@
     <script src="../Scripts/jquery-3.7.0.min.js"></script>
     <title>Página Principal</title>
     <link rel="stylesheet" href="pagina_principal.css">
-    <script src="pagina_principal.js"></script>
+    <script src="../pagina_principal/pagina_principal.js"></script>
 </head>
 <body>
     <div class="menu">
@@ -36,20 +36,20 @@
             <img src="../img/logo_pequena.png" class="imagem_logo">
         </div>
         <div class="opcoes">
-            <a class="opition" href="#dados_paciente">Dados do Paciente</a>
-            <a class="opition" href="#tipo_ocorrencia">Tipo de Ocorrência</a>
-            <a class="opition" href="#localizacao_traumas">Localização Traumas</a>
-            <a class="opition" href="#observacoes">Observações Importantes</a>
-            <a class="opition" href="#nivel_consciencia">Nível de Consciência</a>
-            <a class="opition" href="#salvar_imagem">Imagem da Ocorrência</a>
-            <a class="opition" href="#objetos_recolhidos">Objetos Recolhidos</a>
-            <a class="opition" href="#avaliacao_cinematica">Avaliação da Cinemática</a>
-            <a class="opition" href="#sinais_sintomas">Sinais e Sintomas</a>
-            <a class="opition" href="#anamnese_emergencia">Anamnese de Emergência</a>
-            <a class="opition" href="#anamnese_gestacional" id="menu_anamnese" style="display: none;">Anamnese Gestacional</a>
-            <a class="opition" href="#materiais_utilizados">Materiais Utilizados</a>
-            <a class="opition" href="#sinais_vitais">Sinais Vitais</a>
-            <a class="opition" href="#forma_conducao">Forma de Condução</a>
+            <a class="opition" onclick="mostrarTela(1)">Dados do Paciente</a>
+            <a class="opition" onclick="mostrarTela(2)">Tipo de Ocorrência</a>
+            <a class="opition" onclick="mostrarTela(3)">Localização Traumas</a>
+            <a class="opition" onclick="mostrarTela(4)">Observações Importantes</a>
+            <a class="opition" onclick="mostrarTela(5)">Nível de Consciência</a>
+            <a class="opition" onclick="mostrarTela(6)">Imagem da Ocorrência</a>
+            <a class="opition" onclick="mostrarTela(7)">Objetos Recolhidos</a>
+            <a class="opition" onclick="mostrarTela(8)">Avaliação da Cinemática</a>
+            <a class="opition" onclick="mostrarTela(9)">Sinais e Sintomas</a>
+            <a class="opition" onclick="mostrarTela(10)">Anamnese de Emergência</a>
+            <a class="opition" onclick="mostrarTela(11)"id="menu_anamnese" style="display: none;">Anamnese Gestacional</a>
+            <a class="opition" onclick="mostrarTela(12)">Materiais Utilizados</a>
+            <a class="opition" onclick="mostrarTela(13)">Sinais Vitais</a>
+            <a class="opition" onclick="mostrarTela(14)">Forma de Condução</a>
         </div>
         <div class="rodape_menu">
             <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
@@ -57,82 +57,88 @@
         </div>
     </div>
 
-    <div class="principal">
-        <div class="pagina1" id="dados_paciente">
+    <div class="principal" id = principal>
+   
+        <div class="pagina1" id="1">
             <?php 
                 include("../dados_paciente/dados_paciente.html");
             ?>
         </div>
-        <br><br>
-        <div class="pagina2" id="tipo_ocorrencia">
+     
+        <div class="pagina2" id="2">
             <?php 
                 include("../tipo_ocorrencia/tipo_ocorrencia.html");
             ?>
         </div>
-        <br><br>
-        <div class="pagina3" id="localizacao_traumas">
+        
+        <div class="pagina3" id="3">
             <?php 
                 include("../localizacao_traumas/localizacao_traumas.html");
             ?>
         </div>
-        <br><br>
-        <div class="pagina4" id="observacoes">
+        
+        <div class="pagina4" id="4">
             <?php 
                 include("../observacoes/observacoes.html");
             ?>
         </div>
-        <br><br>
-        <div class="pagina5" id="nivel_consciencia">
+        
+        <div class="pagina5" id="5">
             <?php 
                 include("../nivel_consciencia/nivel_consciencia.html");
             ?>
         </div>
-        <div class="pagina6" id="salvar_imagem">
+        <div class="pagina6" id="6">
             <?php 
                 include("../salvar_imagem/salvar_imagem.html")
             ?>
         </div>
-        <div class="pagina7" id="objetos_recolhidos">
+        <div class="pagina7" id="7">
             <?php
                 include("../objetos_recolhidos/objetos_recolhidos.html")
             ?>
         </div>
-        <div class="pagina8" id="avaliacao_cinematica">
+        <div class="pagina8" id="8">
             <?php
                 include("../avaliacao_cinematica/avaliacao_cinematica.html")
             ?>
         </div>
-        <div class="pagina9" id="sinais_sintomas">
+        <div class="pagina9" id="9">
             <?php
                 include("../sinais_sintomas/sinais_sintomas.html")
             ?>
         </div>
-        <div class="pagina10" id="anamnese_emergencia">
+        <div class="pagina10" id="10">
             <?php
                 include("../anamnese_emergencia/anamnese_emergencia.html")
             ?>
         </div>
-        <div class="pagina11" id="anamnese_gestacional">
+        <div class="pagina11" id="11">
             <?php
                 include("../anamnese_gestacional/anamnese_gestacional.html")
             ?>
         </div>
-        <div class="pagina12" id="materiais_utilizados">
+        <div class="pagina12" id="12">
             <?php
                 include("../materiais_utilizados/materiais_utlizados.html")
             ?>
         </div>
-        <div class="pagina13" id="sinais_vitais">
+        <div class="pagina13" id="13">
             <?php
                 include("../sinais_vitais/sinais_vitais.html")
             ?>
         </div>
-        <div class="pagina14" id="forma_conducao">
+        <div class="pagina14" id="14">
             <?php
                 include("../forma_conducao/forma_conducao.html")
             ?>
         </div>
-        <button href="../concluido/concluido.html">Enviar</button>
+        <div class="btns">
+            <div onclick="MostrarAnteriorPagina()" class="btn"><</div>
+            <div onclick="MostrarProximaPagina()"  class="btn">></div>
+        </div>
+       
+    
     </div>
     
 </body>
