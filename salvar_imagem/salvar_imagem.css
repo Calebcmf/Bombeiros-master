@@ -1,16 +1,3 @@
-body,
-html {
-    width: 100%;
-    min-height: 100%;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    background-color: #eeeeee;
-}
 
 .fundo {
     width: 100%;

@@ -1,0 +1,71 @@
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+.meio {
+    width: 30%;
+    min-height: 45%;
+    background-color: #1e232c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    animation: slideInUp 1.5s;
+    box-shadow: 1px 1px 1px 1px 10px rgba(0, 0, 0, 0.274);
+    transition: 0.5s;
+    text-indent: 20px;
+}
+.continuar {
+    text-decoration: none;
+    cursor: pointer;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    text-indent: 1px;
+    border-radius: 100px;
+    border: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .barra {
+    width: 85%;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    animation: slideInDown 1.5s;
+    position: fixed;
+    top: 10px;
+}
+.continuar:hover {
+    background-color: #f8f8f8;
+    border: 1px solid rgba(255, 255, 255, 0.699);
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
+}

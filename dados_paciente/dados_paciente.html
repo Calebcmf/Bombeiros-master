@@ -50,6 +50,53 @@
 </head>
 
 <body>
+  <div class="menu">
+    <div class="pop-up_faleconosco" id="container_faleconosco">
+      <h1>Fale Conosco</h1>
+      <form class="form_faleconosco" action="duvidas.php" method="post">
+        Nome
+        <input type="text" class="caixa_texto" id="nome" name="nome" placeholder="Seu nome" required><br>
+
+        Email
+        <input type="email" class="caixa_texto" id="email" name="email" placeholder="Seu email" required><br>
+
+        Mensagem
+        <textarea id="mensagem" class="msg" name="mensagem" onkeypress="return searchKeyPress(event)"
+          placeholder="Digite sua mensagem" required></textarea>
+
+        <div class="botoes">
+          <button onclick="Esconder();" class="fechar_popup">Fechar</button>
+          <input type="submit" value="Enviar" name="enviar" class="enviar">
+        </div>
+      </form>
+    </div>
+    <div class="fundo_popup-escuro" id="fundo_popup-escuro">
+    </div>
+    <div class="logos">
+      <img src="../img/logo_medicina.png" class="imagem_logo">
+      <img src="../img/logo_pequena.png" class="imagem_logo">
+    </div>
+    <div class="opcoes">
+      <a class="opition" href="#dados_paciente">Dados do Paciente</a>
+      <a class="opition" href="#tipo_ocorrencia">Tipo de Ocorrência</a>
+      <a class="opition" href="#localizacao_traumas">Localização Traumas</a>
+      <a class="opition" href="#observacoes">Observações Importantes</a>
+      <a class="opition" href="#nivel_consciencia">Nível de Consciência</a>
+      <a class="opition" href="#salvar_imagem">Imagem da Ocorrência</a>
+      <a class="opition" href="#objetos_recolhidos">Objetos Recolhidos</a>
+      <a class="opition" href="#avaliacao_cinematica">Avaliação da Cinemática</a>
+      <a class="opition" href="#sinais_sintomas">Sinais e Sintomas</a>
+      <a class="opition" href="#anamnese_emergencia">Anamnese de Emergência</a>
+      <a class="opition" href="#anamnese_gestacional" id="menu_anamnese" style="display: none;">Anamnese Gestacional</a>
+      <a class="opition" href="#materiais_utilizados">Materiais Utilizados</a>
+      <a class="opition" href="#sinais_vitais">Sinais Vitais</a>
+    </div>
+    <div class="rodape_menu">
+      <div class="fale_conosco" onclick="Aparecer();">Fale Conosco</div>
+      <div class="ajuda">Ajuda</div>
+    </div>
+  </div>
+
   <div class="cabecalho">
 
     <div class="titulo">
