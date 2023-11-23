@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="../avaliacao_cinematica/avaliacao_cinematica.css">
 
 </head>
+<script src="../Scripts/jquery-3.7.0.min.js"></script>
+<script>
+   $(document).ready(function () {
+$("#enviarButton3").click(function (e) {
+    e.preventDefault();
+
+    var formData = $(".tiposA").serialize();
+
+    $.ajax({
+        type: "POST",
+        url: "../avaliacao_cinematica/avaliacao_cinematica.php",
+        data: formData,
+        success: function (response) {
+            console.log('Server response:', response);
+            alert("Dados enviados com succeso");
+            // Handle success response if needed
+        },
+        error: function () {
+            alert("Erro ao enviar os dados.");
+        }
+    });
+});
+});
+</script>
 
 <body>
     <div class="cabecalho">
@@ -18,36 +42,36 @@
         <div class="subtitulo">
         </div>
     </div>
-    <form class="tipos" method="post" action="../avaliacao_cinematica/avaliacao_cinematica.php">
-        <div class="esco_ac">
+    <form class="tiposA" method="post" >
+        <div class="esco">
             <input type="checkbox" name="resposta1" id="esco_1" class="oco_ac">
-            <label for="esco_1" class="check">DISTURBIO DE COMPORTAMENTO</label>
+            <label for="esco_1" >DISTURBIO DE COMPORTAMENTO</label>
         </div>
-        <div class="esco_ac">
+        <div class="esco">
             <input type="checkbox" name="resposta2" id="esco_2" class="oco_ac">
-            <label for="esco_2" class="check">ENCONTRADO DE CAPACETE</label>
+            <label for="esco_2" >ENCONTRADO DE CAPACETE</label>
         </div>
-        <div class="esco_ac">
+        <div class="esco">
             <input type="checkbox" name="resposta3" id="esco_3" class="oco_ac">
-            <label for="esco_3" class="check">ENCONTRADO DE CINTO</label>
+            <label for="esco_3" >ENCONTRADO DE CINTO</label>
         </div>
-        <div class="esco_ac">
+        <div class="esco">
             <input type="checkbox" name="resposta4" id="esco_4" class="oco_ac">
-            <label for="esco_4" class="check">PARA-BRISA AVARIADO</label>
+            <label for="esco_4" >PARA-BRISA AVARIADO</label>
         </div>
-        <div class="esco_ac">
+        <div class="esco">
             <input type="checkbox" name="resposta5" id="esco_5" class="oco_ac">
-            <label for="esco_5" class="check">CAMINHANDO NA CENA</label>
+            <label for="esco_5" >CAMINHANDO NA CENA</label>
         </div>
-        <div class="esco_ac">
+        <div class="esco">
             <input type="checkbox" name="resposta6" id="esco_6" class="oco_ac">
-            <label for="esco_6" class="check">PAINEL AVARIADO</label>
+            <label for="esco_6" >PAINEL AVARIADO</label>
         </div>
-        <div class="esco_ac">
+        <div class="esco">
             <input type="checkbox" name="resposta7" id="esco_7" class="oco_ac">
-            <label for="esco_7" class="check">VOLANTE TORCIDO</label>
+            <label for="esco_7" >VOLANTE TORCIDO</label>
         </div>
-        <td class="hf"> <input type="submit" id="enviar" name="enviar" class="btnE " value="Enviar">  </td>
+        <td class="hf"> <input id="enviarButton3" type="button" name="enviar" class="btnE " onclick="MostrarProximaPagina()" value="Enviar">  </td>
     </form>
 </body>
 

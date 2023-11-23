@@ -21,10 +21,10 @@ $quantidade_tala = $_POST["quantidade_tala"];
 $tala_total = $tamanho_tala . "|" . $quantidade_tala;
 $outros = $_POST["outros"];
 
-if (isset($_POST['enviar'])) {
+
     $comando = $pdo->prepare("INSERT INTO materiais_utilizados_descartaveis(ataduras_descartavel, cateter_tp_oculos_descartaveis, compressa_comum_descartaveis, kits_descartaveis, luvas_descartaveis, mascara_descartaveis, manta_aluminizada_descartaveis, pas_do_dea_descartaveis, sonda_aspiracao_descartaveis, soro_fisiologico_descartaveis, talas_pap_descartaveis, outros_descartaveis, id_paciente) VALUES('$atadura_total','$cateter','$compressa_comum','$kit_total','$luvas_desc','$mascara_desc','$manta_aluminizada','$pas_do_dea','$sonda_de_aspiracao','$soro_fisiologico','$tala_total','$outros', $id)");
     $resultado = $comando->execute();
-}
+
 
 
 ?>

@@ -8,12 +8,44 @@
     <link rel="stylesheet" href="../localizacao_traumas/localizacao_traumas.css">
     <link rel="stylesheet" href="../pagina_principal/pagina_principal.css">
 
-    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+    
 
         <script src="../localizacao_traumas/localizacao_traumas.js"> </script>
   
 </head>
 <body>
+
+    
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+    <script>
+     $(document).ready(function () {
+    $("#enviarBtn11").click(function (e) {
+        e.preventDefault();
+   
+    
+        var parteCorpoText = document.getElementById('mtd').innerText;
+
+       
+        document.getElementById('parteCorpo').value = parteCorpoText;
+
+        var formData = $("#form1").serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "../localizacao_traumas/localizacao_traumas.php",
+            data: formData,
+            success: function (response) {
+                console.log('Server response:', response);
+                alert("Dados enviados com sucesso!");
+            },
+            error: function () {
+                alert("Erro ao enviar os dados.");
+            }
+        });
+    });
+});
+
+    </script>
     
     <div class="cabecalho">
         <div class="titulo">
@@ -113,14 +145,14 @@
     
 
     
-    <form class="popUP" id="form1"  method="post" >
+    <form class="popUP" id="form1" class ="form1"  method="post" >
     
             <div class="m">
                 <div class="fechar" onclick="fechar(1)">X</div>
                 <div class="quadI">
-                    <img src="../img/Cabeca.png" width  ="50%" height="auto" id="im" alt=""></img>
+                    <img src="../img/Cabeca.png" width  ="50%" height="auto " class="imLT" id="im" alt=""></img>
                 </div>
-                
+                <input type="hidden" id="parteCorpo" name="parteCorpo">
                 <p id="mtd" >Cabeça<p>
             </div>
         <div class="m m1">
@@ -177,18 +209,18 @@
             </div>
 
             <div class="tri ">
-                <div class="esco">
-                    <input type="radio" name="check_40" id="check_39"class="spc">
+                <div class="escolha">
+                    <input type="checkbox" name="check_39" id="check_39"class="tra">
                     <label for="check_39" class="check">Frente</label>
                 </div>
-                <div class="esco">
-                    <input type="radio" name="check_40" id="check_40"class="spc">
+                <div class="escolha">
+                    <input type="checkbox" name="check_40" id="check_40"class="tra">
                     <label for="check_40" class="check">Atrás</label>
                 </div>
             </div>
         </div> 
         
-        <input type="submit" value="Enviar" name="Enviar" id="Enviar"  class="btnF">
+        <input id="enviarBtn11" type="button" name="enviarBtn11" class="btnE ltb " onclick="MostrarProximaPagina()" value="Enviar"> 
 
         
     </form> 

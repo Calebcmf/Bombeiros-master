@@ -11,11 +11,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            $(".formulario").submit(function (event) {
+            $("#enviarBtn9").click(function (event) {
                 event.preventDefault(); // Impede o envio do formulário padrão
 
                 // Coleta os dados do formulário
-                var formData = $(this).serialize();
+                var formData = $('#formSV').serialize();
 
                 $.ajax({
                     type: "POST",
@@ -32,7 +32,7 @@
             });
         });
     </script>
-    <script>
+     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             const radioButtons = document.querySelectorAll('.oco');
 
@@ -48,7 +48,7 @@
                 });
             });
         });
-    </script>
+    </script> 
 </head>
 
 <body>
@@ -58,26 +58,28 @@
             <div class="titulo">Sinais Vitais</div>
         </div>
         <br><br>
-        <form class="formulario" method="post">
+        <form class="formulario" id="formSV" method="post">
+        <div class="tabela tSV">
+
             <div class="uh">
                 <div class="container_sinais">
                     Pressão Arterial:<input type="text" id="pressao_arterial" name="pressao" class="caixa_texto">mmHg
-                </div><br>
+                </div>
                 <div class="container_sinais">
-                    Pulso: <input type="text" id="pulso" name="pulso" class="caixa_texto">B.C.P.M.
-                </div><br>
+                    Pulso:<br> <input type="text" id="pulso" name="pulso" class="caixa_texto">B.C.P.M.
+                </div>
                 <div class="container_sinais">
-                    Respiração: <input type="text" id="respiracao" name="respiracao" class="caixa_texto">M.R.M.
-                </div><br>
+                    Respiração: <br>  <input type="text" id="respiracao" name="respiracao" class="caixa_texto">M.R.M.
+                </div>
                 <div class="container_sinais">
-                    Saturação: <input type="number" id="saturacao" name="saturacao" class="caixa_numero">%
-                </div><br>
+                    Saturação: <br>  <input type="number" id="saturacao" name="saturacao" class="caixa_numero">%
+                </div>
                 <div class="container_sinais">
-                    HGT: <input type="text" id="hgt" name="hgt" class="caixa_texto">
-                </div><br>
+                    HGT: <br>  <input type="text" id="hgt" name="hgt" class="caixa_texto">
+                </div>
                 <div class="container_sinais">
-                    Temperatura: <input type="number" id="temperatura" name="temperatura" class="caixa_numero">°C
-                </div><br>
+                    Temperatura: <br>  <input type="number" id="temperatura" name="temperatura" class="caixa_numero">°C
+                </div>
             </div>
             <div class="container_sinais">Perfuração:
                 <input type="radio" name="perfuracao" id="maior_2">
@@ -86,7 +88,9 @@
                 <label for="menor_2">Menor que 2seg.</label>
             </div>
             <br><br>
-            <td class="hf"> <input id="enviar" type="submit" name="enviar" class="btnE " value="Enviar">  </td>
+            <td class="hf"> <input id="enviarBtn9" type="button" name="enviarBtn9" class="btnE " onclick="MostrarProximaPagina()" value="Enviar">  </td>
+        </div>      
+            
         </form>
 
     </div>

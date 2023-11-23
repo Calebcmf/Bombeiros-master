@@ -7,6 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../anamnese_emergencia/anamnese_emergencia.css">
 </head>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#enviarBtn6").click(function (e) {
+            e.preventDefault();
+
+            var formData = $("#formAE").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "../anamnese_emergencia/anamnese_emergencia.php", // Update with your PHP processing script path
+                data: formData,
+                success: function (response) {
+                    console.log('Server response:', response);
+                    alert("Dados enviados com sucesso");
+                    
+                },
+                error: function () {
+                    alert("Erro ao enviar os dados.");
+                }
+            });
+        });
+    });
+</script>
 
 <body>
   <div class="cabecalho">
@@ -17,15 +41,15 @@
       Da Emergência Médica
     </div>
   </div>
-
-  <div class="texto">
+<div class="pAnamnese">
+  <div class="textoAE">
     <div class="tc">
       O que Aconteceu?
     </div>
   </div>
-  <form action="../anamnese_emergencia/anamnese_emergencia.php" method="post">
+  <form  method="post" id="formAE">
     <input type="text" name="per1" id="sinais" class="sinais" cols="20" rows="10" placeholder="..." a></input>
-    <div class="texto">
+    <div class="textoAE">
       <div class="tc">
         Aconteceu outras vezes?
       </div>
@@ -37,13 +61,13 @@
         Não
       </div>
     </div><br><br>
-    <div class="texto">
+    <div class="textoAE">
       <div class="tc">
         A quanto tempo isso aconteceu?
       </div>
     </div>
-    <input type="text" name="per2" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-    <div class="texto">
+    <input type="text" name="per2" id="sinais" class="sinais"  placeholder="..." a></input>
+    <div class="textoAE">
       <div class="tc">
         Possui algum problema de saúde?
       </div>
@@ -54,13 +78,13 @@
         Não
       </div>
     </div><br><br>
-    <div class="texto">
+    <div class="textoAE">
       <div class="tc">
         Quais?
       </div>
     </div>
-    <input type="text" name="per3" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-    <div class="texto">
+    <input type="text" name="per3" id="sinais" class="sinais" placeholder="..." a></input>
+    <div class="textoAE">
       <div class="tc">
         Faz uso de medicação
       </div>
@@ -71,19 +95,19 @@
         Não
       </div>
     </div><br><br>
-    <div class="texto">
+    <div class="textoAE">
       <div class="tc">
         Horario da última medicação
       </div>
     </div>
     <input type="time" class="tempo" name="per4">
-    <div class="texto">
+    <div class="textoAE">
       <div class="tc">
         Quais?
       </div>
     </div><br><br>
-    <input type="text" name="per5" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-    <div class="texto">
+    <input type="text" name="per5" id="sinais" class="sinais" placeholder="..." a></input>
+    <div class="textoAE">
       <div class="tc">
         Alérgico a alguma coisa
       </div>
@@ -94,13 +118,13 @@
         Não
       </div>
     </div><br><br>
-    <div class="texto">
+    <div class="textoAE">
       <div class="tc">
         Quais?
       </div>
     </div>
-    <input type="text" name="per6" id="sinais" class="sinais" cols="20" rows="5" placeholder="..." a></input>
-    <div class="texto">
+    <input type="text" name="per6" id="sinais" class="sinais"  placeholder="..." a></input>
+    <div class="textoAE">
       <div class="tc">
         Ingeriu alimento ou líquido >= 6 horas
       </div>
@@ -111,15 +135,15 @@
         Não
       </div>
     </div><br><br>
-    <div class="texto">
+    <div class="textoAE">
       <div class="tc">
         Que Horas?
       </div>
     </div>
     <input type="time" name="per7" class="tempo"><br><br>
-    <td class="hf"> <input id="enviar" name="enviar" class="btnE " value="Enviar">  </td>
+    <td class="hf"> <input id="enviarBtn6" type="button" name="enviarBtn6" class="btnE " onclick="MostrarProximaPagina()" value="Enviar">  </td>
   </form>
-
+</div>
 </body>
 
 </html>

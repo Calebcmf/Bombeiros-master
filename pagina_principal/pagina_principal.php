@@ -114,7 +114,7 @@
         </div>
         <div class="pagina11" id="11">
             <?php
-                include("../anamnese_gestacional/anamnese_gestacional.html")
+               
             ?>
         </div>
         <div class="pagina12" id="12">
@@ -132,10 +132,10 @@
                 include("../forma_conducao/forma_conducao.html")
             ?>
         </div>
-        <div class="btns">
+        <!-- <div class="btns">
             <div onclick="MostrarAnteriorPagina()" class="btn"><</div>
             <div onclick="MostrarProximaPagina()"  class="btn">></div>
-        </div>
+        </div> -->
        
     
     </div>

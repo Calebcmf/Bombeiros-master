@@ -50,9 +50,36 @@
         
     }
 
-
-    input.addEventListener('keyup', filterUsers);
    
+    input.addEventListener('keyup', filterUsers);
+
+    const screenHeight = window.innerHeight;
+
+    
+    const percentageMapping = {
+    1080: 40,
+    766: 70
+    };
+
+    
+    let calculatedPaddingTop = 0;
+    for (const height in percentageMapping) {
+    if (screenHeight === parseInt(height)) {
+        calculatedPaddingTop = percentageMapping[height];
+        break;
+    }
+    }
+
+    if (element) {
+    element.style.paddingTop = `${calculatedPaddingTop}%`;
+    } else {
+    console.error('Element not found');
+    }
+
+    window.addEventListener('resize', () => {
+        
+    });
+    
    
 
         

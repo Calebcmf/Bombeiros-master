@@ -1,9 +1,9 @@
-.texto{
+.textoAE{
     width: 50%;
-    height: 100px;
+    height: 50px;
     font-size: 20px;
     display: flex;
-  
+    align-content: space-evenly;
     flex-direction: column;
     font-size: 12px;
 
@@ -17,16 +17,21 @@
 .sinais{
     display: flex;
     background-color: #D9D9D9;
-    border: 0px;
+    border: 0px; 
     transition: 1s;
     width: 50%;
-    height: 50px;
-    margin-bottom: 2%;
+    height: 30px;
+    font-size: 15px;
+  
 }
+::-webkit-scrollbar {
+    display: none;
+  }
+  
 
 .tempo{
-    width: 30%;
-   
+    width: 50%;
+    height: 30px;
     background-color: #D9D9D9;
     outline: none;
     border: none;
@@ -40,21 +45,32 @@
     border-bottom: 2px solid #75777D;
 }
 
+.pAnamnese{
+   
+    width: 50%;
+    height: 1050px;
+    max-height: 1050px;
+    border-radius: 20px;
+    margin-top: 30%;    
+     
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+
+}
+
 .tc{
     
 
     color: #1E232C;
-
-    margin-top: 20px ;
-    border-bottom: 10px solid #C0C0C0;
-
+    border-bottom: 10px solid #75777D;
+    padding: 1% ;
+    margin-bottom: 1%;
     font-size: 16px;
     display: flex;
     width: 100%;
-    margin-bottom: 2%;
-    padding-bottom: 1%;
- 
- 
 }
 
 .sinais:focus{
@@ -62,7 +78,7 @@
     outline: none;
     border-radius: 0%;
     
-    border-bottom: 5px solid #B1B1B1;
+ 
     transition: .5s; 
 }
 .opcoesE{
@@ -85,7 +101,7 @@
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.5) ;
     outline: #1E232C;
-    margin:1%;
+  
     transition: .5s;
 }
 
@@ -96,7 +112,7 @@
     background: #1E232C;
     border: none;
     border-radius: 0%;
-    outline: 10px solid #D9D9D9; 
+
     width: 30px;  
     height: 30px;  
     transition: .5s;
@@ -110,7 +126,7 @@
     width: 100%;
     height: 50%;
     display: flex;
-    margin-top: 10px;
+  
    
     align-items: center;
    
@@ -120,8 +136,7 @@
 .caixaPesquisa{
     outline: none;
     border: none;
-    margin-bottom: 5%;
-    margin-top: 5%;
+   
     width: 75%;
     padding: 1.5%;
 }
@@ -141,25 +156,25 @@
         width: 80%;
     }
 
-    .texto{
+    .textoAE{
         width: 80%;
-        height: 50px;
+        height: 40px;
       
     }
 
+    .tc{
+       
+    }
+   
+
     .alt{
-       margin-bottom: 12.5%;
-       margin-top: 2.5%;
+      
     }
 
     .pagina11,.pagina10{
         height: 2000px;
     }
 
-    .tc{
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-    }
 
     .a{
         height: 200px;

@@ -38,6 +38,13 @@ function mostrarTela(id){
    
     currentPage = id;
     document.getElementById(currentPage).style.display = "flex";
+    console.log(currentPage);
+    if (currentPage === 10 || currentPage === 11) {
+        document.body.style.height = "150vh";
+    }
+
+
+
 }
 
 function MostrarProximaPagina() {
@@ -45,17 +52,17 @@ function MostrarProximaPagina() {
     document.getElementById(currentPage).style.display = "none";
     currentPage ++;
     document.getElementById(currentPage).style.display = "flex";
-
+  
+      
+    
 }
 
-function MostrarAnteriorPagina() {
-    if (currentPage > 1){
-    document.getElementById(currentPage).style.display = "none";
-    currentPage --;
-    document.getElementById(currentPage).style.display = "flex";
-    }
+function VoltarTudo() {
+ 
+    document.getElementById(14).style.display = "none";
+    document.getElementById(1).style.display = "flex";
+    
     
 
 }
-
 

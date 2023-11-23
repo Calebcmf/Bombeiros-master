@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../nivel_consciencia/nivel_consciencia.css">
     <script src="../nivel_consciencia/nivel_consciencia.js"></script>
     <link rel="stylesheet" href="../pagina_principal/pagina_principal.css">
-
+      <script src="../Scripts/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <div id="idade_info"></div>
         </div>
     </div>
-    <form action="../nivel_consciencia/nivel_consciencia.php" method="post">
+    <form id="myForm" method="post">
         <br><br>
         <div class="container_nivel-consciencia">
             <div class="titulo2">
@@ -56,9 +56,32 @@
                     <option value="nenhuma">Nenhuma</option>
                 </select>
             </div>
-        
+            <input type="button" value="Enviar" id="EnviarNC" class="btnF" onclick="MostrarProximaPagina()" >
         </div>
     </form>
+    <script>
+        $(document).ready(function () {
+            $("#EnviarNC").click(function () {
+                // Get form data
+                var formData = $("#myForm").serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "../nivel_consciencia/nivel_consciencia.php",
+                    data: formData,
+                    success: function (response) {
+                        // Handle success response here
+                        console.log(response);
+                        // Optionally, perform actions after successful submission
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle error
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

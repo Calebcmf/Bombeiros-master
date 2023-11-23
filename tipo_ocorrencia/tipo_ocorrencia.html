@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="../tipo_ocorrencia/tipo_ocorrencia.css">
     <link rel="stylesheet" href="../pagina_principal/pagina_principal.css">
 
+    <script src="../Scripts/jquery-3.7.0.min.js"></script>
+    <script>
+       $(document).ready(function () {
+    $("#enviarButton2").click(function (e) {
+        e.preventDefault();
+
+        var formData = $(".tiposT").serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "../tipo_ocorrencia/tipo_ocorrencia.php",
+            data: formData,
+            success: function (response) {
+                console.log('Server response:', response);
+                alert("Dados enviados com succeso");
+                // Handle success response if needed
+            },
+            error: function () {
+                alert("Erro ao enviar os dados.");
+            }
+        });
+    });
+    });
+    </script>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             const radioButtons = document.querySelectorAll('.oco');
@@ -26,6 +50,7 @@
             });
         });
     </script>
+
 </head>
 
 <body>
@@ -40,10 +65,12 @@
     <!-- <div class="pesquisa" id="pesquisaC">
         <input type="text"></input> -->
     <br><br>
-    <form class="tipos" id="pai" method="post" action="../tipo_ocorrencia/tipo_ocorrencia.php">
-        <br><br>
+    <form class="tiposT" id="tipoOcorrenciaForm" method="post">
+    
+        
+
         <div class="esco">
-            <input type="radio" name="check_10" id="check_11"  class="oco">
+            <input type="radio" name="check_10" id="check_10"  class="oco">
             <label for="check_10" class="check" id="var_0">CAUSADO POR ANIMAIS</label>
         </div>
         <div class="esco">
@@ -51,19 +78,19 @@
             <label for="check_11" class="check"id="var_1">MEIO DE TRANSPORTE</label>
         </div>
         <div class="esco">
-            <input type="radio" name="check_12" class="oco">
+            <input type="radio" name="check_12" id="check_12"class="oco">
             <label for="check_12" class="check"id="var_2">DESMORONAMENTO</label>
         </div>
         <div class="esco">
-            <input type="radio" name="check_13" class="oco">
+            <input type="radio" name="check_13" id="check_13"class="oco">
             <label for="check_13" class="check"id="var_3">EMERGÊNCIA MÉDICA</label>
         </div>
         <div class="esco">
-            <input type="radio" name="check_14" class="oco">
+            <input type="radio" name="check_14" id="check_14"class="oco">
             <label for="check_14" class="check"id="var_3">QUEDA DE ALTURA 2M</label>
         </div>
         <div class="esco">
-            <input type="radio" name="check_15" class="oco">
+            <input type="radio" name="check_15" id="check_15"class="oco">
             <label for="check_15" class="check"id="var_3">TENTATIVA DE SUICÍDIO</label>
         </div>
         <div class="esco">
@@ -112,7 +139,7 @@
             <label for="check_27" class="check"id="var_3">QUEDA MOTO</label>
         </div>
         <div class="esco">
-            <input type="radio" name="check_28" id="check_28"class="oco">
+            <input type="radio" name="check _28" id="check_28"class="oco">
             <label for="check_28" class="check"id="var_3">QUEDA NÍVEL <2M </label>
         </div>
         <div class="esco">
@@ -123,9 +150,13 @@
             <input type="radio" name="check_30" id="check_30"class="oco">
             <label for="check_30" class="check"id="var_3">TRANSFERÊNCIA</label>
         </div>
-        <td class="hf"> <input id="enviar" type="submit" name="enviar" class="btnE toco" value="Enviar">  </td>
+        <br><br>
+        <td class="hf"> <button id="enviarButton2" name="local" class="btnE btoc" onclick="MostrarProximaPagina()">Enviar</button>  </td>
     </form>
+
+    <script src="../tipo_ocorrencia/tipo_ocorrencia.js"></script>
 </body>
-<script src="../tipo_ocorrencia/tipo_ocorrencia.js"></script>
+
+
 
 </html>

@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,6 +45,12 @@ td {
   justify-content: space-between;
 }
 
+td{
+  padding: .5%;
+}
+
+
+
 .botao_proximo {
   width: 250px;
   height: 40px;
@@ -57,10 +64,15 @@ td {
 }
 
 .tabela {
-  border: #1E232C 2px solid;
-  width: 80%;
+  border-bottom: #1d4983 10px solid;
+  border-left: #1d4983 1px solid;
+  border-right: #1d4983 1px solid;
+
+  width: 60%;
   height: 90%;
   font-size: 20px;
+  padding : 2%;
+  border-radius: 10px;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -68,15 +80,17 @@ td {
   width: 90%;
   height: 30px;
   border-radius: 20px;
-  border: #1E232C 2px solid;
+  border: none; 
+  background-color: #d9d9d9;
   padding-left: 10px;
 }
 
 .caixa1 {
   width: 15%;
+  background-color: #d9d9d9;
   height: 30px;
   border-radius: 20px;
-  border: #1E232C 2px solid;
+  border: none; 
   padding-left: 10px;
 }
 
@@ -129,15 +143,17 @@ B {
   justify-items: center;
   border-radius: 5px;
   margin-right: 20px;
-
+  transition: .5s;
 }
+
+
 
 .radio_sexo {
   display: none;
 }
 
 .radio_sexo:checked+.sexo_check {
-  background-color: #AF1521;
+  background-color: #1d4983;
 }
 
 .rodape_menu {
@@ -225,6 +241,10 @@ a.opition {
 a.opition:hover {
   background-color: rgb(47, 150, 219);
 
+}
+
+.form{
+  margin-top: 30%;
 }
 
 .pop-up_faleconosco {

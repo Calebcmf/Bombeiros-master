@@ -31,12 +31,12 @@ input.escolha_ss{
 
 
 
-.tipos{
+.tiposS{
     background-color: #C0C0C0;
     width: 80%;
     height: 250px;
     max-height: 250px;
-    
+    padding-top: 50%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ input.escolha_ss{
     overflow-y: auto;
 }
 
-.tipos{
+.tiposS{
     grid-template-columns: 100%;
     display: grid;
     padding: 3%;
@@ -170,13 +170,19 @@ input.escolha_ss{
         width: 100%;
     }
 
-    .tipos{
-        grid-template-columns: repeat(2, 1fr);
+    .btnAc{
+        width: 100%;
+    }
+
+    .tiposS{
+        grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 30%;
         padding: 1%;
         height: 400px;
-        width: 50%;
-        max-height: 400px;
+        width: 60%;
+        padding-top: 30%;
+        max-height: 250px;
+        margin-top: 5%;
     }
 
    

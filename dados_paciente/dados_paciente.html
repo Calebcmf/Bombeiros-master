@@ -8,31 +8,34 @@
   <link rel="stylesheet" href="../pagina_principal/pagina_principal.css">
   <script src="../nivel_consciencia/nivel_consciencia.js"></script>
   <title>Dados do Paciente</title>
+
+  <script src="../Scripts/jquery-3.7.0.min.js"></script>
   <script>
     $(document).ready(function () {
-      $(".formulario").submit(function (event) {
-        event.preventDefault(); // Impede o envio do formulário padrão
+    $("#enviarButton").click(function (e) {
+        e.preventDefault(); 
 
-        // Coleta os dados do formulário
-        var formData = $(this).serialize();
+        var formData = $(".formularioDados").serialize();
 
         $.ajax({
-          type: "POST",
-          url: "../dados_paciente/dados_paciente.php",
-          data: formData,
-          success: function (response) {
-            // Aqui você pode manipular a resposta da requisição
-            
-          },
-          error: function () {
-            alert("Erro ao enviar os dados.");
-          }
+            type: "POST",
+            url: "../dados_paciente/dados_paciente.php",
+            data: formData,
+            success: function (response) {
+                console.log('Server response:', response);
+                alert("Dados enviados com succeso");
+                // Handle success response if needed
+            },
+            error: function () {
+                alert("Erro ao enviar os dados.");
+            }
         });
-      });
     });
-  </script>
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
+});
+
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
       const radioButtons = document.querySelectorAll('.radio_sexo');
 
       radioButtons.forEach(radioButton => {
@@ -47,14 +50,16 @@
         });
       });
     });
-  </script>
+</script>
+ 
+ 
 </head>
 
 <body>
   <div class="menu">
     <div class="pop-up_faleconosco" id="container_faleconosco">
       <h1>Fale Conosco</h1>
-      <div class="form_faleconosco" action="duvidas.php" method="post">
+      <form class="form_faleconosco" action="duvidas.php" method="post">
         Nome
         <input type="text" class="caixa_texto" id="nome" name="nome" placeholder="Seu nome" required><br>
 
@@ -69,7 +74,7 @@
           <button onclick="Esconder();" class="fechar_popup">Fechar</button>
           <input type="submit" value="Enviar" name="enviar" class="enviar">
         </div>
-      </div>
+      </form>
     </div>
     <div class="fundo_popup-escuro" id="fundo_popup-escuro">
     </div>
@@ -108,36 +113,36 @@
 
   </div>
   <br><br>
-  <form class="formulario" method="post">
+  <form class="formularioDados" method="post" action="#">
     <table class="tabela">
-      <TR BGCOLOR=#1E232C>
+      <TR BGCOLOR=#1d4983>
 
       </TR>
       <tr>
-        <td>Nome:</td>
-        <td width="70%"><input type="text" name="nome" class="caixa"></td>
+        <td ><div class="dpI">Nome:</div></td>
+        <td width="90%"><input type="text" name="nome" class="caixa"></td>
       </tr>
       <tr>
-        <td>RG/CPF:</td>
+        <td ><div class="dpI">RG/CPF: </div></td>
         <td>
           <input type="text" name="cpf" class="caixa">
         </td>
       </tr>
       <tr>
-        <td>
-          Sexo:
+        <td >
+          <div class="dpI"> Sexo:</div>
         </td>
         <td style="display: flex; flex-direction: row;">
           <input type="radio" name="sexo_m" id="masculino" class="radio_sexo">
-          <label for="masculino" class="sexo_check"><img src="../img/masc.png"></label>
+          <label for="masculino" class="sexo_check"><img src="../img/masc.png" height="80%"></label>
 
           <input type="radio" name="sexo_f" id="feminino" class="radio_sexo">
-          <label for="feminino" class="sexo_check"><img src="../img/fem.png"></label>
+          <label for="feminino" class="sexo_check"><img src="../img/fem.png" height="80%"></label>
         </td>
       </tr>
       <tr>
         <td>
-          Idade:
+           <div class="dpI">Idade:</div>
         </td>
         <td>
           <input type="number" name="idade" id="idade" class="caixa1" min="0" max="150" onchange="Mudar_Idade();">
@@ -145,7 +150,7 @@
       </tr>
       <tr>
         <td>
-          Fone:
+           <div class="dpI">Fone:</div>
         </td>
         <td>
           <input type="text" name="telefone" class="caixa">
@@ -153,12 +158,14 @@
       </tr>
       <TR BGCOLOR=#1E232C>
         <td ALIGN="center" VALIGN="center" HEIGHT="40" COLSPAN="2" class="t">
-          Dados do Acompanhante
+           Dados do Acompanhante
         </td>
       </TR>
       <tr>
-        <td>
-          Nome:
+        <td> 
+          
+          <div class="dpI">Nome:</div>
+        </div>
         </td>
         <td>
           <input type="text" name="nomeAcompanhante" class="caixa">
@@ -166,7 +173,7 @@
       </tr>
       <tr>
         <td>
-          Idade:
+          <div class="dpI">Idade:</div>
         </td>
         <td>
           <input type="number" name="idadeAcompanhante" class="caixa1">
@@ -179,7 +186,7 @@
       </TR>
       <tr>
         <td>
-          CEP:
+          <div class="dpI">CEP:</div> 
         </td>
         <td>
           <input type="text" id="cep_local" name="cep" class="caixa">
@@ -187,7 +194,7 @@
       </tr>
       <tr>
         <td>
-          Local:
+          <div class="dpI"> Local:</div>
         </td>
         <td>
           <input type="text" id="local" name="local" class="caixa">
@@ -195,19 +202,17 @@
         <tr >
          <td></td>
           
-          <td class="hf"> <input type="submit" id="local" name="local" class="btnE" value="Enviar">  </td>
-          
-           
-        
-          
-        </tr>
+         <td><button style="width: 90%;" id="enviarButton" name="local" class="btnE" onclick="MostrarProximaPagina()">Enviar</button></td>
+
+        </tr> 
       </tr>
       
     </table>
     
   </form>
 </body>
-<script>
+<!-- <script>
+  
   navigator.geolocation.getCurrentPosition(function (posicao) {
     var url = "http://nominatim.openstreetmap.org/reverse?lat=" + posicao.coords.latitude + "&lon=" + posicao.coords.longitude + "&format=json&json_callback=preencherDados";
     var script = document.createElement('script');
@@ -225,6 +230,6 @@
     document.getElementById("cep_local").value = dados.address.postcode;
     document.getElementById("local").value = dados.address.city;
   }
-</script>
+</script> -->
 
 </html>

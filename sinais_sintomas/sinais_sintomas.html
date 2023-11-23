@@ -9,8 +9,33 @@
     <link rel="stylesheet" href="../sinais_sintomas/sinais_sintomas.css">
     <link rel="stylesheet" href="../pagina_principal/pagina_principal.css">
 
+    <script>
+        $(document).ready(function () {
+     $("#enviarButton4").click(function (e) {
+         e.preventDefault();
+ 
+         var formData = $(".tiposS").serialize();
+ 
+         $.ajax({
+             type: "POST",
+             url: "../sinais_sintomas/sinais_sintomas.php",
+             data: formData,
+             success: function (response) {
+                 console.log('Server response:', response);
+                 alert("Dados enviados com succeso");
+                 // Handle success response if needed
+             },
+             error: function () {
+                 alert("Erro ao enviar os dados.");
+             }
+         });
+     });
+     });
+     </script>
+
 
 </head>
+
 
 <body>
     <div class="cabecalho">
@@ -20,176 +45,256 @@
         <div class="subtitulo">
         </div>
     </div>
-    <form action="../sinais_sintomas/sinais_sintomas.php" method="post">
+
         <div class="pesquisa">
             <input type="text" name="esco_41"></input>
         </div>
-        <div class="tipos">
+<form class="tiposS">
 
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_1" class="oco_ac">
-                <label for="esco_1" class="check">ABDOMEM SENSÍVEL OU RÍGIDO</label>
+            <!-- Checkbox 1 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_01" name="esco_01" class="oco_ac">
+    <label for="esco_01" class="check">ABDOMEM SENSÍVEL OU RÍGIDO</label>
+</div>
+
+<!-- Checkbox 2 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_02" name="esco_02" class="oco_ac">
+    <label for="esco_02" class="check">AFUNDAMENTO DE CRÂNIO</label>
+</div>
+
+<!-- Checkbox 3 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_03" name="esco_03" class="oco_ac">
+    <label for="esco_03" class="check">AGITAÇÃO</label>
+</div>
+
+<!-- Checkbox 4 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_04" name="esco_04" class="oco_ac">
+    <label for="esco_04" class="check">AMNÉSIA</label>
+</div>
+
+<!-- Checkbox 5 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_05" name="esco_05" class="oco_ac">
+    <label for="esco_05" class="check">ANGINA DE PEITO</label>
+</div>
+
+<!-- Checkbox 6 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_06" name="esco_06" class="oco_ac">
+    <label for="esco_06" class="check">APINÉIA</label>
+</div>
+
+<!-- Checkbox 7 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_07" name="esco_07" class="oco_ac">
+    <label for="esco_07" class="check">BRADICARDIA</label>
+</div>
+
+<!-- Checkbox 8 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_8" name="esco_8" class="oco_ac">
+    <label for="esco_8" class="check">BRADIPNÉIA</label>
+</div>
+
+<!-- Checkbox 9 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_9" name="esco_9" class="oco_ac">
+    <label for="esco_9" class="check">BRONCO-ASPIRADO</label>
+</div>
+
+<!-- Checkbox 10 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_10" name="esco_10" class="oco_ac">
+    <label for="esco_10" class="check">CEFALÉIA</label>
+</div>
+ <!-- Checkbox 11 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_11" name="esco_11" class="oco_ac">
+    <label for="esco_11" class="check">CIANOSE</label>
+</div>
+
+<!-- Checkbox 12 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_12" name="esco_12" class="oco_ac">
+    <label for="esco_12" class="check">CONVULSÃO</label>
+</div>
+
+<!-- Checkbox 13 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_13" name="esco_13" class="oco_ac">
+    <label for="esco_13" class="check">DECORTICAÇÃO</label>
+</div>
+
+<!-- Checkbox 14 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_14" name="esco_14" class="oco_ac">
+    <label for="esco_14" class="check">DEFORMIDADE</label>
+</div>
+
+<!-- Checkbox 15 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_15" name="esco_15" class="oco_ac">
+    <label for="esco_15" class="check">DESCEREBRAÇÃO</label>
+</div>
+
+<!-- Checkbox 16 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_16" name="esco_16" class="oco_ac">
+    <label for="esco_16" class="check">DESMAIO</label>
+</div>
+
+<!-- Checkbox 17 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_17" name="esco_17" class="oco_ac">
+    <label for="esco_17" class="check">DESVIO DE TRAQUÉIA</label>
+</div>
+
+<!-- Checkbox 18 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_18" name="esco_18" class="oco_ac">
+    <label for="esco_18" class="check">DOR LOCAL</label>
+</div>
+
+<!-- Checkbox 19 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_19" name="esco_19" class="oco_ac">
+    <label for="esco_19" class="check">EDEMA</label>
+</div>
+
+<!-- Checkbox 20 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_20" name="esco_20" class="oco_ac">
+    <label for="esco_20" class="check">ENFISEMA SUBCUTÂNEO</label>
+</div>
+<!-- Checkbox 21 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_21" name="esco_21" class="oco_ac">
+    <label for="esco_21" class="check">FACE PÁLIDA</label>
+</div>
+
+<!-- Checkbox 22 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_22" name="esco_22" class="oco_ac">
+    <label for="esco_22" class="check">HEMORRAGIA</label>
+</div>
+
+<!-- Checkbox 23 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_23" name="esco_23" class="oco_ac">
+    <label for="esco_23" class="check">HIPERTENSÃO</label>
+</div>
+
+<!-- Checkbox 24 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_24" name="esco_24" class="oco_ac">
+    <label for="esco_24" class="check">HIPOTENSÃO</label>
+</div>
+
+<!-- Checkbox 25 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_25" name="esco_25" class="oco_ac">
+    <label for="esco_25" class="check">NÂUSEAS E VÔMITOS</label>
+</div>
+
+<!-- Checkbox 26 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_26" name="esco_26" class="oco_ac">
+    <label for="esco_26" class="check">NASORAGIA</label>
+</div>
+
+<!-- Checkbox 27 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_27" name="esco_27" class="oco_ac">
+    <label for="esco_27" class="check">ÓBITO</label>
+</div>
+
+<!-- Checkbox 28 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_28" name="esco_28" class="oco_ac">
+    <label for="esco_28" class="check">OTORRÉIA</label>
+</div>
+
+<!-- Checkbox 29 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_29" name="esco_29" class="oco_ac">
+    <label for="esco_29" class="check">O.V.A.C.E.</label>
+</div>
+
+<!-- Checkbox 30 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_30" name="esco_30" class="oco_ac">
+    <label for="esco_30" class="check">PARADA CARDÍACA/ RESPIRATÓRIA</label>
+</div>
+<!-- Checkbox 31 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_31" name="esco_31" class="oco_ac">
+    <label for="esco_31" class="check">PRIAPRISMO</label>
+</div>
+
+<!-- Checkbox 32 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_32" name="esco_32" class="oco_ac">
+    <label for="esco_32" class="check">PRURIDO NA PELE</label>
+</div>
+
+<!-- Checkbox 33 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_33" name="esco_33" class="oco_ac">
+    <label for="esco_33" class="check">SEDE</label>
+</div>
+
+<!-- Checkbox 34 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_34" name="esco_34" class="oco_ac">
+    <label for="esco_34" class="check">PUPILAS</label>
+</div>
+
+<!-- Checkbox 35 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_35" name="esco_35" class="oco_ac">
+    <label for="esco_35" class="check">SINAL DE BATTLE</label>
+</div>
+
+<!-- Checkbox 36 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_36" name="esco_36" class="oco_ac">
+    <label for="esco_36" class="check">SINAL DE GUAXINIM</label>
+</div>
+
+<!-- Checkbox 37 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_37" name="esco_37" class="oco_ac">
+    <label for="esco_37" class="check">SUDORESE</label>
+</div>
+
+<!-- Checkbox 38 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_38" name="esco_38" class="oco_ac">
+    <label for="esco_38" class="check">TAQUIPNÉIA</label>
+</div>
+
+<!-- Checkbox 39 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_39" name="esco_39" class="oco_ac">
+    <label for="esco_39" class="check">TAQUICARDIA</label>
+</div>
+
+<!-- Checkbox 40 -->
+<div class="esco_ac">
+    <input type="checkbox" id="esco_40" name="esco_40" class="oco_ac">
+    <label for="esco_40" class="check">TONTURA</label>
+</div>
+
+            <div class="esco_ac btnAC">
+                <td class="hf"> <input id="enviarButton4" type="button" name="enviar" class="btnE " onclick="MostrarProximaPagina()" value="Enviar">  </td>
             </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_2" class="oco_ac">
-                <label for="esco_2" class="check">AFUNDAMENTO DE CRÂNIO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_3" class="oco_ac">
-                <label for="esco_3" class="check">AGITAÇÃO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_4" class="oco_ac">
-                <label for="esco_4" class="check">AMNÉSIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_5" class="oco_ac">
-                <label for="esco_5" class="check">ANGINA DE PEITO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_6" class="oco_ac">
-                <label for="esco_6" class="check">APINÉIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_7" class="oco_ac">
-                <label for="esco_7" class="check">BRADICARDIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_8" class="oco_ac">
-                <label for="esco_8" class="check">BRADIPNÉIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_9" class="oco_ac">
-                <label for="esco_9" class="check">BRONCO-ASPIRADO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_10" class="oco_ac">
-                <label for="esco_10" class="check">CEFALÉIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_11" class="oco_ac">
-                <label for="esco_11" class="check">CIANOSE</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_12" class="oco_ac">
-                <label for="esco_12" class="check">CONVULSÃO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_13" class="oco_ac">
-                <label for="esco_13" class="check">DECORTICAÇÃO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_14" class="oco_ac">
-                <label for="esco_14" class="check">DEFORMIDADE</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_15" class="oco_ac">
-                <label for="esco_15" class="check">DESCEREBRAÇÃO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_16" class="oco_ac">
-                <label for="esco_16" class="check">DESMAIO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_17" class="oco_ac">
-                <label for="esco_17" class="check">DESVIO DE TRAQUÉIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_18" class="oco_ac">
-                <label for="esco_18" class="check">DOR LOCAL</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_19" class="oco_ac">
-                <label for="esco_19" class="check">EDEMA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_20" class="oco_ac">
-                <label for="esco_20" class="check">ENFISEMA SUBCUTÂNEO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_21" class="oco_ac">
-                <label for="esco_21" class="check">FACE PÁLIDA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_22" class="oco_ac">
-                <label for="esco_22" class="check">HEMORRAGIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_23" class="oco_ac">
-                <label for="esco_23" class="check">HIPERTENSÃO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_24" class="oco_ac">
-                <label for="esco_24" class="check">HIPOTENSÃO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_25" class="oco_ac">
-                <label for="esco_25" class="check">NÂUSEAS E VÔMITOS</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_26" class="oco_ac">
-                <label for="esco_26" class="check">NASORAGIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_27" class="oco_ac">
-                <label for="esco_27" class="check">ÓBITO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_28" class="oco_ac">
-                <label for="esco_28" class="check">OTORRÉIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_29" class="oco_ac">
-                <label for="esco_29" class="check">O.V.A.C.E.</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_30" class="oco_ac">
-                <label for="esco_30" class="check">PARADA CARDÍACA/ RESPIRATÓRIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_31" class="oco_ac">
-                <label for="esco_31" class="check">PRIAPRISMO</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_32" class="oco_ac">
-                <label for="esco_32" class="check">PRURIDO NA PELE</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_33" class="oco_ac">
-                <label for="esco_33" class="check">SEDE</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_34" class="oco_ac">
-                <label for="esco_34" class="check">PUPILAS</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_35" class="oco_ac">
-                <label for="esco_35" class="check">SINAL DE BATTLE</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_36" class="oco_ac">
-                <label for="esco_36" class="check">SINAL DE GUAXINIM</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_37" class="oco_ac">
-                <label for="esco_37" class="check">SUDORESE</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_38" class="oco_ac">
-                <label for="esco_38" class="check">TAQUIPNÉIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_39" class="oco_ac">
-                <label for="esco_39" class="check">TAQUICARDIA</label>
-            </div>
-            <div class="esco_ac">
-                <input type="checkbox" name="esco_40" class="oco_ac">
-                <label for="esco_40" class="check">TONTURA</label>
-            </div>
-            <td class="hf"> <input id="enviar" type="button" name="enviar" class="btnE stn" value="Enviar">  </td>
-        </div>
+            
+        </form>
         
-    </form>
+
 </body>
 
 </html>

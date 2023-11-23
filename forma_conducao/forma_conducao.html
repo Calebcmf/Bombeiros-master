@@ -9,8 +9,57 @@
 
     <title>Forma de Condução</title>
     <script>
+        $(document).ready(function () {
+            $("#enviarBtn10").click(function (event) {
+                event.preventDefault(); // Impede o envio do formulário padrão
+
+                // Coleta os dados do formulário
+                var formData = $('#formFC').serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "../forma_conducao/forma_conducao.php",
+                    data: formData,
+                    success: function (response) {
+                        // Aqui você pode manipular a resposta da requisição
+                        alert("Dados enviados com sucesso!");
+                    },
+                    error: function () {
+                        alert("Erro ao enviar os dados.");
+                    }
+                });
+            });
+        });
+    </script>
+   
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="titulo">
+            Forma de Condução
+        </div>
+        <div class="subtitulo">
+        </div>
+    </div>
+    <form class="tiposFC" id="formFC">
+        <div class="esco_ac">
+            <input type="checkbox" class="form_conducao_checkbox oco_ac" id="esco_71" name="resposta1">
+            <label for="esco_71" class="check">DEITADA</label>
+        </div>
+        <div class="esco_ac">
+            <input type="checkbox" class="form_conducao_checkbox oco_ac" id="esco_72" name="resposta2">
+            <label for="esco_72" class="check">SEMI-DEITADA</label>
+        </div>
+        <div class="esco_ac">
+            <input type="checkbox" class="form_conducao_checkbox oco_ac" id="esco_73" name="resposta3">
+            <label for="esco_73" class="check">SENTADA</label>
+        </div>
+        <td class="hf"> <input id="enviarBtn10" type="button" name="enviarBtn10" class="btnE " onclick="VoltarTudo()" value="Enviar"> </td>
+    </form>
+
+    <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checkboxes = document.querySelectorAll('.form_conducao_checkbox');
 
             checkboxes.forEach(checkbox => {
                 checkbox.addEventListener('change', (event) => {
@@ -24,27 +73,6 @@
             });
         });
     </script>
-</head>
-<body>
-  <div class="cabecalho">
-    <div class="titulo">
-       Forma de Condução
-    </div>
-    <div class="subtitulo">
-    </div>
-</div>
-<form class="tipos">
-    <div class="esco_ac">
-        <input type="radio" id="esco_1" class="oco_ac" name="forma_conduçao">
-        <label for="esco_1" class="check">DEITADA</label>    
-    </div>
-    <div class="esco_ac">
-        <input type="radio" id="esco_2" class="oco_ac" name="forma_conduçao">
-        <label for="esco_2"class="check">SEMI-DEITADA</label>    
-    </div>
-    <div class="esco_ac">
-        <input type="radio" id="esco_3" class="oco_ac" name="forma_conduçao">
-        <label for="esco_3"class="check">SENTADA</label>    
-    </div>
 </body>
+
 </html>

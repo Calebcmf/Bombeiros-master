@@ -30,8 +30,7 @@ $outro2_total = $outros2_texto . "|" . $outros_2;
 $outro3_total = $outros3_texto . "|" . $outros_3;
 
 
-if (isset($_POST['enviar'])) {
     $comando = $pdo->prepare("INSERT INTO materiais_utilizados_deixados_hospital(base_do_estabiliza_hospital, tala_hospital, colar_hospital, coxins_estabiliza_hospital, ked_hospital, maca_rigida_hospital, ttf_hospital, tirante_aranha_hospital, canula_hospital, outros_1, outros_2, outros_3, id_paciente) VALUES('$base_do_estabiliza', '$tala2_total', '$colar_total', '$coxins_estabiliza', '$ked_total', '$marca_rigida', '$ttf_total', '$tirante_aranha', '$canula', '$outro1_total', '$outro2_total', '$outro3_total', $id)");
     $resultado = $comando->execute();
-}
+
 ?>

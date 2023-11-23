@@ -179,15 +179,27 @@ img{
     opacity: 100;
 }
 
+.imLT{
+    transition: .5s;
+    filter: sepia(50%) hue-rotate(150deg) saturate(50%) brightness(10);
+    opacity: 100;
+}
+
+.ltb{
+    margin-top: 2%;
+    border: 2px solid white;
+}
 
 .popUP{
     display: none;
     width: 40%;
-    height: 80%;
-
+    height: 70%;
+    border-radius: 10px;
     z-index: 3;
-    background-color: #D9D9D9;  
-
+    margin-bottom: 20%;
+    border-left: 1px solid #1d4983;
+    border-right: 1px solid #1d4983;
+   
     align-items: center;
     justify-content: center;
   
@@ -198,23 +210,30 @@ img{
 }
 
 
-
 .m{
     width: 100%;
     height: 30%;
-   
+    
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  
+    background-color: white;
     flex-direction: column;
     color: #1E232C;
+    border-top: 5px solid #1d4983;
+    border-left: 1px solid #1d4983;
+    border-right: 1px solid #1d4983;
     padding-top: 5%;
 
 }
 
 .m1{
     height: 55%;
+    border: 2px solid transparent;
+    background: linear-gradient(180deg, #1d498363 0%,  rgba(29, 73, 131, 0.689) 100%);
+    
+    border-bottom: 10px solid #0a599b;
+
 }
 
 .p{
@@ -222,8 +241,8 @@ img{
     height: 100%;
     position: absolute;
     display: flex;
-
-    border: 2px solid #1E232C;
+   
+   
 }
 
 .tri{
@@ -243,7 +262,7 @@ img{
 .fechar{
     position: absolute;
 
-    color: red;
+    color: #0a599b;
     font-weight: bolder;
     display: flex;
     align-items: center;
@@ -251,21 +270,33 @@ img{
     width: 30px;
     height: 30px;
     top: 5%;
+    font-size: 20px;
+
+    border: 2px solid #1d4983;
     border-radius: 50%;
     left: 85%;
     cursor: pointer;
+    transition: .25s;
 }
+
+.fechar:hover{
+    font-size: 25px;
+    background-color: #1d4983;
+    color: white;
+}
+
 
 p{
     margin: 0;
-    padding-top: 3%;
-    background-color: #1E232C;
+    padding-top: 4%;
+    background-color: #1d4983;
     
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #D9D9D9;
+    color: white;
+
 }
 
 .tra[type="checkbox"]:not(:checked), 
@@ -279,7 +310,7 @@ p{
   
 
   cursor: pointer;
-  height: 35px;
+  height: 50px;
   width: 80%;
   font-size: 10px;
   display: flex;
@@ -287,7 +318,9 @@ p{
   justify-content: center;
   border-bottom: 1px solid #1E232C;
   color: white;
-  background-color: #5B5B5B;
+  border-radius: 10px;
+  
+  background-color: #1d4983;
   margin-bottom: 10px;
 }
 
@@ -295,7 +328,7 @@ p{
 .btnF{
     width: 80%;
     height: 5%;
-    background-color: #1272c1;
+    background-color: #1272c1bd;
     margin-bottom: 3%;
    
 
@@ -319,8 +352,9 @@ p{
 .tra[type="checkbox"]:checked + label {
   border-bottom: 1px solid white;
   color: white;
-  background-color: #1E232C;
-  height: 40px;
+  background-color: #1272c1;
+  height: 52px;
+  border-radius: 0px;
   transition: 1s;
 }
 
@@ -451,6 +485,7 @@ p{
         width: 80%;
         overflow: hidden;
         height: 50%;
+      
     }
     .cabecalho{
         padding: 0%;

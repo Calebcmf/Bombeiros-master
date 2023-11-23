@@ -46,7 +46,7 @@ $esco_39 = 0;
 $esco_40 = 0;
 $esco_41 = 0;
 
-if (isset($_POST['enviar'])) {
+try{
     if (isset($_POST['esco_1'])) {
 
         $esco_1 = 1;
@@ -291,4 +291,9 @@ if (isset($_POST['enviar'])) {
 	$resultado = $comando->execute();
 
 }
+catch (PDOException $e) {
+    echo "Error: " . $e->getMessage(); // Output any caught exception message
+} 
+
+
 ?>

@@ -3,14 +3,14 @@ session_start();
 $_SESSION["id_paciente"] = 0;
 include("../conecta.php");
 
-$nome = $_POST["nome"];
-$cpf = $_POST["cpf"];
-$idade = $_POST["idade"];
-$telefone = $_POST["telefone"];
-$local = $_POST["local"];
-$nomeAcompanhante = $_POST["nomeAcompanhante"];
-$idadeAcompanhante = $_POST["idadeAcompanhante"];
-$cep = $_POST["cep"];
+$nome = isset($_POST['nome']) ? $_POST['nome'] : 'NomePadrao';
+$cpf = isset($_POST['cpf']) ? $_POST['cpf'] : 'CPFPadrao';
+$idade = isset($_POST['idade']) ? $_POST['idade'] : 0;
+$telefone = isset($_POST['telefone']) ? $_POST['telefone'] : 'TelefonePadrao';
+$local = isset($_POST['local']) ? $_POST['local'] : 'LocalPadrao';
+$nomeAcompanhante = isset($_POST['nomeAcompanhante']) ? $_POST['nomeAcompanhante'] : 'NomeAcompanhantePadrao';
+$idadeAcompanhante = isset($_POST['idadeAcompanhante']) ? $_POST['idadeAcompanhante'] : 0;
+$cep = isset($_POST['cep']) ? $_POST['cep'] : 'CEPPadrao';
 $sexo = 0;
 
 if (isset($_POST['sexo_m'])) {
@@ -31,14 +31,14 @@ try {
         echo "Atualizando paciente existente...\n";
         $comandoPaciente = $pdo->prepare("UPDATE dados_paciente SET nome_paciente = ?, idade_paciente = ?, fone_paciente = ?, local_ocorrencia = ?, cep = ?, sexo = ? WHERE id_paciente = ?");
         $resultadoPaciente = $comandoPaciente->execute([$nome, $idade, $telefone, $local, $cep, $sexo, $pacienteexisteId]);
-        header("Location:../tipo_ocorrencia/tipo_ocorrencia.html");
+        
     } else {
         echo "Inserindo novo paciente...\n";
         $comandoPaciente = $pdo->prepare("INSERT INTO dados_paciente (nome_paciente, cpf_paciente, idade_paciente, fone_paciente, local_ocorrencia, cep, sexo) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $resultadoPaciente = $comandoPaciente->execute([$nome, $cpf, $idade, $telefone, $local, $cep, $sexo]);
         $pacienteexisteId = $pdo->lastInsertId(); 
         $_SESSION["id_paciente"] = $pacienteexisteId;
-        header("Location:../tipo_ocorrencia/tipo_ocorrencia.html");
+       
     }
 
     if ($resultadoPaciente) {
