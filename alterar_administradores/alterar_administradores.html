@@ -17,17 +17,20 @@
     <img src="../img/logo_pequena.png" class="imagem">
     <div class="container">
        
-        <form id="myForm">
-            Listar pelo nome:
+        <form action="../alterar_administradores/alterar_administradores.php" method="post">
+            Alterar pelo nome:
             <input type="text" name="nome" class="texto">
-            <input type="button" value="Listar" class="botao" data-option="listar1"> <br><br>
-            Listar pelo email:
+            <input type="submit" name="alterar1" value="Alterar" class="botao" data-option="alterar1"> <br><br>
+            Alterar pelo email:
             <input type="text" name="email" class="texto">
-            <input type="button" value="Listar" class="botao" data-option="listar2"> <br><br>
-            Listar pelo telefone:
+            <input type="submit" name="alterar2" value="Alterar" class="botao" data-option="alterar2"> <br><br>
+            Alterar pelo telefone:
             <input type="text" name="telefone" class="texto">
-            <input type="button" value="Enviar" class="botao" data-option="listar3"> <br><br>
+            <input type="submit" name="alterar3" value="Alterar" class="botao" data-option="alterar3"> <br><br>
+            Senha
+            <input type="text" name="senha" class="texto">
         </form>
+        <br><br>
         <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
         
        
@@ -41,30 +44,6 @@
     </div>
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-    $('input[type="button"]').click(function () {
-        var option = $(this).data('option');
-        var formData = $('#myForm').serialize() + '&' + option + '=true';
-
-        $.ajax({
-            type: 'POST',
-            url: '../listar_administradores/listar_administradores.php',
-            data: formData,
-            success: function (response) {
-            // Construct a table structure with received data
-            var tableContent = '<table class="resultado"><tr><th>Nome</th><th>Email</th><th>Telefone</th></tr>';
-            tableContent += response; // Append the received data (table rows)
-
-            tableContent += '</table>';
-
-            // Replace the content of the result div with the created table
-            $('#result').html(tableContent);
-}
-        });
-    });
-});
-</script>
 
 </body>
 
