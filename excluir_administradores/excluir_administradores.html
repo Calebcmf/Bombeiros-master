@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,15 +18,15 @@
     <div class="container">
        
         <form id="myForm">
-            Listar pelo nome do paciente:
-            <input type="text" name="nome_paciente" class="texto">
+            Listar pelo nome:
+            <input type="text" name="nome" class="texto">
             <input type="button" value="Listar" class="botao" data-option="listar1"> <br><br>
-            Listar pelo Id Paciente:
-            <input type="text" name="id_paciente" class="texto">
+            Listar pelo email:
+            <input type="text" name="email" class="texto">
             <input type="button" value="Listar" class="botao" data-option="listar2"> <br><br>
-            Listar pelo local da ocorrencia:
-            <input type="text" name="local_ocorrencia" class="texto">
-            <input type="button" value="Listar" class="botao" data-option="listar3"> <br><br>
+            Listar pelo telefone:
+            <input type="text" name="telefone" class="texto">
+            <input type="button" value="Enviar" class="botao" data-option="listar3"> <br><br>
         </form>
         <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
         
@@ -47,16 +49,16 @@
 
         $.ajax({
             type: 'POST',
-            url: '../listar_paciente/listar_paciente.php',
+            url: '../listar_administradores/listar_administradores.php',
             data: formData,
             success: function (response) {
-            
-            var tableContent = '<table class="resultado"><tr><th class="dif">Nome </th><th class="dif">Cpf </th><th class="dif">Sexo </th><th class="dif">Idade</th><th class="dif">Fone</th><th class="dif">ID</th><th class="dif">L.O</th><th class="dif">Cep</th></tr>';
-            tableContent += response; 
+            // Construct a table structure with received data
+            var tableContent = '<table class="resultado"><tr><th>Nome</th><th>Email</th><th>Telefone</th></tr>';
+            tableContent += response; // Append the received data (table rows)
 
             tableContent += '</table>';
 
-            
+            // Replace the content of the result div with the created table
             $('#result').html(tableContent);
 }
         });
