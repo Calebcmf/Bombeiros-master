@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../listar_paciente/listar_paciente.css">
-    <title>Listar</title>
+    <title>Listar Bombeiros</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
     <img src="../img/logo_pequena.png" class="imagem">
     <div class="container">
-       
+        <h1>Listar conta de Bombeiros:</h1>
         <form id="myForm">
             Listar pelo nome:
             <input type="text" name="nome" class="texto">
@@ -28,7 +28,6 @@
         </form>
         <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
         
-       
     </div>
     <div class="container cont2">
         <div id="result" class="resultado">

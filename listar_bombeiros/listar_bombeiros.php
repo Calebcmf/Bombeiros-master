@@ -72,4 +72,18 @@ if (isset($_POST["listar3"])){
 }
   echo $data; 
 
+  include_once("../listar_usuarios.php");
+  if(!empty($lista_bombeiros)){
+      foreach($lista_bombeiros as $linha){
+          echo ' <tr>
+                  <td> '.$linha['id_bombeiro'] .' </td>
+                  <td> '.$linha['nome'] .' </td>
+                  <td> '.$linha['email'] .' </td>
+                  <td> '.$linha['telefone'] .' </td>
+                  <td> <a href="excluir_usuario.php?id='.$linha['id_bombeiro'].'"> Excluir <a> </td>
+                  <td> <a href="alterar_usuario.php?id='.$linha['id_bombeiro'].'"> Alterar <a> </td>
+              </tr>
+          ';
+      }
+    }
 ?>

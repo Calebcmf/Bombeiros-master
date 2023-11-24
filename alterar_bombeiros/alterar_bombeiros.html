@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../listar_paciente/listar_paciente.css">
-    <title>Listar</title>
+    <link rel="stylesheet" href="../excluir_paciente/alterar-excluir_paciente.css">
+    <title>Alterar Bombeiros</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
     <img src="../img/logo_pequena.png" class="imagem">
     <div class="container">
-       
+       <h1>Alterar conta de Bombeiros:</h1>
         <form action="../alterar_bombeiros/alterar_bombeiros.php" method="post">
             Alterar pelo nome:
             <input type="text" name="nome" class="texto">
@@ -25,46 +25,15 @@
             Alterar pelo telefone:
             <input type="text" name="telefone" class="texto">
             <input type="submit" name="alterar3" value="Alterar" class="botao" data-option="alterar3"> <br><br>
-            Senha
+            Senha:
             <input type="text" name="senha" class="texto">
         </form>
-        <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
-        
+        <a href="../adm/adm_principal.html" class="voltar">Voltar</a>    
        
     </div>
-    <div class="container cont2">
-        <div id="result" class="resultado">
-          
-            
-        </div>
-        
-    </div>
+
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-    $('input[type="button"]').click(function () {
-        var option = $(this).data('option');
-        var formData = $('#myForm').serialize() + '&' + option + '=true';
-
-        $.ajax({
-            type: 'POST',
-            url: '../listar_bombeiros/listar_bombeiros.php',
-            data: formData,
-            success: function (response) {
-            // Construct a table structure with received data
-            var tableContent = '<table class="resultado"><tr><th>Nome</th><th>Email</th><th>Telefone</th></tr>';
-            tableContent += response; // Append the received data (table rows)
-
-            tableContent += '</table>';
-
-            // Replace the content of the result div with the created table
-            $('#result').html(tableContent);
-}
-        });
-    });
-});
-</script>
 
 </body>
 
