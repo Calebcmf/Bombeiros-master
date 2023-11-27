@@ -26,6 +26,7 @@
             <input type="text" name="telefone" class="texto">
             <input type="button" value="Listar" class="botao" data-option="listar3"> <br><br>
         </form>
+        <a href="listar_todos_bombeiros.php" class="listar">Listar todos Pacientes</a> <br><br>
         <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
         
     </div>
@@ -50,7 +51,7 @@
             data: formData,
             success: function (response) {
             // Construct a table structure with received data
-            var tableContent = '<table class="resultado"><tr><th>Nome</th><th>Email</th><th>Telefone</th></tr>';
+            var tableContent = '<table class="resultado"><tr><th>Código</th><th>Nome</th><th>Email</th><th>Telefone</th><th>Ações</th></tr>';
             tableContent += response; // Append the received data (table rows)
 
             tableContent += '</table>';

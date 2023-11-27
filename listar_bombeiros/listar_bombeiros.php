@@ -82,8 +82,7 @@ if (isset($_POST["listar3"])){
                   <td> '.$linha['telefone'] .' </td>
                   <td> <a href="excluir_usuario.php?id='.$linha['id_bombeiro'].'"> Excluir <a> </td>
                   <td> <a href="alterar_usuario.php?id='.$linha['id_bombeiro'].'"> Alterar <a> </td>
-              </tr>
-          ';
+              </tr>';
       }
     }
 ?>
