@@ -28,7 +28,10 @@
         </form>
         <a href="listar_todos_pacientes.php" class="listar">Listar todos Pacientes</a> <br><br>
         <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
-        
+        <div class="botafogo">
+            <div class="vasco" onclick="anteriorBD()">Ant.</div>
+            <div class="vasco" onclick="proximoBD()">Pro.</div>
+        </div>
        
     </div>
     <div class="container cont2">
@@ -41,28 +44,85 @@
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script>
-    $(document).ready(function () {
+    let contador = 1;   
+
+function anteriorBD(){
+    contador--;
+
+    if(contador < 1 || contador > 12){
+        contador = 1;
+    }
+}
+
+function proximoBD(){
+    contador++
+
+    if(contador < 1 || contador > 12){
+        contador = 1;
+    };
+}
+
+$(document).ready(function () {
     $('input[type="button"]').click(function () {
         var option = $(this).data('option');
         var formData = $('#myForm').serialize() + '&' + option + '=true';
-
+    
+        formData += '&contador=' + contador;
         $.ajax({
             type: 'POST',
             url: '../listar_paciente/listar_paciente.php',
             data: formData,
             success: function (response) {
-            
-            var tableContent = '<table class="resultado"><tr><th class="dif">Nome </th><th class="dif">Cpf </th><th class="dif">Sexo </th><th class="dif">Idade</th><th class="dif">Fone</th><th class="dif">ID</th><th class="dif">L.O</th><th class="dif">Cep</th></tr>';
-            tableContent += response; 
+                var tableContent;
+                if(contador == 1) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">Nome</th><th class="dif">Cpf</th><th class="dif">Idade</th><th class="dif">Fone</th><th class="dif">ID</th><th class="dif">L.O</th><th class="dif">Cep</th><th class="dif">Sexo</th></tr>';
+                } else if(contador == 2) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">Tipo de Ocorrência</th><th class="dif">ID</th></tr>';
+                } else if(contador == 3) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">Observações</th><th class="dif">ID</th></tr>';
+                }
+                else if(contador == 4) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">Objetos</th><th class="dif">ID</th></tr>';
+                }
+                else if(contador == 5) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">Abertura_Ocular</th><th class="dif">Resposta Verbal</th><th class="dif">Resposta Motora</th><th class="dif">ID</th></tr>';
+                }
+                else if(contador == 6) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">disturbio_comportamento</th><th class="dif">encontrado_de_capacete</th><th class="dif">encontrado_de_cinto</th><th class="dif">para_brisas_avariado </th><th class="dif">caminhando_na_cena </th><th class="dif">painel_avariado</th> <th class="dif">volante_torcido</th><th class="dif">ID</th></tr>';
+                }
+                else if(contador == 7) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">Abdomen sensivel ou rigido</th><th class="dif">Afundamento de cranio</th><th class="dif">	Agitacao</th><th class="dif">Amnesia</th> <th class="dif">Angina de peito</th> <th class="dif">Apineia</th><th class="dif">Bradicardia</th> <th class="dif">Bradipneia</th><th class="dif">Bronco Aspirando</th> <th class="dif">Cafalea</th> <th class="dif">	Cianose labios</th> <th class="dif">		Convulsão </th> <th class="dif">Decorticação </th> <th class="dif"> Deformidade	 </th>  <th class="dif">		Descerebração</th> <th class="dif">	Desmaio</th> <th class="dif">	Desvio de traqueia</th> <th class="dif">	Dor local</th> <th class="dif">	edema_generalizado</th><th class="dif">	enfisema_subcutaneo</th><th class="dif">	face_palida</th><th class="dif">	hemorragia</th> <th class="dif">		hipertensao</th><th class="dif">	nauseas_e_vomitos</th><th class="dif">	nasoragia</th><th class="dif">	obito</th><th class="dif">		otorreia</th><th class="dif">	o_v_a_c_e</th><th class="dif">		parada_cardiaca_ou_respiratoria</th><th class="dif">	priaprismo</th><th class="dif">		prurido_na_pele</th> <th class="dif">		pupilas</th> <th class="dif">		sede</th> <th class="dif">		sinal_de_battle</th> <th class="dif">		sinal_de_guaxinim</th> <th class="dif">			sudorese</th> <th class="dif">		taquipneia</th> <th class="dif">		taquicardia</th> <th class="dif">		tontura</th><th class="dif">			outro_sinais_e_sintomas</th> <th class="dif">				ID</th> <th class="dif"> </tr>';
+                }
+                else if(contador == 8) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">o_que_aconteceu</th><th class="dif">	aconteceu_outras_vezes</th> <th class="dif">	quanto_tempo_aconteceu</th><th class="dif">possui_problema_saude </th><th class="dif">quais_problemas_saude </th><th class="dif">faz_uso_medicacao</th> <th class="dif">horario_ultima_medicacao</th> <th class="dif">	quais_medicacao</th> <th class="dif">		alergico_alguma_coisa</th> <th class="dif">	alergique_o_que</th> <th class="dif">	ingeriu_alimento</th> <th class="dif">		horas_ingerir</th> <th class="dif">ID</th> </tr>';
+                }
+                else if(contador == 9) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">ataduras_descartavel</th><th class="dif">cateter_tp_oculos_descartaveis</th><th class="dif">compressa_comum_descartaveis</th><th class="dif">	kits_descartaveis</th><th class="dif">luvas_descartaveis</th><th class="dif">	mascara_descartaveis</th><th class="dif">manta_aluminizada_descartaveis</th> <th class="dif">pas_do_dea_descartaveis</th> <th class="dif">sonda_aspiracao_descartaveis</th> <th class="dif">soro_fisiologico_descartaveis</th> <th class="dif">talas_pap_descartaveis</th> <th class="dif">outros_descartaveis</th> <th class="dif">ID</th>  </tr>';
+                }
+                else if(contador == 10) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">	base_do_estabiliza_hospital	</th><th class="dif">	colar_hospital</th><th class="dif">	tala_hospital</th><th class="dif">	coxins_estabiliza_hospital</th><th class="dif">ked_hospital</th><th class="dif">	maca_rigida_hospital</th><th class="dif">ttf_hospital</th> <th class="dif">tirante_aranha_hospital</th> <th class="dif">	canula_hospital</th> <th class="dif">outros_1</th> <th class="dif">outros_2</th> <th class="dif">	outros_3</th> <th class="dif">ID</th>  </tr>';
+                }
+                else if(contador == 11) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">	pressao_arterial	</th><th class="dif">		pulso</th><th class="dif">	respiracao_mrm</th><th class="dif">	saturacao</th><th class="dif">hgt_numero</th><th class="dif">	temperatura_corporal</th><th class="dif">perfusao_2sec</th>  <th class="dif">ID</th>  </tr>';
+                }
+                else if(contador == 12) {
+                    tableContent = '<table class="resultado" id="resultado"><tr><th class="dif">Forma de Condução   </th><th class="dif">ID</th></tr>';
+                }
+                
+                
+                tableContent += response; 
+                tableContent += '</table>';
+                
+                $('#result').html(tableContent);
 
-            tableContent += '</table>';
-
-            
-            $('#result').html(tableContent);
-}
+                // Calculate and set the width of each cell based on the parent row's width
+                
+            }
         });
     });
 });
+
+
 </script>
 
 </body>
