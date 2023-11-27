@@ -70,8 +70,8 @@
                  <td> '.$linha['cpf_paciente'] .' </td>
                  <td> '.$linha['idade_paciente'] .' </td>
                  <td> '.$linha['fone_paciente'] .' </td>
-                 <td> <a href="excluir_usuario.php?id='.$linha['id_paciente'].'"> Excluir <a> </td>
-                 <td> <a href="alterar_usuario.php?id='.$linha['id_paciente'].'"> Alterar <a> </td>
+                 <td> <a href="../excluir_paciente/excluirpacientes.php?id='.$linha['id_paciente'].'"> Excluir <a> </td>
+                 <td> <a href="../alterar_bombeiros/alterar_pacientes1.php?id='.$linha['id_paciente'].'"> Alterar <a> </td>
              </tr>
          ';
      }

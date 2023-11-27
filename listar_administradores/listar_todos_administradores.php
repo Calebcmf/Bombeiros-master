@@ -72,8 +72,8 @@
                  <td> '.$linha['email'] .' </td>
                  <td> '.$linha['senha'] .' </td>
                  <td> '.$linha['telefone'] .' </td>
-                 <td> <a href="excluir_usuario.php?id='.$linha['id_admin'].'"> Excluir <a> </td>
-                 <td> <a href="alterar_usuario.php?id='.$linha['id_admin'].'"> Alterar <a> </td>
+                 <td> <a href="../excluir_administradores/excluiradministradores.php?id='.$linha['id_admin'].'"> Excluir <a> </td>
+                 <td> <a href="../alterar_administradores/alterar_administradores1.html?id='.$linha['id_admin'].'"> Alterar <a> </td>
              </tr>
          ';
      }

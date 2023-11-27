@@ -9,7 +9,7 @@ body {
 }
 
 .texto {
-    width: 70%;
+    width: 60%;
     height: 30px;
     border-radius: 5px;
     border: none;
@@ -33,7 +33,7 @@ body {
 
 .container {
     width: 30%;
-    height: 60%;
+    height: 55%;
     padding: 0px 30px 20px 30px;
     min-height: 35%;
     border-radius: 30px;
