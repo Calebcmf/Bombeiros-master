@@ -15,7 +15,7 @@ $resultado = $comando->execute();
 $pdo->exec("SET foreign_key_checks = 1");
 
 if ($resultado) {
-    header("Location:../adm/adm_principal.html");
+    header("Location:../listar_paciente/listar_todos_pacientes.php");
 } else {
     echo "Erro ao excluir o bombeiro.";
 }

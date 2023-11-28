@@ -8,7 +8,7 @@ $comando->bindParam(':codigo', $codigo);
 $resultado = $comando->execute();
 
 if ($resultado) {
-    header("Location:../adm/adm_principal.html");
+    header("Location:../listar_bombeiros/listar_todos_bombeiros.php");
 } else {
     echo "Erro ao excluir o bombeiro.";
 }
