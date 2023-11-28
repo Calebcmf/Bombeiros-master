@@ -8,7 +8,7 @@
   $data = ""; 
 
   if (isset($_POST["listar1"])) {
-
+    $contador = 1;
       $comando = $pdo->prepare("SELECT * FROM dados_paciente WHERE nome_paciente = :nome_paciente");
       $comando->bindParam(':nome_paciente', $nome_paciente);
       $resultado = $comando->execute();
@@ -27,8 +27,8 @@
   
       echo   $data  ;
   }
-  
-  if (isset($_POST["listar2"])) {
+  $check = isset($_POST["listar4"]) && $contador > 1;
+  if (isset($_POST["listar2"]) || $check) {
 
     
     switch ($contador) {
@@ -93,6 +93,7 @@
 
   }
   if (isset($_POST["listar3"])) {
+    $contador = 1;
     $comando = $pdo->prepare("SELECT * FROM dados_paciente WHERE local_ocorrencia = :local_ocorrencia");
     $comando->bindParam(':local_ocorrencia', $local_ocorrencia);
     $resultado = $comando->execute();

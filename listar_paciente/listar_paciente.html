@@ -29,8 +29,8 @@
         <a href="listar_todos_pacientes.php" class="listar">Listar todos Pacientes</a> <br><br>
         <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
         <div class="botafogo">
-            <div class="vasco" onclick="anteriorBD()">Ant.</div>
-            <div class="vasco" onclick="proximoBD()">Pro.</div>
+            <div class="vasco" onclick="anteriorBD()" data-option="listar4">Ant.</div>
+            <div class="vasco" onclick="proximoBD()" data-option="listar4">Pro.</div>
         </div>
        
     </div>
@@ -63,10 +63,11 @@ function proximoBD(){
 }
 
 $(document).ready(function () {
-    $('input[type="button"]').click(function () {
+    $('input[type="button"], .vasco').click(function () {
+        
         var option = $(this).data('option');
         var formData = $('#myForm').serialize() + '&' + option + '=true';
-    
+        
         formData += '&contador=' + contador;
         $.ajax({
             type: 'POST',
