@@ -46,10 +46,10 @@
             <a class="opition" onclick="mostrarTela(8)">Avaliação da Cinemática</a>
             <a class="opition" onclick="mostrarTela(9)">Sinais e Sintomas</a>
             <a class="opition" onclick="mostrarTela(10)">Anamnese de Emergência</a>
-            <a class="opition" onclick="mostrarTela(11)"id="menu_anamnese" style="display: none;">Anamnese Gestacional</a>
-            <a class="opition" onclick="mostrarTela(12)">Materiais Utilizados</a>
-            <a class="opition" onclick="mostrarTela(13)">Sinais Vitais</a>
-            <a class="opition" onclick="mostrarTela(14)">Forma de Condução</a>
+            <!-- <a class="opition" onclick="mostrarTela(11)"id="menu_anamnese" style="display: none;">Anamnese Gestacional</a> -->
+            <a class="opition" onclick="mostrarTela(11)">Materiais Utilizados</a>
+            <a class="opition" onclick="mostrarTela(12)">Sinais Vitais</a>
+            <a class="opition" onclick="mostrarTela(13)">Forma de Condução</a>
         </div>
         <div class="rodape_menu">
             <div class="ajuda" href="https://drive.google.com/file/d/1InkeVS7bkLO14Tya5JILE7_YbtGm3fFH/view">Ajuda</div>
