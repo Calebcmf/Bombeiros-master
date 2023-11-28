@@ -23,6 +23,10 @@
             text-decoration: none;
             color: black;
         }
+        table{
+            margin-left:50px;
+        }
+
         th,
         td {
             padding: 15px;

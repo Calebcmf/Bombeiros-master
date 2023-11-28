@@ -12,15 +12,17 @@ if (isset($_POST["listar1"])) {
   $data = ""; // Initialize an empty string to store the table rows
 
   while ($linhas = $comando->fetch()) {
-      $a = $linhas["nome"];
-      $b = $linhas["email"];
-      $c = $linhas["telefone"];
+      $a = $linhas["id_bombeiro"];
+      $b = $linhas["nome"];
+      $c = $linhas["email"];
+      $d = $linhas["telefone"];
 
-      // Construct a row for each result
+    // Construct a row for each result
       $data .= '<tr>';
       $data .= '<td>' . $a . '</td>';
       $data .= '<td>' . $b . '</td>';
       $data .= '<td>' . $c . '</td>';
+      $data .= '<td>' . $d . '</td>';
       $data .= '</tr>';
   }
 
@@ -35,16 +37,18 @@ if (isset($_POST["listar2"])) {
   $data = ""; // Initialize an empty string to store the table rows
 
   while ($linhas = $comando->fetch()) {
-      $a = $linhas["nome"];
-      $b = $linhas["email"];
-      $c = $linhas["telefone"];
+    $a = $linhas["id_bombeiro"];
+    $b = $linhas["nome"];
+    $c = $linhas["email"];
+    $d = $linhas["telefone"];
 
-      // Construct a row for each result
-      $data .= '<tr>';
-      $data .= '<td>' . $a . '</td>';
-      $data .= '<td>' . $b . '</td>';
-      $data .= '<td>' . $c . '</td>';
-      $data .= '</tr>';
+    // Construct a row for each result
+    $data .= '<tr>';
+    $data .= '<td>' . $a . '</td>';
+    $data .= '<td>' . $b . '</td>';
+    $data .= '<td>' . $c . '</td>';
+    $data .= '<td>' . $d . '</td>';
+    $data .= '</tr>';
   }
 
   echo $data; // Return all constructed rows
@@ -58,16 +62,18 @@ if (isset($_POST["listar3"])){
   $data = ""; // Initialize an empty string to store the table rows
 
   while ($linhas = $comando->fetch()) {
-      $a = $linhas["nome"];
-      $b = $linhas["email"];
-      $c = $linhas["telefone"];
+    $a = $linhas["id_bombeiro"];
+    $b = $linhas["nome"];
+    $c = $linhas["email"];
+    $d = $linhas["telefone"];
 
-      // Construct a row for each result
-      $data .= '<tr>';
-      $data .= '<td>' . $a . '</td>';
-      $data .= '<td>' . $b . '</td>';
-      $data .= '<td>' . $c . '</td>';
-      $data .= '</tr>';
+    // Construct a row for each result
+    $data .= '<tr>';
+    $data .= '<td>' . $a . '</td>';
+    $data .= '<td>' . $b . '</td>';
+    $data .= '<td>' . $c . '</td>';
+    $data .= '<td>' . $d . '</td>';
+    $data .= '</tr>';
   }
 }
   echo $data; 
