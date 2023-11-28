@@ -26,7 +26,7 @@
             <input type="text" name="telefone" class="texto">
             <input type="button" value="Listar" class="botao" data-option="listar3"> <br><br>
         </form>
-        <a href="listar_todos_bombeiros.php" class="listar">Listar todos Pacientes</a> <br><br>
+        <a href="listar_todos_bombeiros.php" class="listar">Listar todos Bombeiros</a> <br><br>
         <a href="../adm/adm_principal.html" class="voltar">Voltar</a>
         
     </div>
